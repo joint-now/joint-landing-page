@@ -2,17 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
     <title>Joint Landing</title>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJGC6M9MC4"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'G-QJGC6M9MC4');
     </script>
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link rel="stylesheet" as="style" crossorigin
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"/>
     <style>
         * {
             margin: 0;
@@ -38,11 +43,13 @@
             background-image: url("./img/background.jpg");
             background-size: contain;
             background-repeat: no-repeat;
+            background-position-x: center;
             overflow-x: hidden;
         }
 
         h2 {
             position: absolute;
+            top: calc(100vw * 0.279);
             width: 100vw;
             font-size: calc(100vw * 0.00938);
             font-weight: 600;
@@ -53,34 +60,173 @@
             width: 100vw;
             font-size: calc(100vw * 0.01562);
             font-weight: 500;
+            line-height: 1.5;
+
+            strong {
+                padding: 2px 6px;
+                border-width: 1px;
+                border-color: rgba(255, 255, 255, 0.5);
+                border-style: solid;
+                border-radius: 4px;
+                box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+            }
         }
 
-        strong {
-            padding: 2px 6px;
-            border-width: 1px;
-            border-color: rgba(255, 255, 255, 0.5);
-            border-style: solid;
-            border-radius: 4px;
-            box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+        p.p-slack {
+            top: calc(100vw * 0.5099);
         }
 
-        div a {
+        p.p-notion {
+            top: calc(100vw * 0.8193);
+        }
+
+        p.p-figma {
+            top: calc(100vw * 1.1287);
+        }
+
+        p.p-github {
+            top: calc(100vw * 1.4349);
+        }
+
+        p.p-joint {
+            top: calc(100vw * 1.7547);
+
+            strong {
+                color: #ffa0a0;
+                border-color: #ffa0a0;
+                box-shadow: inset 0 0 10px rgba(255, 160, 160, 0.5);
+            }
+        }
+
+        div.contact {
+            position: absolute;
+            width: 100vw;
+            top: calc(100vw * 2.2349);
+        }
+
+        div.contact a {
             font-size: calc(100vw * 0.01667);
             font-weight: 700;
             line-height: 2;
         }
+
+        @media screen and (max-width: 960px) {
+            body {
+                height: 2350px;
+                background-size: 960px;
+            }
+
+            h2 {
+                top: 268px;
+                font-size: 9px;
+            }
+
+            p {
+                font-size: 15px;
+
+                strong {
+                    padding: 1px 3px;
+                    border-width: 1px;
+                    border-color: rgba(255, 255, 255, 0.5);
+                    border-style: solid;
+                    border-radius: 2px;
+                    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.5);
+                }
+            }
+
+            p.p-slack {
+                top: 489px;
+            }
+
+            p.p-notion {
+                top: 786px;
+            }
+
+            p.p-figma {
+                top: 1083px;
+            }
+
+            p.p-github {
+                top: 1377px;
+            }
+
+            p.p-joint {
+                top: 1684px;
+            }
+
+            div.contact {
+                top: 2145px;
+            }
+
+            div.contact a {
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            body {
+                height: 1675px;
+                background-size: 640px;
+            }
+
+            h2 {
+                top: 178px;
+                font-size: 7px;
+            }
+
+            p {
+                font-size: 10px;
+
+                strong {
+                    padding: 1px 3px;
+                    border-width: 1px;
+                    border-color: rgba(255, 255, 255, 0.5);
+                    border-style: solid;
+                    border-radius: 2px;
+                    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.5);
+                }
+            }
+
+            p.p-slack {
+                top: 326px;
+            }
+
+            p.p-notion {
+                top: 523px;
+            }
+
+            p.p-figma {
+                top: 721px;
+            }
+
+            p.p-github {
+                top: 917px;
+            }
+
+            p.p-joint {
+                top: 1121px;
+            }
+
+            div.contact {
+                top: 1429px;
+            }
+
+            div.contact a {
+                font-size: 11px;
+            }
+        }
     </style>
 </head>
 <body>
-<h2 style="top: calc(100vw * 0.279)">Global Standard for Communication<br/>with External Partners</h2>
+<h2>Global Standard for Communication<br/>with External Partners</h2>
 
-<p style="top: calc(100vw * 0.5099)">만약 우리 <strong>사내 직원들 간의 소통</strong>을 <br/>실시간으로 확인하고 참여할 수 있다면?</p>
-<p style="top: calc(100vw * 0.8193)">만약 우리 <strong>직원들 간의 문서</strong>를 <br/>실시간으로 확인하고 참여할 수 있다면?</p>
-<p style="top: calc(100vw * 1.1287)">만약 우리 <strong>디자이너들의 작업물</strong>을 <br/>실시간으로 확인하고 참여할 수 있다면?</p>
-<p style="top: calc(100vw * 1.4349)">만약 우리 <strong>개발자들의 코드</strong>를 <br/>실시간으로 확인하고 참여할 수 있다면?</p>
-<p style="top: calc(100vw * 1.7547)">만약 우리 <strong>외부 파트너들과의 소통</strong>를 <br/>실시간으로 확인하고 참여할 수 있다면?</p>
+<p class="p-slack">만약 우리 <strong>사내 직원들 간의 소통</strong>을 <br/>실시간으로 확인하고 참여할 수 있다면?</p>
+<p class="p-notion">만약 우리 <strong>직원들 간의 문서</strong>를 <br/>실시간으로 확인하고 참여할 수 있다면?</p>
+<p class="p-figma">만약 우리 <strong>디자이너들의 작업물</strong>을 <br/>실시간으로 확인하고 참여할 수 있다면?</p>
+<p class="p-github">만약 우리 <strong>개발자들의 코드</strong>를 <br/>실시간으로 확인하고 참여할 수 있다면?</p>
+<p class="p-joint">만약 우리 <strong>외부 파트너들과의 소통</strong>를 <br/>실시간으로 확인하고 참여할 수 있다면?</p>
 
-<div style="position: absolute; width: 100vw; top: calc(100vw * 2.2349)">
+<div class="contact">
     <div><a href="mailto:daeho.kim@joint.now">✉️ daeho.kim@joint.now</a></div>
     <div>Global Standard for Communication with External Partners</div>
 </div>
