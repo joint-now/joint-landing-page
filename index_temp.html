@@ -6,11 +6,15 @@
 
     <meta property="og:title" content="JOINT - 고객 관계를 위한 새로운 대화 플랫폼">
     <meta property="og:description" content="여러 고객과의 소통을 한곳에서. JOINT로 더 강한 관계를 만들어 보세요.">
-    <meta property="og:image" content="https://i.ytimg.com/vi/fF4UF6VaBSc/maxresdefault.jpg" />
-    <meta property="og:url" content="https://jointnow.typeform.com/to/LS0PjAIl">
+    <meta property="og:image" content="https://www.joint.now/img/og-image.png" />
+    <meta property="og:url" content="https://www.joint.now/">
     <meta property="og:type" content="website">
 
-    <title>JOINT Landing</title>
+    <link rel="icon" type="image/png" sizes="16x16"  href="./img/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="theme-color" content="#FFFFFF">
+
+    <title>JOINT</title>
     <link rel="stylesheet" as="style" crossorigin
         href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -148,13 +152,10 @@
             -ms-user-select: none;
             user-select: none;
             outline: none;
-            p{
-                color: #000;
-                font-family: Poppins;
-                font-size: 24px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: 24px; /* 100% */
+
+            img{
+                width: 120px;
+                height: auto;
             }
         }
 
@@ -690,16 +691,6 @@
                 display: flex;
                 margin-left: 0;
                 padding: 2px 5px 2px 18.5px;
-                img{
-                    width: 30px;
-                    height: auto;
-                }
-                p{
-                    font-size: 24px;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: 24px; /* 100% */
-                }
             }
 
             .navbar-btns{
@@ -1057,7 +1048,7 @@
 
             const shareBtnMobile = document.getElementById('share-btn-mobile');
             const shareBtnDesktop = document.getElementById('share-btn-desktop');
-            const shareUrl = 'http://127.0.0.1:8080/';
+            const shareUrl = 'https://www.joint.now/';
 
             // 공유 로직을 별도의 함수로 분리
             async function handleShare() {
@@ -1179,7 +1170,6 @@
         <nav class="navbar">
             <div class="logo">
                 <img src="./img/joint-logo.svg" alt="">
-                <p>JOINT</p>
             </div>
             <div class="navbar-btns">
                 <p class="nav-scrolled-text"><strong>조인트 Beta <span class="joint-color">런칭 이벤트</span></strong> ・ 대기 리스트 등록하면 리워드를 드려요</p>
