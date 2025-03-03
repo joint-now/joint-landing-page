@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+
+    <meta property="og:title" content="JOINT - 고객 관계를 위한 새로운 대화 플랫폼">
+    <meta property="og:description" content="여러 고객과의 소통을 한곳에서. JOINT로 더 강한 관계를 만들어 보세요.">
+    <meta property="og:image" content="https://i.ytimg.com/vi/fF4UF6VaBSc/maxresdefault.jpg" />
+    <meta property="og:url" content="https://jointnow.typeform.com/to/LS0PjAIl">
+    <meta property="og:type" content="website">
+
+    <title>JOINT Landing</title>
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJGC6M9MC4"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QJGC6M9MC4');
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            user-select: none;
+            box-sizing: border-box;
+            font-family: Pretendard;
+        }
+        
+        .for-desktop {
+            display: block !important;
+        }
+
+        .for-mobile {
+            display: none !important;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .for-desktop {
+                display: none !important;
+            }
+
+            .for-mobile {
+                display: block !important;
+            }
+        }
+
+        .skeleton {
+            min-width: 20px;
+            min-height: 20px;
+            background: #f0f0f0;
+            animation: skeleton 1.5s infinite ease-in-out;
+        }
+
+        html, body {
+            background-color: #fff;
+            font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .gray-text{
+            color:rgba(255, 255, 255, 0.40);
+        }
+
+        .joint-color{
+            color: #664BF4;
+        }
+
+
+        /* 여기부터는 main for desktop style 입니다. */
+
+        .gnb {
+            border-bottom: 1px solid var(--black-black006, rgba(36, 42, 48, 0.06));
+            background: #00000000;
+
+            padding: 19px 0 ;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+
+            transition: background 0.5s ease;
+        }
+
+        .gnb.scrolled{
+            background: #FFF;
+        }
+
+        .nav-scrolled-text{
+            display: none;
+            animation: fadeOut 1.5s ease forwards;
+        }
+
+        .gnb.scrolled {
+            .nav-scrolled-text{
+                margin-right: 12px;
+                display: block;
+                animation: fadeIn 0.5s ease forwards;
+                font-size: 13px;
+                color: var(--black, #242A30);
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%; /* 18.2px */
+                letter-spacing: -0.26px;
+            }
+        }
+        
+        .nav-banner{
+            display: none;
+        }
+
+        .navbar {
+            max-width: 1250px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 5px 5px 5px 18.5px;
+            margin-left: 20px;
+            p{
+                color: #000;
+                font-family: Poppins;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 24px; /* 100% */
+            }
+        }
+
+        .navbar-btns{
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin-right: 20px;
+            padding-right: 13.5px;
+        }
+
+        .typeform-btn{
+            button{
+                all:inherit !important;
+                height: 32px !important;
+                padding: 7px 12px !important;
+                border-radius: 10px !important;
+                box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.06) inset, 0px 0px 0px 1px rgba(0, 0, 0, 0.08) inset, 0px 2px 6px 0px rgba(0, 0, 0, 0.02) !important;;
+                color: var(--white, #FFF) !important;;
+                font-family: Pretendard !important;;
+                font-size: 13px !important;;
+                font-style: normal !important;;
+                font-weight: 700 !important;;
+                line-height: 140% !important; /* 16.8px  */
+                background-color: #242A30 !important;
+            }
+        }
+
+        .share-btn{
+            display: flex;
+            padding: 8px 12px;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            border-radius: 10px;
+            background: var(--white, #FFF);
+            border-color: rgba(36, 42, 48, 0.06);
+            box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.06) inset, 0px 0px 0px 1px rgba(0, 0, 0, 0.08) inset, 0px 2px 6px 0px rgba(0, 0, 0, 0.02);
+        }
+
+        main {
+            margin: 4px;
+            padding-bottom: 150px;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: center;
+            margin: 0 0 560px;
+            border-radius: 24px;
+            border: 1px solid var(--black-black006, rgba(36, 42, 48, 0.06));
+            background: #FBFBFB;
+            background: radial-gradient(rgba(111, 72, 235, 0.1), rgba(111, 72, 235, 0));
+
+            .typeform-btn{
+                button{
+                    margin: 18px 0 8px 0 !important;
+                    height: 48px !important;
+                    padding: 12px 20px !important;
+                    font-size: 16px !important;
+                }
+            }
+        }
+
+        .vertical-line-out{
+            padding: 160px 0 148px 0;
+            margin: 0 16px;
+            width: 100%;
+            max-width: 1205px;
+            border: solid 1px rgba(36, 42, 48, 0.04);
+            border-top: none;
+            border-bottom: none;
+        }
+
+        .hero-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .hero h1 {
+            white-space: pre-wrap;
+            color: var(--black, #242A30);
+            font-family: Pretendard;
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%; /* 60px */
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            max-width: 320px;
+            white-space: pre-wrap;
+            color: var(--black-black072, rgba(36, 42, 48, 0.72));
+            font-family: Pretendard;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 155%; /* 24.8px */
+            letter-spacing: -0.32px;
+        }
+
+        .chat-img-container{
+            position: absolute;
+            top: 600px;
+            padding: 2px 2px 0 2px;
+            margin: 0 20px;
+
+            .chat-img{
+                margin-bottom: -4px;
+                width: 100%;
+                max-width: 1195px;
+                max-height: 669px;
+            }
+        }
+
+        .wait-benefit{
+            padding: 12px 0;
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            align-items: center;   
+        }
+
+        .wait-benefit-border{
+            width: 574px;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(36, 42, 48, 0.00) 0%, rgba(36, 42, 48, 0.09) 14%, rgba(36, 42, 48, 0.09) 83.5%, rgba(36, 42, 48, 0.00) 100%);
+            background-blend-mode: multiply;
+        }
+
+        .wait-benefit-item{
+            display: flex;
+            gap: 8px;
+            align-items: center;
+
+            p{
+                color: #034C0B;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 155%; /* 20.15px */
+                letter-spacing: -0.26px;
+            }
+        }
+
+        .wait-benefit-item-img{
+            width: 20px;
+            height: 20px;
+        }
+
+        .wait-benefit-item.reward{
+            p{
+                color: #513400;
+            }
+        }
+
+        .tooltip-container {
+            width: 20px;
+            height: 20px;
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+
+            -webkit-tap-highlight-color: transparent;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            outline: none;
+        }
+
+        .info-icon {
+            width: 20px;
+            height: 20px;
+            margin-left: -4px;            
+        }
+
+        .tooltip-container:focus {
+            outline: none;
+            box-shadow: none;
+            
+        }
+
+        .tooltip-container {
+            transition: transform 0.5s ease; 
+        }
+
+        .tooltip-container:hover {
+            transform: scale(1.1); 
+        }
+
+
+        .tooltip {
+            display: none;
+            position:absolute;
+            background: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.06) inset, 0px 0px 0px 1px rgba(0, 0, 0, 0.12) inset, 0px 6px 24px 0px rgba(0, 0, 0, 0.16);
+            padding: 8px 12px;
+            font-family: Pretendard;
+            font-size: 12px;
+            color: #242A30;
+            z-index: 1001;
+            min-width: 300px;
+            width: max-content;
+            bottom: 30px;
+            right: -10px;
+        }
+
+        .tooltip.active {
+            display: block;
+        }
+
+        .tooltip p{
+            text-align: left;
+            color: #242A30 !important;
+        }
+
+        .tooltip ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin: 6px 0 0 0;
+        }
+
+        .tooltip li {
+            text-align: left;
+            line-height: 155%;
+            color: #242A30;
+            span{
+                color: #664BF4;
+            }
+        }
+
+        .features{
+            margin: 0 20px;
+        }
+
+        .feature-card{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin: 0 auto;
+
+            height: 550px;
+            max-width: 1100px;
+
+            white-space: pre-wrap;
+
+            &:nth-child(2){
+                .feature-img-container{
+                    max-width: 630px;   
+                    
+                }
+            }
+
+            &:nth-child(3){
+                flex-direction: row-reverse;
+                .feature-img-container{
+                    max-width: 550px;
+                    margin-left: -100px;
+                }
+            }
+
+            &:nth-child(4){
+                .feature-img-container{
+                    max-width: 632px;   
+                }
+            }
+        }
+
+        .feature-card-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .feature-title{
+            text-align: left;
+            color: var(--primary-primary, #664BF4);
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 160%; /* 32px */
+            letter-spacing: -0.4px;
+        }
+
+        .feature-content{
+            text-align: left;
+            color: var(--black, #242A30);
+            font-size: 42px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%; /* 54.6px */
+            letter-spacing: -0.84px;
+        }
+
+        .feature-description{
+            text-align: left;
+            white-space: pre-wrap;
+            color: var(--black-black080, rgba(36, 42, 48, 0.80));
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 160%; /* 28.8px */
+            letter-spacing: -0.36px;
+        }
+
+        .wait-banner{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            padding: 94px 0 76px;
+            border-radius: 16px;
+            background: radial-gradient(100% 100% at 50% 50%, rgba(143, 31, 255, 0.75) 0%, rgba(49, 38, 205, 0.58) 100%), #7000FF;
+
+            
+            h2{
+                margin-bottom: 10px;
+                color: var(--white, #FFF);
+                text-align: center;
+                font-family: Pretendard;
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 130%; /* 62.4px */
+                letter-spacing: -0.96px;
+            }
+
+
+            .typeform-btn{
+                button{
+                    padding: 12px 14.5px !important;
+                    height: auto !important;
+                    width: auto !important;
+                    background-color: #fff !important;
+                    color: #664BF4 !important;
+                    text-align: center !important;
+                    font-family: Pretendard !important;
+                    font-size: 16px !important;
+                    font-style: normal !important;
+                    font-weight: 600 !important;
+                    line-height: normal !important;
+                    letter-spacing: -0.32px !important;
+                }
+            }
+
+            .wait-benefit-item{
+                p{
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 155%; /* 21.7px */
+                    letter-spacing: -0.28px;
+                    color: #FFF;
+                }
+            }
+
+            .wait-benefit-border{
+                background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.20) 14%, rgba(255, 255, 255, 0.20) 83.5%, rgba(255, 255, 255, 0.00) 100%);
+            }
+        }
+
+        .functions{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 60px;
+            margin: 150px 20px 0 20px;
+
+
+            dl{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 18px;
+
+                font-style: normal;
+                dt{
+                    color: #000;
+                    font-size: 30px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 120%; /* 36px */
+                    letter-spacing: -0.6px;
+                }
+
+                dd{
+                    white-space: pre-wrap;
+                    padding: 0 34px;
+                    color: var(--black-black072, rgba(36, 42, 48, 0.72));
+                    font-size: 15px;
+                    font-weight: 500;
+                    line-height: 160%; /* 24.8px */
+                    letter-spacing: -0.3px;
+                }
+            }
+        }
+
+        .functionItem-container{
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1155px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-column: span 2;
+            gap: 27px 24px;
+        }
+
+        .functionItem-card{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 40px 0 0 0;
+            border-radius: 20px;
+            background: #FFF;
+            box-shadow: 0px 0px 0px 0.5px #E4E5E9, 0px 0px 0px 1px rgba(228, 229, 233, 0.60), 0px 0px 0px 3.5px #F9F9FB, 0px 0px 0px 4px #F3F4F7;
+
+            &:nth-child(2){
+                grid-column: span 2;
+            }
+
+            &:nth-child(3){
+                grid-column: span 3;
+            }
+
+            &:nth-child(4){
+                grid-column: span 3;
+            }
+
+            &:nth-child(5){
+                grid-column: span 2;
+            }
+        }
+
+        .functionItem-card-content{
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 0 81px 30px 30px;
+        }
+
+        .functionItem-title{
+            text-align: left;
+            color: #31373D;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 140%; /* 25.2px */
+            letter-spacing: -0.36px;
+        }
+
+        .functionItem-description{
+            text-align: left;
+            color: var(--black-black056, rgba(36, 42, 48, 0.56));
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 155%; /* 24.8px */
+            letter-spacing: -0.32px;
+        }
+
+        .functionItem-img{
+            width: 100%;
+            height: auto;
+            border-radius: 0 0 20px 20px;
+        }
+
+        footer {
+            background: var(--black, #242A30);
+            padding: 30px 0;
+        }
+
+        .footer-container{
+            display: flex;
+            justify-content: space-between;
+            max-width: 1190px;
+            margin: 0 auto;
+            padding: 0 20px;
+            color: #FFF !important;
+            font-size: 15px;
+        }
+
+        .social-links{
+            a {
+                width: 24px;
+                height: 24px;
+                color: inherit; /* 부모 요소의 색상을 상속받음 (파란색 제거) */
+                text-decoration: none; /* 밑줄 제거 */
+                
+                i{
+                    font-size: 24px;
+                }
+            }
+            a:hover {
+                text-decoration: none; /* 호버 시 밑줄도 안 생기게 */
+            }
+        }
+
+        /* 여기부터는 main for mobile style 입니다. */
+
+        @media screen and (max-width: 1000px) {
+
+            .chat-img-container{
+            position: initial;            
+
+            .chat-img{
+                width: 100%;
+            }
+        }
+
+            .gnb{
+                padding: 13px 0;
+            }
+
+            .gnb.scrolled{
+                padding-bottom: 0;
+            }
+
+            .navbar .logo {
+                display: flex;
+                margin-left: 0;
+                padding: 2px 5px 2px 18.5px;
+                img{
+                    width: 30px;
+                    height: auto;
+                }
+                p{
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 24px; /* 100% */
+                }
+            }
+
+            .navbar-btns{
+                gap: 4px;
+                margin-right: 0;
+                padding-right: 16px;
+            }
+
+            .share-btn{
+                padding: 4px;
+                border-radius: 10px;
+                background: var(--white, #FFF);
+                box-shadow: none;
+                width: 32px;
+                height: 32px;
+                img{
+                    width: 20px;
+                    height: auto;
+                }
+            }
+
+            .nav-scrolled-text{
+                display: none !important;
+            }
+
+            .gnb.scrolled .nav-banner{
+                display: block;
+                background-color: #242A30;
+                padding: 6px 0;
+                margin: 11px auto 0 auto;
+
+                color: var(--white, #FFF);
+                font-family: Pretendard;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 155%; /* 20.15px */
+                letter-spacing: -0.26px;
+
+                animation: fadeIn 0.5s ease forwards;
+
+                .rainbow{
+                    background: linear-gradient(90deg, #FEF1FF 0%, #FDD2FF 18.5%, #FBFEE5 40.5%, #CCF7FC 69%, #F9F5FF 100%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    color: transparent;
+                    background-size: 200% 200%;
+                    animation: rainbow 4s ease infinite;
+                }
+            }
+
+            main{
+                margin: 0;
+                padding-bottom: 48px;
+            }
+
+            .hero {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            background: #FFF;
+            background: radial-gradient(rgba(111, 72, 235, 0.1), rgba(111, 72, 235, 0));
+            border: none;
+
+            .typeform-btn{
+                button{
+                    margin: 0 0 2px 0 !important;
+                    height: 48px !important;
+                    padding: 12px 20px !important;
+                    font-size: 16px !important;
+                }
+            }
+        }
+
+            .hero-box{
+                padding: 116px 0 0 0;
+                gap: 30px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+                letter-spacing: -0.64px;
+            }
+
+            .hero p {
+                max-width: 320px;
+                font-size: 15px;
+                letter-spacing: -0.3px;
+            }
+
+            .wait-benefit{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 12px 22.5px;
+                gap: 8px;
+            }
+
+            .wait-benefit-border{
+                max-width: 340px;
+                width: 100%;
+            }
+
+            .tooltip {
+                font-size: 12px;
+                max-width: 200px;
+                padding: 10px 12px;
+            }
+
+            .tooltip::before {
+                width: 8px;
+                height: 8px;
+            }
+
+            .features{
+                margin: 40px 24px 0 24px;
+
+                display: flex;
+                flex-direction: column;
+                gap: 48px;
+            }
+
+            .feature-card{
+                display: flex;
+                flex-direction: column !important;
+                align-items: flex-start;
+                margin: 0 auto;
+                white-space: pre-wrap;
+                gap: 36px;
+                width: 100%;
+                max-width: 390px;
+                justify-content: flex-start;
+                height: auto;
+
+                img{
+                    width: 100%;
+                    max-width: 390px;
+                }
+
+                .feature-img-container{
+                    display: contents;
+                }
+
+
+                &:nth-child(3){
+                    .feature-img-container{
+                        margin-left: 0;
+                        img{
+                            margin-left: -24px;
+                        }
+                    }
+                }
+            }
+
+            .feature-card-content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .feature-title{
+                text-align: left;
+                color: var(--primary-primary, #664BF4);
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 160%; /* 32px */
+                letter-spacing: -0.4px;
+            }
+
+            .feature-content{
+                text-align: left;
+                color: var(--black, #242A30);
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 130%; /* 54.6px */
+                letter-spacing: -0.84px;
+            }
+
+            .feature-description{
+                text-align: left;
+                color: var(--black-black080, rgba(36, 42, 48, 0.80));
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 160%; /* 28.8px */
+                letter-spacing: -0.36px;
+                max-width: 250px;
+                white-space: initial;
+            }
+
+            .wait-banner{
+                margin: 84px 8px 48px 8px;
+                padding: 80px 27px;
+                gap: 30px;
+
+                h2{
+                    font-size: 28px;
+                    letter-spacing: -0.56px;
+                }
+            }
+
+            .wait-benefit{
+                gap: 8px;
+                padding: 12px 0;
+            }
+
+            .wait-benefit-container{
+                margin-top: 2px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .functions{
+                margin: 0;
+                padding: 32px 16px;
+                gap: 36px;
+
+                dl{
+                    white-space: pre-wrap;
+                    gap: 24px;
+                }
+            }
+
+            .functionItem-container{
+                margin: 0 auto;
+                width: 100%;
+                max-width: 390px;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+
+        @keyframes skeleton {
+            0% { background-color: #f0f0f0; }
+            50% { background-color: #e0e0e0; }
+            100% { background-color: #f0f0f0; }
+        }
+
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+                transform: translateY(0);
+                visibility: visible;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-20px); /* 위로 이동하며 사라짐 */
+                visibility: hidden;
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const heroContent = {
+            title: '대화가 쌓이면\n고객 관계가 보입니다',
+            description: '여러 고객과의 소통, 여기저기 흩어져서 불편하시죠?\n중요한 컨텍스트를 놓치지 말고 한곳에서 대화하세요.\n팀 커뮤니케이션으로 더 강한 고객 관계를 만듭니다.',
+        }
+
+        const benefitList = {
+            free: '베타 기간동안 무료로 경험해보세요.',
+            reward: '거래처 담당자 초대하면, 리워드를 드려요.',
+        }
+
+        const featuresList = [
+            {
+                title: '그룹 대화',
+                content:'거래처 중심\n메신저의 새로운 기준',
+                description:"여러 채널에 흩어진 고객 대화를 한곳에서 진행할 수 있어요.\n거래처별로 소통 내역을 모아 보면 관계까지\n한눈에 파악할 수 있어요.",
+            },
+            {
+                title:"멤버 관리",
+                content:"우리 팀원들의\n고객 소통을 한 눈에",
+                description:"팀원들이 고객과 나눈 대화를 한눈에 확인하고\n소통 이력을 투명하게 공유할 수 있어요."
+            },
+            {
+                title:"거래처 관리",
+                content:"흩어지지 않는\n거래처 인사이트",
+                description:"회사와 소통했던 거래처 데이터를 한 곳에서\n조회하고 지속적으로 정보를 업데이트할 수 있어요."
+            }
+        ]
+
+        const functionsContent = {
+            title: '외부 협업,\n 이제 이 정도는 기본이죠.',
+            description: '고객과의 모든 소통을 조인트, 한곳에서 진행하세요.\n흩어진 대화와 정보 찾기에 소모되는 시간을 줄여드립니다.\n이제 효율적으로 대응하고, 더 중요한 일에 집중할 수 있어요.',
+            mobileDescription: '조인트로 고객 소통을 한곳에서.\n흩어진 대화 없이, 더 중요한 일에 집중하세요.'
+        }
+
+        const functionsList = [
+            {
+                title: '손쉽게 시작하세요. 가입 없이.',
+                description:'회원가입 없이도 초대받으면 즉시 참여할 수 있어요.\n간편하게 접속하고, 필요한 대화를 빠르게 시작하세요.',
+            },
+            {
+                title: '고객과 대화, 팀과 소통을 한곳에서.',
+                description:'원활한 대화를 나누면서도, 내부에서는 민감한 이슈를 \n조용히 논의할 수 있습니다. 하나의 공간에서 관리하세요.',
+            },
+            {
+                title: 'AI 요약으로, 더 빠르게 더 스마트하게.',
+                description:'한눈에 보는 업무 대화 요약. AI가 주요 키포인트를 정리해, \n놓치는 것 없이 중요한 내용을 빠르게 확인할 수 있어요.',
+            },
+            {
+                title: '파일 공유의 혁신',
+                description:'고객과의 대화에서 오간 중요한 파일들을 자동으로 정리해, \n언제든 쉽게 조회하고 활용할 수 있어요.',
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const gnb = document.querySelector('.gnb');
+
+            if (gnb) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 100) {
+                        gnb.classList.add('scrolled');
+                    } else {
+                        gnb.classList.remove('scrolled');
+                    }
+                });
+            }
+
+            const shareBtnMobile = document.getElementById('share-btn-mobile');
+            const shareBtnDesktop = document.getElementById('share-btn-desktop');
+            const shareUrl = 'http://127.0.0.1:8080/';
+
+            // 공유 로직을 별도의 함수로 분리
+            async function handleShare() {
+                if (navigator.share) {
+                    try {
+                        await navigator.share({
+                            title: 'JOINT - 고객 관계를 위한 새로운 대화 플랫폼',
+                            text: '여러 고객과의 소통을 한곳에서. JOINT로 더 강한 관계를 만들어 보세요.',
+                            url: shareUrl,
+                        });
+                        console.log('공유 성공');
+                    } catch (error) {
+                        console.log('공유 실패:', error);
+                    }
+                } else {
+                    try {
+                        await navigator.clipboard.writeText(shareUrl);
+                        alert('설문 링크가 클립보드에 복사되었습니다: ' + shareUrl);
+                    } catch (error) {
+                        console.error('복사 실패:', error);
+                        alert('링크 복사에 실패했습니다. 수동으로 복사해주세요: ' + shareUrl);
+                    }
+                }
+            }
+
+            // 두 버튼에 동일한 이벤트 리스너 적용
+            shareBtnMobile.addEventListener('click', handleShare);
+            shareBtnDesktop.addEventListener('click', handleShare);
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const infoIcons = document.querySelectorAll('.info-icon');
+            let currentTooltip = null; // 현재 열린 툴팁 추적
+
+            infoIcons.forEach(icon => {
+                // 클릭 시 툴팁 표시 (모든 기기) 및 애니메이션 트리거
+                icon.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const tooltip = icon.nextElementSibling || icon.querySelector('.tooltip');
+                    if (!tooltip) return;
+
+                    // 이미 열린 툴팁이 있다면 닫기
+                    if (currentTooltip && currentTooltip !== tooltip) {
+                        currentTooltip.classList.remove('active');
+                    }
+
+                    // 툴팁 토글
+                    tooltip.classList.toggle('active');
+                    currentTooltip = tooltip.classList.contains('active') ? tooltip : null;
+
+                    // 아이콘 클릭 시 애니메이션 리셋 (스케일 복원)
+                    icon.style.transform = 'scale(1)';
+                    setTimeout(() => {
+                        icon.style.transform = ''; // 애니메이션 초기화
+                    }, 300); // 트랜지션 시간과 맞춤
+
+                    // 외부 클릭이나 스크롤 시 툴팁 닫기
+                    const handleCloseTooltip = (event) => {
+                        if (!icon.contains(event.target) && !tooltip.contains(event.target)) {
+                            tooltip.classList.remove('active');
+                            currentTooltip = null;
+                            // 아이콘 애니메이션 리셋
+                            icon.style.transform = '';
+                            // 이벤트 리스너 정리
+                            document.removeEventListener('click', handleCloseTooltip);
+                            window.removeEventListener('scroll', handleCloseTooltip);
+                        }
+                    };
+
+                    // 툴팁 닫기 위한 이벤트 리스너 추가
+                    document.addEventListener('click', handleCloseTooltip);
+                    window.addEventListener('scroll', handleCloseTooltip);
+                });
+
+                // 데스크톱(화면 너비 1000px 이상)에서 호버 시 표시 및 애니메이션
+                if (window.innerWidth > 1000) {
+                    icon.addEventListener('mouseenter', () => {
+                        const tooltip = icon.nextElementSibling || icon.querySelector('.tooltip');
+                        if (tooltip) {
+                            tooltip.classList.add('active');
+                            currentTooltip = tooltip;
+                            icon.style.transform = 'scale(1.1)'; // 호버 시 커짐
+                        }
+                    });
+
+                    icon.addEventListener('mouseleave', () => {
+                        const tooltip = icon.nextElementSibling || icon.querySelector('.tooltip');
+                        if (tooltip) {
+                            tooltip.classList.remove('active');
+                            currentTooltip = null;
+                            icon.style.transform = 'scale(1)'; // 원래 크기로 복원
+                        }
+                    });
+                }
+            });
+
+            // 추가 정리: 아이콘이나 툴팁 외부 클릭 시 툴팁 닫기
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.tooltip-container') && currentTooltip) {
+                    currentTooltip.classList.remove('active');
+                    currentTooltip = null;
+                    // 아이콘 애니메이션 리셋
+                    infoIcons.forEach(icon => icon.style.transform = '');
+                }
+            });
+
+            // 스크롤 시 툴팁 닫기 및 아이콘 애니메이션 리셋
+            window.addEventListener('scroll', () => {
+                if (currentTooltip) {
+                    currentTooltip.classList.remove('active');
+                    currentTooltip = null;
+                    infoIcons.forEach(icon => icon.style.transform = ''); // 아이콘 복원
+                }
+            });
+        });
+    </script>
+
+    <header class="gnb">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./img/joint-logo.svg" alt="">
+                <p>JOINT</p>
+            </div>
+            <div class="navbar-btns">
+                <p class="nav-scrolled-text"><strong>조인트 Beta <span class="joint-color">런칭 이벤트</span></strong> ・ 대기 리스트 등록하면 리워드를 드려요</p>
+                <div class="typeform-btn" data-tf-live="01JN0ZFPTG39F4MCN7N76209YD"></div><script src="//embed.typeform.com/next/embed.js"></script>
+                <button id="share-btn-mobile" class="share-btn for-mobile">
+                    <img src="./img/share-icon.svg" alt="">
+                </button>
+                <button id="share-btn-desktop" class="share-btn for-desktop">
+                    공유하기
+                </button>
+            </div>
+        </nav>
+        <div class="nav-banner">
+            <span class="rainbow">Beta 런칭 이벤트</span> <span class="gray-text">・</span> 대기 리스트 등록하면 리워드를 드려요
+        </div>
+    </header>
+
+    <main class="for-desktop">
+        <section class="hero">
+            <div class="vertical-line-out">
+                <div class="hero-box">
+                    <script>
+                        document.write(`
+                            <h1>${heroContent.title}</h1>
+                            <p>${heroContent.description}</p>
+                        `)
+                    </script>
+                    <div class="typeform-btn" data-tf-live="01JN12C56NXQ5MT02TTTCT15W1"></div><script src="//embed.typeform.com/next/embed.js"></script>
+                    
+
+                    <div class="wait-benefit-container">
+                        <div class="wait-benefit-border"></div>
+                            <script>
+                                document.write(`
+                                    <div class="wait-benefit">
+                                        <div class="wait-benefit-item">
+                                            <img class="wait-benefit-item-img" src="./img/benefit-badge-1.svg" >
+                                            <p>${benefitList.free}</p>
+                                        </div>
+                                        <div class="wait-benefit-item reward">
+                                            <img class="wait-benefit-item-img" src="./img/benefit-badge-2.svg" >
+                                            <p>${benefitList.reward}</p>
+                                            <div class="tooltip-container">
+                                                <img src="./img/info-icon.svg" class="info-icon" alt="" data-tooltip="">
+                                                <div class="tooltip">
+                                                    <p>리워드 안내</p>
+                                                    <ul>
+                                                        <li><strong>대상:</strong> 대기리스에 사전등록 하신 분</li>
+                                                        <li><strong>혜택:</strong> 거래처 담당자 초대하고 & 월상황시, <span>1명당 1만 원 상장 보상</span></li>
+                                                        <li><strong>조건:</strong> 선택 질문들에 답변한 <span>선착순 500명 한정</span></li>
+                                                        <li>제출하신 분들에게만 별도 상세 공지</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `)
+                            </script>
+                        <div class="wait-benefit-border"></div>
+                    </div>
+                    
+                    <div class="chat-img-container">
+                        <img class="chat-img" alt="" src="./img/landing-chat.png" />
+                    </div>
+                </div>
+            </div>  
+        </section>
+            
+        </section>
+
+        <section class="features">
+            <script>
+                featuresList.forEach((feature, index) => {
+                    document.write(`
+                        <div class="feature-card">
+                            <div class="feature-card-content">
+                                <h3 class="feature-title">${feature.title}</h3>
+                                <p class="feature-content">${feature.content}</p>
+                                <p class="feature-description">${feature.description}</p>
+                            </div>
+                            <div class="feature-img-container">
+                                <img class="feature-img" loading="lazy" src="./img/feature-${index + 1}.svg" alt="">
+                            </div>
+                        </div>
+                    `)
+                })
+            </script>
+            
+        </section>
+
+        <gap style="display:block; height: 60px;"></gap>
+
+        <section class="wait-banner">
+            <h2>경험해보세요<br/>고객과의 대화가 달라집니다</h2>
+            <div class="typeform-btn" data-tf-live="01JN12GPB4QVKCY3ZFH618G8C0"></div><script src="//embed.typeform.com/next/embed.js"></script>
+            <div class="wait-benefit-container">
+                <div class="wait-benefit-border"></div>
+                    <script>
+                        document.write(`
+                            <div class="wait-benefit">
+                                <div class="wait-benefit-item">
+                                    <img class="wait-benefit-item-img" loading="lazy" src="./img/benefit-badge-3.svg" >
+                                    <p>${benefitList.free}</p>
+                                </div>
+                                <div class="wait-benefit-item reward">
+                                    <img class="wait-benefit-item-img" loading="lazy" src="./img/benefit-badge-4.svg" >
+                                    <p>${benefitList.reward}</p>
+                                    <div class="tooltip-container">
+                                        <img src="./img/info-icon-purple.svg" class="info-icon" alt="" data-tooltip="">
+                                        <div class="tooltip">
+                                            <p>리워드 안내</p>
+                                            <ul>
+                                                <li>대상: 대기리스에 사전등록 하신 분</li>
+                                                <li>혜택: 거래처 담당자 초대하고 & 월상황시, <span>1명당 1만 원 상장 보상</span></li>
+                                                <li>조건: 선택 질문들에 답변한 <span>선착순 500명 한정</span></li>
+                                                <li>제출하신 분들에게만 별도 상세 공지</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `)
+                    </script>
+                <div class="wait-benefit-border"></div>
+            </div>
+        </section>
+
+        <section class="functions">
+            <dl>
+                <script>
+                    document.write(`
+                        <dt>${functionsContent.title}</dt>
+                        <dd>${functionsContent.description}</dd>
+                    `)
+                </script>
+            </dl>
+            <div class="functionItem-container">
+                <script>
+                    functionsList.forEach((functionItem, index) => {
+                        document.write(`
+                            <div class="functionItem-card">
+                                <div class="functionItem-card-content">
+                                    <h3 class="functionItem-title">${functionItem.title}</h3>
+                                    <p class="functionItem-description">${functionItem.description}</p>
+                                </div>
+                                <img class="functionItem-img" loading="lazy" src="./img/functions-${index + 1}.svg" alt="">
+                            </div>
+                        `)
+                    })
+                </script>
+            </div>
+        </section>
+    </main>
+
+    <main class="for-mobile">
+        <section class="hero">
+            <div class="hero-box">
+                <script>
+                    document.write(`
+                        <h1>${heroContent.title}</h1>
+                        <p>${heroContent.description}</p>
+                    `)
+                </script>
+                <div class="typeform-btn" data-tf-live="01JN12C56NXQ5MT02TTTCT15W1"></div><script src="//embed.typeform.com/next/embed.js"></script>
+                
+
+                <div class="wait-benefit-container">
+                    <div class="wait-benefit-border"></div>
+                        <script>
+                            document.write(`
+                                <div class="wait-benefit">
+                                    <div class="wait-benefit-item">
+                                        <img class="wait-benefit-item-img" loading="lazy" src="./img/benefit-badge-1.svg" >
+                                        <p>${benefitList.free}</p>
+                                    </div>
+                                    <div class="wait-benefit-item reward">
+                                        <img class="wait-benefit-item-img" loading="lazy" src="./img/benefit-badge-2.svg" >
+                                        <p>${benefitList.reward}</p>
+                                        <div class="tooltip-container">
+                                            <img src="./img/info-icon.svg" class="info-icon" alt="" data-tooltip="">
+                                            <div class="tooltip">
+                                                <p>리워드 안내</p>
+                                                <ul>
+                                                    <li><strong>대상:</strong> 대기리스에 사전등록 하신 분</li>
+                                                    <li><strong>혜택:</strong> 거래처 담당자 초대하고 & 월상황시, <span>1명당 1만 원 상장 보상</span></li>
+                                                    <li><strong>조건:</strong> 선택 질문들에 답변한 <span>선착순 500명 한정</span></li>
+                                                    <li>제출하신 분들에게만 별도 상세 공지</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            `)
+                        </script>
+                    <div class="wait-benefit-border"></div>
+                </div>
+                
+                <div class="chat-img-container">
+                    <img class="chat-img" alt="" loading="lazy" src="./img/mobile-landing-chat@x3.png" />
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <script>
+                featuresList.forEach((feature, index) => {
+                    document.write(`
+                        <div class="feature-card">
+                            <div class="feature-card-content">
+                                <h3 class="feature-title">${feature.title}</h3>
+                                <p class="feature-content">${feature.content}</p>
+                                <p class="feature-description">${feature.description}</p>
+                            </div>
+                            <div class="feature-img-container">
+                                <img class="feature-img" loading="lazy" src="./img/feature-${index + 1}.svg" alt="">
+                            </div>
+                        </div>
+                    `)
+                })
+            </script>
+        </section>
+
+        <section class="wait-banner">
+            <h2>경험해보세요<br/>고객과의 대화가 달라집니다</h2>
+            <div class="typeform-btn" data-tf-live="01JN12GPB4QVKCY3ZFH618G8C0"></div><script src="//embed.typeform.com/next/embed.js"></script>
+            <div class="wait-benefit-container">
+                <div class="wait-benefit-border"></div>
+                    <script>
+                        document.write(`
+                            <div class="wait-benefit">
+                                <div class="wait-benefit-item">
+                                    <img class="wait-benefit-item-img" loading="lazy" src="./img/benefit-badge-3.svg" >
+                                    <p>${benefitList.free}</p>
+                                </div>
+                                <div class="wait-benefit-item reward">
+                                    <img class="wait-benefit-item-img" loading="lazy" src="./img/benefit-badge-4.svg" >
+                                    <p>${benefitList.reward}</p>
+                                    <div class="tooltip-container">
+                                        <img src="./img/info-icon-purple.svg" class="info-icon" alt="" data-tooltip="">
+                                        <div class="tooltip">
+                                            <p>리워드 안내</p>
+                                            <ul>
+                                                <li><strong>대상:</strong> 대기리스에 사전등록 하신 분</li>
+                                                <li><strong>혜택:</strong> 거래처 담당자 초대하고 & 월상황시, <span>1명당 1만 원 상장 보상</span></li>
+                                                <li><strong>조건:</strong> 선택 질문들에 답변한 <span>선착순 500명 한정</span></li>
+                                                <li>제출하신 분들에게만 별도 상세 공지</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `)
+                    </script>
+                <div class="wait-benefit-border"></div>
+            </div>
+        </section>
+
+        <section class="functions">
+            <dl>
+                <script>
+                    document.write(`
+                        <dt>${functionsContent.title}</dt>
+                        <dd>${functionsContent.mobileDescription}</dd>
+                    `)
+                </script>
+            </dl>
+            <div class="functionItem-container">
+                <script>
+                    functionsList.forEach((functionItem, index) => {
+                        document.write(`
+                            <div class="functionItem-card">
+                                <div class="functionItem-card-content">
+                                    <h3 class="functionItem-title">${functionItem.title}</h3>
+                                    <p class="functionItem-description">${functionItem.description}</p>
+                                </div>
+                                <img class="functionItem-img" loading="lazy" src="./img/mobile-functions-${index + 1}.svg" alt="">
+                            </div>
+                        `)
+                    })
+                </script>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>© 2025 Joint. All rights reserved.</p>
+            <div class="social-links">
+                
+                <a href="https://www.linkedin.com/company/jointnow/about/" target="_blank" rel="noopener noreferrer" >
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
