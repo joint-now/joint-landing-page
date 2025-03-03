@@ -139,6 +139,8 @@
             gap: 10px;
             padding: 5px 5px 5px 18.5px;
             margin-left: 20px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
             p{
                 color: #000;
                 font-family: Poppins;
@@ -147,6 +149,10 @@
                 font-weight: 600;
                 line-height: 24px; /* 100% */
             }
+        }
+
+        .navbar .logo:hover {
+            opacity: 0.7;
         }
 
         .navbar-btns{
@@ -158,6 +164,7 @@
         }
 
         .typeform-btn{
+            cursor: pointer;
             button{
                 all:inherit !important;
                 height: 32px !important;
@@ -177,6 +184,7 @@
         .share-btn{
             display: flex;
             padding: 8px 12px;
+            cursor: pointer;
             justify-content: center;
             align-items: center;
             gap: 6px;
@@ -1018,6 +1026,17 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             const gnb = document.querySelector('.gnb');
+            const logo = document.querySelector('.logo');
+
+            if (logo) {
+                logo.addEventListener('click', (e) => {
+                    e.preventDefault(); // 기본 링크 동작 방지 (만약 링크로 사용 중이라면)
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth' // 부드러운 스크롤 효과
+                    });
+                });
+            }
 
             if (gnb) {
                 window.addEventListener('scroll', () => {
