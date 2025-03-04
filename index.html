@@ -1,36 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=yes">
-    <title>Joint Landing</title>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJGC6M9MC4"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+    <meta property="og:title" content="JOINT - 고객 관계를 위한 새로운 대화 플랫폼">
+    <meta property="og:description" content="여러 고객과의 소통을 한 곳에서. JOINT로 더 강한 관계를 만들어 보세요.">
+    <meta property="og:image" content="https://www.joint.now/img/og-image.png" />
+    <meta property="og:url" content="https://www.joint.now/">
+    <meta property="og:type" content="website">
 
-        gtag('js', new Date());
+    <link rel="icon" type="image/png" sizes="16x16"  href="./img/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="theme-color" content="#FFFFFF">
 
-        gtag('config', 'G-QJGC6M9MC4');
-    </script>
+    <title>JOINT</title>
     <link rel="stylesheet" as="style" crossorigin
         href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJGC6M9MC4"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QJGC6M9MC4');
+    </script>
+
     <style>
         * {
             margin: 0;
             padding: 0;
-            color: #fff;
             text-align: center;
             user-select: none;
+            box-sizing: border-box;
+            font-family: Pretendard;
+            word-break: auto-phrase;
+        }
+        
+        .for-desktop {
+            display: block !important;
         }
 
-        html {
-            background-color: #111;
+        .for-mobile {
+            display: none !important;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .for-desktop {
+                display: none !important;
+            }
+
+            .for-mobile {
+                display: block !important;
+            }
+        }
+
+        .skeleton {
+            min-width: 20px;
+            min-height: 20px;
+            background: #f0f0f0;
+            animation: skeleton 1.5s infinite ease-in-out;
+        }
+
+        html, body {
+            background-color: #fff;
             font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-            font-size: calc(100vw / 100.6);
+            font-size: 16px;
             line-height: 1.4;
         }
 
@@ -39,145 +75,1383 @@
             padding: 0;
             width: 100vw;
             min-height: 100vh;
-            height: calc(100vw * 2.44);
-            background-image: url("./img/background.jpg");
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position-x: center;
             overflow-x: hidden;
         }
 
-        h2 {
-            position: absolute;
-            top: calc(100vw * 0.279);
-            width: 100vw;
-            font-size: calc(100vw * 0.00938);
-            font-weight: 600;
+        .gray-text{
+            color:rgba(255, 255, 255, 0.40);
         }
 
-        p {
-            position: absolute;
-            width: 100vw;
-            font-size: calc(100vw * 0.01562);
-            font-weight: 500;
-            line-height: 1.5;
+        .joint-color{
+            color: #664BF4;
+        }
 
-            strong {
-                padding: 2px 6px;
-                border-width: 1px;
-                border-color: rgba(255, 255, 255, 0.5);
-                border-style: solid;
-                border-radius: 4px;
-                box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+
+        /* 여기부터는 main for desktop style 입니다. */
+
+        .gnb {
+            border-bottom: 1px solid var(--black-black006, rgba(36, 42, 48, 0.06));
+            background: #00000000;
+
+            padding: 19px 0 ;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+
+            transition: background 0.5s ease;
+        }
+
+        .gnb.scrolled{
+            background: #FFF;
+        }
+
+        .nav-scrolled-text{
+            display: none;
+            animation: fadeOut 1.5s ease forwards;
+        }
+
+        .gnb.scrolled {
+            .nav-scrolled-text{
+                margin-right: 12px;
+                display: block;
+                animation: fadeIn 0.5s ease forwards;
+                font-size: 13px;
+                color: var(--black, #242A30);
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%; /* 18.2px */
+                letter-spacing: -0.26px;
+            }
+        }
+        
+        .nav-banner{
+            display: none;
+        }
+
+        .navbar {
+            max-width: 1250px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 5px 5px 5px 18.5px;
+            margin-left: 20px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+
+            -webkit-tap-highlight-color: transparent;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            outline: none;
+
+            img{
+                width: 120px;
+                height: auto;
             }
         }
 
-        p.p-slack {
-            top: calc(100vw * 0.5099);
+        .navbar .logo:hover {
+            opacity: 0.7;
         }
 
-        p.p-notion {
-            top: calc(100vw * 0.8193);
+        .navbar-btns{
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            margin-right: 20px;
+            padding-right: 13.5px;
         }
 
-        p.p-figma {
-            top: calc(100vw * 1.1287);
-        }
-
-        p.p-github {
-            top: calc(100vw * 1.4349);
-        }
-
-        p.p-joint {
-            top: calc(100vw * 1.7547);
-
-            strong {
-                color: #ffa0a0;
-                border-color: #ffa0a0;
-                box-shadow: inset 0 0 10px rgba(255, 160, 160, 0.5);
+        .typeform-btn{
+            cursor: pointer;
+            button{
+                all:inherit !important;
+                height: 32px !important;
+                padding: 7px 12px !important;
+                border-radius: 10px !important;
+                box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.06) inset, 0px 0px 0px 1px rgba(0, 0, 0, 0.08) inset, 0px 2px 6px 0px rgba(0, 0, 0, 0.02) !important;;
+                color: var(--white, #FFF) !important;;
+                font-family: Pretendard !important;;
+                font-size: 13px !important;;
+                font-style: normal !important;;
+                font-weight: 700 !important;;
+                line-height: 140% !important; /* 16.8px  */
+                background-color: #242A30 !important;
             }
         }
 
-        div.contact {
-            position: absolute;
-            width: 100vw;
-            top: calc(100vw * 2.2349);
+        .share-btn{
+            display: flex;
+            padding: 8px 12px;
+            cursor: pointer;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            border-radius: 10px;
+            background: var(--white, #FFF);
+            border-color: rgba(36, 42, 48, 0.06);
+            box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.06) inset, 0px 0px 0px 1px rgba(0, 0, 0, 0.08) inset, 0px 2px 6px 0px rgba(0, 0, 0, 0.02);
         }
 
-        div.contact a {
-            font-size: calc(100vw * 0.01667);
+        main {
+            margin: 4px;
+            padding-bottom: 150px;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: center;
+            margin: 0 0 560px;
+            border-radius: 24px;
+            border: 1px solid var(--black-black006, rgba(36, 42, 48, 0.06));
+            background: #FBFBFB;
+            background: radial-gradient(rgba(111, 72, 235, 0.1), rgba(111, 72, 235, 0));
+
+            .typeform-btn{
+                button{
+                    margin: 18px 0 8px 0 !important;
+                    height: 48px !important;
+                    padding: 12px 20px !important;
+                    font-size: 16px !important;
+                }
+            }
+        }
+
+        .vertical-line-out{
+            padding: 160px 0 148px 0;
+            margin: 0 16px;
+            width: 100%;
+            max-width: 1205px;
+            border: solid 1px rgba(36, 42, 48, 0.04);
+            border-top: none;
+            border-bottom: none;
+        }
+
+        .hero-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .hero h1 {
+            white-space: pre-wrap;
+            color: var(--black, #242A30);
+            font-family: Pretendard;
+            font-size: 50px;
+            font-style: normal;
             font-weight: 700;
-            line-height: 2;
-            text-decoration: none;
+            line-height: 120%; /* 60px */
+            letter-spacing: -1px;
         }
 
-        @media screen and (max-width: 960px) {
-            body {
-                height: 2350px;
-                background-size: 960px;
-                font-size: 9px;
+        .hero p {
+            max-width: 320px;
+            white-space: pre-wrap;
+            color: var(--black-black072, rgba(36, 42, 48, 0.72));
+            font-family: Pretendard;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 155%; /* 24.8px */
+            letter-spacing: -0.32px;
+        }
+
+        .chat-img-container{
+            position: absolute;
+            top: 600px;
+            padding: 2px 2px 0 2px;
+            margin: 0 20px;
+
+            .chat-img{
+                margin-bottom: -4px;
+                width: 100%;
+                max-width: 1195px;
+                max-height: 669px;
+            }
+        }
+
+        .wait-benefit{
+            padding: 12px 0;
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            align-items: center;   
+            text-align: left;
+        }
+
+        .wait-benefit-border{
+            width: 574px;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(36, 42, 48, 0.00) 0%, rgba(36, 42, 48, 0.09) 14%, rgba(36, 42, 48, 0.09) 83.5%, rgba(36, 42, 48, 0.00) 100%);
+            background-blend-mode: multiply;
+        }
+
+        .wait-benefit-item{
+            display: flex;
+            gap: 8px;
+            align-items: center;
+
+            p{
+                text-align: left;
+                color: #034C0B;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 155%; /* 20.15px */
+                letter-spacing: -0.26px;
+            }
+        }
+
+        .wait-benefit-item-img{
+            width: 20px;
+            height: 20px;
+        }
+
+        .wait-benefit-item.reward{
+            p{
+                color: #513400;
+            }
+        }
+
+        .tooltip-container {
+            width: 20px;
+            height: 20px;
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            /* 파란효과 제거 */
+            -webkit-tap-highlight-color: transparent;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            outline: none;
+        }
+
+        .info-icon {
+            width: 20px;
+            height: 20px;
+            margin-left: -4px;            
+        }
+
+        .tooltip-container:focus {
+            outline: none;
+            box-shadow: none;
+            
+        }
+
+        .tooltip-container {
+            transition: transform 0.5s ease; 
+        }
+
+        .tooltip-container:hover {
+            transform: scale(1.1); 
+        }
+
+
+        .tooltip {
+            display: none;
+            position:absolute;
+            background: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.06) inset, 0px 0px 0px 1px rgba(0, 0, 0, 0.12) inset, 0px 6px 24px 0px rgba(0, 0, 0, 0.16);
+            padding: 8px 12px;
+            font-family: Pretendard;
+            font-size: 12px;
+            color: #242A30;
+            z-index: 1001;
+            min-width: 270px;
+            width: max-content;
+            bottom: 30px;
+            right: -10px;
+        }
+
+        .tooltip.active {
+            display: block;
+        }
+
+        .tooltip p{
+            text-align: left;
+            color: #242A30 !important;
+        }
+
+        .tooltip ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin: 6px 0 0 0;
+        }
+
+        .tooltip li {
+            text-align: left;
+            line-height: 155%;
+            color: #242A30;
+            span{
+                color: #664BF4;
+            }
+        }
+
+        .features{
+            margin: 0 20px;
+        }
+
+        .feature-card{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin: 0 auto;
+
+            height: 550px;
+            max-width: 1100px;
+
+            white-space: pre-wrap;
+
+            img{
+                width: 100%;
             }
 
-            h2 {
-                top: 268px;
-                font-size: 9px;
+
+            .feature-img-container{
+                max-width: 630px;
             }
 
-            p {
-                font-size: 15px;
+            &:nth-child(odd){
+                flex-direction: row-reverse;
+                .feature-img-container{
+                    max-width: 550px;
+                }
+            } 
+        }
 
-                strong {
-                    padding: 1px 3px;
-                    border-width: 1px;
-                    border-color: rgba(255, 255, 255, 0.5);
-                    border-style: solid;
-                    border-radius: 2px;
-                    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.5);
+        .feature-card-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .feature-title{
+            text-align: left;
+            color: var(--primary-primary, #664BF4);
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 160%; /* 32px */
+            letter-spacing: -0.4px;
+        }
+
+        .feature-content{
+            text-align: left;
+            color: var(--black, #242A30);
+            font-size: 42px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%; /* 54.6px */
+            letter-spacing: -0.84px;
+        }
+
+        .feature-description{
+            text-align: left;
+            white-space: pre-wrap;
+            color: var(--black-black080, rgba(36, 42, 48, 0.80));
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 160%; /* 28.8px */
+            letter-spacing: -0.36px;
+        }
+
+        .wait-banner{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            padding: 94px 0 76px;
+            border-radius: 16px;
+            background: radial-gradient(100% 100% at 50% 50%, rgba(143, 31, 255, 0.75) 0%, rgba(49, 38, 205, 0.58) 100%), #7000FF;
+
+            
+            h2{
+                margin-bottom: 10px;
+                color: var(--white, #FFF);
+                text-align: center;
+                font-family: Pretendard;
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 130%; /* 62.4px */
+                letter-spacing: -0.96px;
+            }
+
+
+            .typeform-btn{
+                button{
+                    padding: 12px 14.5px !important;
+                    height: auto !important;
+                    width: auto !important;
+                    background-color: #fff !important;
+                    color: #664BF4 !important;
+                    text-align: center !important;
+                    font-family: Pretendard !important;
+                    font-size: 16px !important;
+                    font-style: normal !important;
+                    font-weight: 600 !important;
+                    line-height: normal !important;
+                    letter-spacing: -0.32px !important;
                 }
             }
 
-            p.p-slack {
-                top: 489px;
+            .wait-benefit-item{
+                p{
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 155%; /* 21.7px */
+                    letter-spacing: -0.28px;
+                    color: #FFF;
+                }
             }
 
-            p.p-notion {
-                top: 786px;
+            .wait-benefit-border{
+                background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.20) 14%, rgba(255, 255, 255, 0.20) 83.5%, rgba(255, 255, 255, 0.00) 100%);
+            }
+        }
+
+        .functions{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 60px;
+            margin: 150px 20px 0 20px;
+
+
+            dl{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 18px;
+
+                font-style: normal;
+                dt{
+                    color: #000;
+                    font-size: 30px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 120%; /* 36px */
+                    letter-spacing: -0.6px;
+                }
+
+                dd{
+                    white-space: pre-wrap;
+                    padding: 0 34px;
+                    color: var(--black-black072, rgba(36, 42, 48, 0.72));
+                    font-size: 15px;
+                    font-weight: 500;
+                    line-height: 160%; /* 24.8px */
+                    letter-spacing: -0.3px;
+                }
+            }
+        }
+
+        .functionItem-container{
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1155px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-column: span 2;
+            gap: 27px 24px;
+        }
+
+        .functionItem-card{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 40px 0 0 0;
+            border-radius: 20px;
+            background: #FFF;
+            box-shadow: 0px 0px 0px 0.5px #E4E5E9, 0px 0px 0px 1px rgba(228, 229, 233, 0.60), 0px 0px 0px 3.5px #F9F9FB, 0px 0px 0px 4px #F3F4F7;
+
+            &:nth-child(2){
+                grid-column: span 2;
             }
 
-            p.p-figma {
-                top: 1083px;
+            &:nth-child(3){
+                grid-column: span 3;
             }
 
-            p.p-github {
-                top: 1377px;
+            &:nth-child(4){
+                grid-column: span 3;
             }
 
-            p.p-joint {
-                top: 1684px;
+            &:nth-child(5){
+                grid-column: span 2;
+            }
+        }
+
+        .functionItem-card-content{
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 0 81px 30px 30px;
+        }
+
+        .functionItem-title{
+            text-align: left;
+            color: #31373D;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 140%; /* 25.2px */
+            letter-spacing: -0.36px;
+        }
+
+        .functionItem-description{
+            text-align: left;
+            color: var(--black-black056, rgba(36, 42, 48, 0.56));
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 155%; /* 24.8px */
+            letter-spacing: -0.32px;
+        }
+
+        .functionItem-img{
+            width: 100%;
+            height: auto;
+            border-radius: 0 0 20px 20px;
+        }
+
+        footer {
+            background: var(--black, #242A30);
+            padding: 30px 0;
+        }
+
+        .footer-container{
+            display: flex;
+            justify-content: space-between;
+            max-width: 1190px;
+            margin: 0 auto;
+            padding: 0 20px;
+            color: #FFF !important;
+            font-size: 15px;
+        }
+
+        .social-links{
+            a {
+                width: 24px;
+                height: 24px;
+                color: inherit; /* 부모 요소의 색상을 상속받음 (파란색 제거) */
+                text-decoration: none; /* 밑줄 제거 */
+                
+                i{
+                    font-size: 24px;
+                }
+            }
+            a:hover {
+                text-decoration: none; /* 호버 시 밑줄도 안 생기게 */
+            }
+        }
+
+        /* 여기부터는 main for mobile style 입니다. */
+
+        @media screen and (max-width: 1000px) {
+
+            .chat-img-container{
+            position: initial;
+            margin:0;      
+
+            .chat-img{
+                width: 100%;
+            }
+        }
+
+            .gnb{
+                padding: 13px 0;
             }
 
-            div.contact {
-                top: 2145px;
+            .gnb.scrolled{
+                padding-bottom: 0;
             }
 
-            div.contact a {
-                font-size: 16px;
+            .navbar .logo {
+                display: flex;
+                margin-left: 0;
+                padding: 2px 5px 2px 18.5px;
+            }
+
+            .navbar-btns{
+                gap: 4px;
+                margin-right: 0;
+                padding-right: 16px;
+            }
+
+            .share-btn{
+                padding: 4px;
+                border-radius: 10px;
+                background: var(--white, #FFF);
+                box-shadow: none;
+                width: 32px;
+                height: 32px;
+                img{
+                    width: 20px;
+                    height: auto;
+                }
+            }
+
+            .nav-scrolled-text{
+                display: none !important;
+            }
+
+            .gnb.scrolled .nav-banner{
+                display: block;
+                background-color: #242A30;
+                padding: 6px 0;
+                margin: 11px auto 0 auto;
+
+                color: var(--white, #FFF);
+                font-family: Pretendard;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 155%; /* 20.15px */
+                letter-spacing: -0.26px;
+
+                animation: fadeIn 0.5s ease forwards;
+
+                .rainbow{
+                    background: linear-gradient(90deg, #FEF1FF 0%, #FDD2FF 18.5%, #FBFEE5 40.5%, #CCF7FC 69%, #F9F5FF 100%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    color: transparent;
+                    background-size: 200% 200%;
+                    animation: rainbow 4s ease infinite;
+                }
+            }
+
+            main{
+                margin: 0;
+                padding-bottom: 48px;
+            }
+
+            .hero {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            background: #FFF;
+            background: radial-gradient(rgba(111, 72, 235, 0.1), rgba(111, 72, 235, 0));
+            border: none;
+
+            .typeform-btn{
+                button{
+                    margin: 0 0 2px 0 !important;
+                    height: 48px !important;
+                    padding: 12px 20px !important;
+                    font-size: 16px !important;
+                }
+            }
+        }
+
+            .hero-box{
+                padding: 116px 0 0 0;
+                gap: 30px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+                letter-spacing: -0.64px;
+            }
+
+            .hero p {
+                max-width: 320px;
+                font-size: 15px;
+                letter-spacing: -0.3px;
+            }
+
+            .wait-benefit{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 12px 22.5px;
+                gap: 8px;
+            }
+
+            .wait-benefit-border{
+                max-width: 340px;
+                width: 100%;
+            }
+
+            .tooltip {
+                font-size: 12px;
+                max-width: 200px;
+                padding: 10px 12px;
+            }
+
+            .tooltip::before {
+                width: 8px;
+                height: 8px;
+            }
+
+            .features{
+                margin: 40px 0 0 0;
+                display: flex;
+                flex-direction: column;
+                gap: 48px;
+            }
+
+            .feature-card{
+                display: flex;
+                flex-direction: column !important;
+                align-items: flex-start;
+                margin: 0 auto;
+                white-space: pre-wrap;
+                gap: 36px;
+                width: 100%;
+                max-width: 390px;
+                justify-content: flex-start;
+                height: auto;
+
+                img{
+                    width: 100%;
+                    max-width: 390px;
+                }
+
+                .feature-img-container{
+                    display: contents;
+                }
+
+
+            }
+
+            .feature-card-content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 20px;
+                padding: 0 24px;
+            }
+
+            .feature-title{
+                text-align: left;
+                color: var(--primary-primary, #664BF4);
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 160%; /* 32px */
+                letter-spacing: -0.4px;
+            }
+
+            .feature-content{
+                text-align: left;
+                color: var(--black, #242A30);
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 130%; /* 54.6px */
+                letter-spacing: -0.84px;
+            }
+
+            .feature-description{
+                text-align: left;
+                color: var(--black-black080, rgba(36, 42, 48, 0.80));
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 160%; /* 28.8px */
+                letter-spacing: -0.36px;
+                max-width: 285px;
+                white-space: initial;
+            }
+
+            .wait-banner{
+                margin: 24px 8px 48px 8px;
+                padding: 80px 27px;
+                gap: 30px;
+
+                h2{
+                    font-size: 28px;
+                    letter-spacing: -0.56px;
+                }
+            }
+
+            .wait-benefit-container{
+                margin-top: 2px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .functions{
+                margin: 0;
+                padding: 32px 16px;
+                gap: 36px;
+
+                dl{
+                    white-space: pre-wrap;
+                    gap: 24px;
+                }
+            }
+
+            .functionItem-container{
+                margin: 0 auto;
+                width: 100%;
+                max-width: 390px;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+
+        @keyframes skeleton {
+            0% { background-color: #f0f0f0; }
+            50% { background-color: #e0e0e0; }
+            100% { background-color: #f0f0f0; }
+        }
+
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+                transform: translateY(0);
+                visibility: visible;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-20px); /* 위로 이동하며 사라짐 */
+                visibility: hidden;
             }
         }
     </style>
 </head>
 <body>
-<h2>Global Standard for Communication<br/>with External Partners</h2>
+    <script>
+        const heroContent = {
+            title: '대화가 쌓이면\n고객 관계가 보입니다',
+            description: '여러 고객과의 소통, 여기저기 흩어져 불편하시죠?\n중요한 컨텍스트를 놓치지 말고 한 곳에서 대화하세요.\n팀 커뮤니케이션으로 더 강한 고객 관계를 만듭니다.',
+        }
 
-<p class="p-slack">만약 우리 <strong>사내 직원들 간의 소통</strong>을 <br/>실시간으로 확인하고 참여할 수 있다면?</p>
-<p class="p-notion">만약 우리 <strong>직원들 간의 문서</strong>를 <br/>실시간으로 확인하고 참여할 수 있다면?</p>
-<p class="p-figma">만약 우리 <strong>디자이너들의 작업물</strong>을 <br/>실시간으로 확인하고 참여할 수 있다면?</p>
-<p class="p-github">만약 우리 <strong>개발자들의 코드</strong>를 <br/>실시간으로 확인하고 참여할 수 있다면?</p>
-<p class="p-joint">만약 우리 <strong>외부 파트너들과의 소통</strong>을 <br/>실시간으로 확인하고 참여할 수 있다면?</p>
+        const benefitList = {
+            free: '베타 기간동안 무료로 경험해 보세요.',
+            reward: '거래처 담당자 초대하면, 리워드를 드려요.',
+        }
 
-<div class="contact">
-    <div><a href="mailto:waitfor@joint.now">✉️ waitfor@joint.now</a></div>
-    <div>Global Standard for Communication with External Partners</div>
-</div>
+        const featuresList = [
+            {
+                title: '그룹 대화',
+                content:'거래처 중심\n메신저의 새로운 기준',
+                description:"여러 채널에 흩어진 고객 대화를 한 곳에서 진행할 수 있어요.\n거래처별로 소통 내역을 모아 보면, 관계까지\n한눈에 파악할 수 있어요.",
+            },
+            {
+                title:"멤버 관리",
+                content:"우리 팀원들의\n고객 소통을 한 눈에",
+                description:"팀원들이 고객과 나눈 대화를 한눈에 확인하고\n소통 이력을 투명하게 공유할 수 있어요."
+            },
+            {
+                title:"거래처 관리",
+                content:"흩어지지 않는\n거래처 인사이트",
+                description:"회사와 소통했던 거래처 데이터를 한 곳에서\n조회하고 지속적으로 정보를 업데이트할 수 있어요."
+            }
+        ]
+
+        const functionsContent = {
+            title: '외부 협업,\n 이제 이 정도는 기본이죠.',
+            description: '고객과의 모든 소통을 조인트, 한 곳에서 진행하세요.\n흩어진 대화와 정보 찾기에 소모되는 시간을 줄여드립니다.\n이제 효율적으로 대응하고, 더 중요한 일에 집중할 수 있어요.',
+            mobileDescription: '조인트로 고객 소통을 한 곳에서.\n흩어진 대화 없이, 더 중요한 일에 집중하세요.'
+        }
+
+        const functionsList = [
+            {
+                title: '손쉽게 시작하세요. 가입 없이.',
+                description:'회원가입 없이도 초대받으면 즉시 참여할 수 있어요.\n간편하게 접속하고, 필요한 대화를 빠르게 시작하세요.',
+            },
+            {
+                title: '고객과 대화, 팀과 소통을 한 곳에서.',
+                description:'원활한 대화를 나누면서도, 내부에서는 민감한 이슈를 \n조용히 논의할 수 있습니다. 하나의 공간에서 관리하세요.',
+            },
+            {
+                title: 'AI 요약으로, 더 빠르게 더 스마트하게.',
+                description:'한눈에 보는 업무 대화 요약. AI가 주요 키포인트를 정리해, \n놓치는 것 없이 중요한 내용을 빠르게 확인할 수 있어요.',
+            },
+            {
+                title: '파일 공유의 혁신',
+                description:'고객과의 대화에서 오간 중요한 파일들을 자동으로 정리해, \n언제든 쉽게 조회하고 활용할 수 있어요.',
+            }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const gnb = document.querySelector('.gnb');
+            const logo = document.querySelector('.logo');
+
+            if (logo) {
+                logo.addEventListener('click', (e) => {
+                    e.preventDefault(); // 기본 링크 동작 방지 (만약 링크로 사용 중이라면)
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth' // 부드러운 스크롤 효과
+                    });
+                });
+            }
+
+            if (gnb) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 100) {
+                        gnb.classList.add('scrolled');
+                    } else {
+                        gnb.classList.remove('scrolled');
+                    }
+                });
+            }
+
+            const shareBtnMobile = document.getElementById('share-btn-mobile');
+            const shareBtnDesktop = document.getElementById('share-btn-desktop');
+            const shareUrl = 'https://www.joint.now/';
+
+            // 공유 로직을 별도의 함수로 분리
+            async function handleShare() {
+                if (navigator.share) {
+                    try {
+                        await navigator.share({
+                            title: 'JOINT - 고객 관계를 위한 새로운 대화 플랫폼',
+                            text: '여러 고객과의 소통을 한 곳에서. JOINT로 더 강한 관계를 만들어 보세요.',
+                            url: shareUrl,
+                        });
+                        console.log('공유 성공');
+                    } catch (error) {
+                        console.log('공유 실패:', error);
+                    }
+                } else {
+                    try {
+                        await navigator.clipboard.writeText(shareUrl);
+                        alert('설문 링크가 클립보드에 복사되었습니다: ' + shareUrl);
+                    } catch (error) {
+                        console.error('복사 실패:', error);
+                        alert('링크 복사에 실패했습니다. 수동으로 복사해주세요: ' + shareUrl);
+                    }
+                }
+            }
+
+            // 두 버튼에 동일한 이벤트 리스너 적용
+            shareBtnMobile.addEventListener('click', handleShare);
+            shareBtnDesktop.addEventListener('click', handleShare);
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const infoIcons = document.querySelectorAll('.info-icon');
+            let currentTooltip = null; // 현재 열린 툴팁 추적
+
+            infoIcons.forEach(icon => {
+                // 클릭 시 툴팁 표시 (모든 기기) 및 애니메이션 트리거
+                icon.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const tooltip = icon.nextElementSibling || icon.querySelector('.tooltip');
+                    if (!tooltip) return;
+
+                    // 이미 열린 툴팁이 있다면 닫기
+                    if (currentTooltip && currentTooltip !== tooltip) {
+                        currentTooltip.classList.remove('active');
+                    }
+
+                    // 툴팁 토글
+                    tooltip.classList.toggle('active');
+                    currentTooltip = tooltip.classList.contains('active') ? tooltip : null;
+
+                    // 아이콘 클릭 시 애니메이션 리셋 (스케일 복원)
+                    icon.style.transform = 'scale(1)';
+                    setTimeout(() => {
+                        icon.style.transform = ''; // 애니메이션 초기화
+                    }, 300); // 트랜지션 시간과 맞춤
+
+                    // 외부 클릭이나 스크롤 시 툴팁 닫기
+                    const handleCloseTooltip = (event) => {
+                        if (!icon.contains(event.target) && !tooltip.contains(event.target)) {
+                            tooltip.classList.remove('active');
+                            currentTooltip = null;
+                            // 아이콘 애니메이션 리셋
+                            icon.style.transform = '';
+                            // 이벤트 리스너 정리
+                            document.removeEventListener('click', handleCloseTooltip);
+                            window.removeEventListener('scroll', handleCloseTooltip);
+                        }
+                    };
+
+                    // 툴팁 닫기 위한 이벤트 리스너 추가
+                    document.addEventListener('click', handleCloseTooltip);
+                    window.addEventListener('scroll', handleCloseTooltip);
+                });
+
+                // 데스크톱(화면 너비 1000px 이상)에서 호버 시 표시 및 애니메이션
+                if (window.innerWidth > 1000) {
+                    icon.addEventListener('mouseenter', () => {
+                        const tooltip = icon.nextElementSibling || icon.querySelector('.tooltip');
+                        if (tooltip) {
+                            tooltip.classList.add('active');
+                            currentTooltip = tooltip;
+                            icon.style.transform = 'scale(1.1)'; // 호버 시 커짐
+                        }
+                    });
+
+                    icon.addEventListener('mouseleave', () => {
+                        const tooltip = icon.nextElementSibling || icon.querySelector('.tooltip');
+                        if (tooltip) {
+                            tooltip.classList.remove('active');
+                            currentTooltip = null;
+                            icon.style.transform = 'scale(1)'; // 원래 크기로 복원
+                        }
+                    });
+                }
+            });
+
+            // 추가 정리: 아이콘이나 툴팁 외부 클릭 시 툴팁 닫기
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.tooltip-container') && currentTooltip) {
+                    currentTooltip.classList.remove('active');
+                    currentTooltip = null;
+                    // 아이콘 애니메이션 리셋
+                    infoIcons.forEach(icon => icon.style.transform = '');
+                }
+            });
+
+            // 스크롤 시 툴팁 닫기 및 아이콘 애니메이션 리셋
+            window.addEventListener('scroll', () => {
+                if (currentTooltip) {
+                    currentTooltip.classList.remove('active');
+                    currentTooltip = null;
+                    infoIcons.forEach(icon => icon.style.transform = ''); // 아이콘 복원
+                }
+            });
+        });
+    </script>
+
+    <header class="gnb">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./img/joint-logo.svg" alt="">
+            </div>
+            <div class="navbar-btns">
+                <p class="nav-scrolled-text"><strong>조인트 Beta <span class="joint-color">런칭 이벤트</span></strong> ・ 대기 리스트 등록하면 리워드를 드려요</p>
+                <div class="typeform-btn" data-tf-live="01JNDN5KGNBVECEKQJH73XRN32"></div><script src="//embed.typeform.com/next/embed.js"></script>
+                <button id="share-btn-mobile" class="share-btn for-mobile">
+                    <img src="./img/share-icon.svg" alt="">
+                </button>
+                <button id="share-btn-desktop" class="share-btn for-desktop">
+                    공유하기
+                </button>
+            </div>
+        </nav>
+        <div class="nav-banner">
+            <span class="rainbow">Beta 런칭 이벤트</span> <span class="gray-text">・</span> 대기 리스트 등록하면 리워드를 드려요
+        </div>
+    </header>
+
+    <main class="for-desktop">
+        <section class="hero">
+            <div class="vertical-line-out">
+                <div class="hero-box">
+                    <script>
+                        document.write(`
+                            <h1>${heroContent.title}</h1>
+                            <p>${heroContent.description}</p>
+                        `)
+                    </script>
+                    <div class="typeform-btn" data-tf-live="01JNDN7R37WECJ19MJ769G0R4Y"></div><script src="//embed.typeform.com/next/embed.js"></script>
+                    <div class="wait-benefit-container">
+                        <div class="wait-benefit-border"></div>
+                            <script>
+                                document.write(`
+                                    <div class="wait-benefit">
+                                        <div class="wait-benefit-item">
+                                            <img class="wait-benefit-item-img" src="./img/benefit-badge-1.svg" >
+                                            <p>${benefitList.free}</p>
+                                        </div>
+                                        <div class="wait-benefit-item reward">
+                                            <img class="wait-benefit-item-img" src="./img/benefit-badge-2.svg" >
+                                            <p>${benefitList.reward}</p>
+                                            <div class="tooltip-container">
+                                                <img src="./img/info-icon.svg" class="info-icon" alt="" data-tooltip="">
+                                                <div class="tooltip">
+                                                    <p>리워드 안내</p>
+                                                    <ul>
+                                                        <li><strong>대상:</strong> 대기리스트에 사전등록 하신 분</li>
+                                                        <li><strong>혜택:</strong> 거래처 담당자 초대 & 활성화시, <span>1명당 1만 원 상당 보상</span></li>
+                                                        <li><strong>조건:</strong> 선택 질문에 답변한 <span>선착순 500명 한정</span></li>
+                                                        <li>제출하신 분들에게만 별도 상세 공지</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `)
+                            </script>
+                        <div class="wait-benefit-border"></div>
+                    </div>
+                    
+                    <div class="chat-img-container">
+                        <img class="chat-img" alt="" src="./img/landing-chat.webp" />
+                    </div>
+                </div>
+            </div>  
+        </section>
+            
+        </section>
+
+        <section class="features">
+            <script>
+                featuresList.forEach((feature, index) => {
+                    document.write(`
+                        <div class="feature-card">
+                            <div class="feature-card-content">
+                                <h3 class="feature-title">${feature.title}</h3>
+                                <p class="feature-content">${feature.content}</p>
+                                <p class="feature-description">${feature.description}</p>
+                            </div>
+                            <div class="feature-img-container">
+                                <img class="feature-img" loading="lazy" src="./img/feature-${index + 1}.webp" alt="">
+                            </div>
+                        </div>
+                    `)
+                })
+            </script>
+            <img style="width: 630px;" class="feature-img" loading="lazy" src="./img/feature-1.png" alt="">
+            <img style="width: 630px;" class="feature-img" loading="lazy" src="./img/feature-1@3x.png" alt="">
+            <img style="width: 630px;"f class="feature-img" loading="lazy" src="./img/feature-1.svg" alt="">
+            <img style="width: 630px;"f class="feature-img" loading="lazy" src="./img/feature-1@3x.webp" alt="">
+        </section>
+
+        <gap style="display:block; height: 60px;"></gap>
+
+        <section class="wait-banner">
+            <h2>경험해 보세요<br/>고객과의 대화가 달라집니다</h2>
+            <div class="typeform-btn" data-tf-live="01JNDN6RCBPSSC9RQ96J09XQ9W"></div><script src="//embed.typeform.com/next/embed.js"></script>
+            <div class="wait-benefit-container">
+                <div class="wait-benefit-border"></div>
+                    <script>
+                        document.write(`
+                            <div class="wait-benefit">
+                                <div class="wait-benefit-item">
+                                    <img class="wait-benefit-item-img" loading="lazy" src="./img/benefit-badge-3.svg" >
+                                    <p>${benefitList.free}</p>
+                                </div>
+                                <div class="wait-benefit-item reward">
+                                    <img class="wait-benefit-item-img" loading="lazy" src="./img/benefit-badge-4.svg" >
+                                    <p>${benefitList.reward}</p>
+                                    <div class="tooltip-container">
+                                        <img src="./img/info-icon-purple.svg" class="info-icon" alt="" data-tooltip="">
+                                        <div class="tooltip">
+                                            <p>리워드 안내</p>
+                                            <ul>
+                                                <li><strong>대상:</strong> 대기리스트에 사전등록 하신 분</li>
+                                                <li><strong>혜택:</strong> 거래처 담당자 초대 & 활성화시, <span>1명당 1만 원 상당 보상</span></li>
+                                                <li><strong>조건:</strong> 선택 질문에 답변한 <span>선착순 500명 한정</span></li>
+                                                <li>제출하신 분들에게만 별도 상세 공지</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `)
+                    </script>
+                <div class="wait-benefit-border"></div>
+            </div>
+        </section>
+
+        <section class="functions">
+            <dl>
+                <script>
+                    document.write(`
+                        <dt>${functionsContent.title}</dt>
+                        <dd>${functionsContent.description}</dd>
+                    `)
+                </script>
+            </dl>
+            <div class="functionItem-container">
+                <script>
+                    functionsList.forEach((functionItem, index) => {
+                        document.write(`
+                            <div class="functionItem-card">
+                                <div class="functionItem-card-content">
+                                    <h3 class="functionItem-title">${functionItem.title}</h3>
+                                    <p class="functionItem-description">${functionItem.description}</p>
+                                </div>
+                                <img class="functionItem-img" loading="lazy" src="./img/functions-${index + 1}.webp" alt="">
+                            </div>
+                        `)
+                    })
+                </script>
+            </div>
+        </section>
+    </main>
+
+    <main class="for-mobile">
+        <section class="hero">
+            <div class="hero-box">
+                <script>
+                    document.write(`
+                        <h1>${heroContent.title}</h1>
+                        <p>${heroContent.description}</p>
+                    `)
+                </script>
+                <div class="typeform-btn" data-tf-live="01JNDN7R37WECJ19MJ769G0R4Y"></div><script src="//embed.typeform.com/next/embed.js"></script>
+
+                <div class="wait-benefit-container">
+                    <div class="wait-benefit-border"></div>
+                        <script>
+                            document.write(`
+                                <div class="wait-benefit">
+                                    <div class="wait-benefit-item">
+                                        <img class="wait-benefit-item-img" loading="lazy" src="./img/benefit-badge-1.svg" >
+                                        <p>${benefitList.free}</p>
+                                    </div>
+                                    <div class="wait-benefit-item reward">
+                                        <img class="wait-benefit-item-img" loading="lazy" src="./img/benefit-badge-2.svg" >
+                                        <p>${benefitList.reward}</p>
+                                        <div class="tooltip-container">
+                                            <img src="./img/info-icon.svg" class="info-icon" alt="" data-tooltip="">
+                                            <div class="tooltip">
+                                                <p>리워드 안내</p>
+                                                <ul>
+                                                    <li><strong>대상:</strong> 대기리스트에 사전등록 하신 분</li>
+                                                    <li><strong>혜택:</strong> 거래처 담당자 초대 & 활성화시, <span>1명당 1만 원 상당 보상</span></li>
+                                                    <li><strong>조건:</strong> 선택 질문에 답변한 <span>선착순 500명 한정</span></li>
+                                                    <li>제출하신 분들에게만 별도 상세 공지</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            `)
+                        </script>
+                    <div class="wait-benefit-border"></div>
+                </div>
+                
+                <div class="chat-img-container">
+                    <img class="chat-img" alt="" loading="lazy" src="./img/mobile-landing-chat.webp" />
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <script>
+                featuresList.forEach((feature, index) => {
+                    document.write(`
+                        <div class="feature-card">
+                            <div class="feature-card-content">
+                                <h3 class="feature-title">${feature.title}</h3>
+                                <p class="feature-content">${feature.content}</p>
+                                <p class="feature-description">${feature.description}</p>
+                            </div>
+                            <div class="feature-img-container">
+                                <img class="feature-img" loading="lazy" src="./img/mobile-feature-${index + 1}.webp" alt="">
+                            </div>
+                        </div>
+                    `)
+                })
+            </script>
+        </section>
+
+        <section class="wait-banner">
+            <h2>경험해보세요<br/>고객과의 대화가 달라집니다</h2>
+            <div class="typeform-btn" data-tf-live="01JNDN6RCBPSSC9RQ96J09XQ9W"></div><script src="//embed.typeform.com/next/embed.js"></script>
+            <div class="wait-benefit-container">
+                <div class="wait-benefit-border"></div>
+                    <script>
+                        document.write(`
+                            <div class="wait-benefit">
+                                <div class="wait-benefit-item">
+                                    <img class="wait-benefit-item-img" loading="lazy" src="./img/benefit-badge-3.svg" >
+                                    <p>${benefitList.free}</p>
+                                </div>
+                                <div class="wait-benefit-item reward">
+                                    <img class="wait-benefit-item-img" loading="lazy" src="./img/benefit-badge-4.svg" >
+                                    <p>${benefitList.reward}</p>
+                                    <div class="tooltip-container">
+                                        <img src="./img/info-icon-purple.svg" class="info-icon" alt="" data-tooltip="">
+                                        <div class="tooltip">
+                                            <p>리워드 안내</p>
+                                            <ul>
+                                                <li><strong>대상:</strong> 대기리스트에 사전등록 하신 분</li>
+                                                <li><strong>혜택:</strong> 거래처 담당자 초대 & 활성화시, <span>1명당 1만 원 상당 보상</span></li>
+                                                <li><strong>조건:</strong> 선택 질문에 답변한 <span>선착순 500명 한정</span></li>
+                                                <li>제출하신 분들에게만 별도 상세 공지</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `)
+                    </script>
+                <div class="wait-benefit-border"></div>
+            </div>
+        </section>
+
+        <section class="functions">
+            <dl>
+                <script>
+                    document.write(`
+                        <dt>${functionsContent.title}</dt>
+                        <dd>${functionsContent.mobileDescription}</dd>
+                    `)
+                </script>
+            </dl>
+            <div class="functionItem-container">
+                <script>
+                    functionsList.forEach((functionItem, index) => {
+                        document.write(`
+                            <div class="functionItem-card">
+                                <div class="functionItem-card-content">
+                                    <h3 class="functionItem-title">${functionItem.title}</h3>
+                                    <p class="functionItem-description">${functionItem.description}</p>
+                                </div>
+                                <img class="functionItem-img" loading="lazy" src="./img/mobile-functions-${index + 1}.webp" alt="">
+                            </div>
+                        `)
+                    })
+                </script>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>© 2025 Joint. All rights reserved.</p>
+            <div class="social-links">
+                
+                <a href="https://www.linkedin.com/company/jointnow/about/" target="_blank" rel="noopener noreferrer" >
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
