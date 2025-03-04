@@ -286,6 +286,7 @@
             gap: 16px;
             justify-content: center;
             align-items: center;   
+            text-align: left;
         }
 
         .wait-benefit-border{
@@ -301,6 +302,7 @@
             align-items: center;
 
             p{
+                text-align: left;
                 color: #034C0B;
                 font-size: 13px;
                 font-style: normal;
@@ -414,26 +416,21 @@
 
             white-space: pre-wrap;
 
-            &:nth-child(2){
-                .feature-img-container{
-                    max-width: 630px;   
-                    
-                }
+            img{
+                width: 100%;
             }
 
-            &:nth-child(3){
+
+            .feature-img-container{
+                max-width: 630px;
+            }
+
+            &:nth-child(odd){
                 flex-direction: row-reverse;
                 .feature-img-container{
                     max-width: 550px;
-                    margin-left: -100px;
                 }
-            }
-
-            &:nth-child(4){
-                .feature-img-container{
-                    max-width: 632px;   
-                }
-            }
+            } 
         }
 
         .feature-card-content{
@@ -672,7 +669,8 @@
         @media screen and (max-width: 1000px) {
 
             .chat-img-container{
-            position: initial;            
+            position: initial;
+            margin:0;      
 
             .chat-img{
                 width: 100%;
@@ -835,14 +833,6 @@
                 }
 
 
-                &:nth-child(3){
-                    .feature-img-container{
-                        margin-left: 0;
-                        img{
-                            margin-left: -24px;
-                        }
-                    }
-                }
             }
 
             .feature-card-content{
@@ -894,11 +884,6 @@
                     font-size: 28px;
                     letter-spacing: -0.56px;
                 }
-            }
-
-            .wait-benefit{
-                gap: 8px;
-                padding: 12px 0;
             }
 
             .wait-benefit-container{
@@ -1234,7 +1219,7 @@
                     </div>
                     
                     <div class="chat-img-container">
-                        <img class="chat-img" alt="" src="./img/landing-chat.png" />
+                        <img class="chat-img" alt="" src="./img/landing-chat.webp" />
                     </div>
                 </div>
             </div>  
@@ -1253,13 +1238,16 @@
                                 <p class="feature-description">${feature.description}</p>
                             </div>
                             <div class="feature-img-container">
-                                <img class="feature-img" loading="lazy" src="./img/feature-${index + 1}.svg" alt="">
+                                <img class="feature-img" loading="lazy" src="./img/feature-${index + 1}.webp" alt="">
                             </div>
                         </div>
                     `)
                 })
             </script>
-            
+            <img style="width: 630px;" class="feature-img" loading="lazy" src="./img/feature-1.png" alt="">
+            <img style="width: 630px;" class="feature-img" loading="lazy" src="./img/feature-1@3x.png" alt="">
+            <img style="width: 630px;"f class="feature-img" loading="lazy" src="./img/feature-1.svg" alt="">
+            <img style="width: 630px;"f class="feature-img" loading="lazy" src="./img/feature-1@3x.webp" alt="">
         </section>
 
         <gap style="display:block; height: 60px;"></gap>
@@ -1371,7 +1359,7 @@
                 </div>
                 
                 <div class="chat-img-container">
-                    <img class="chat-img" alt="" loading="lazy" src="./img/mobile-landing-chat@x3.png" />
+                    <img class="chat-img" alt="" loading="lazy" src="./img/mobile-landing-chat.webp" />
                 </div>
             </div>
         </section>
@@ -1387,7 +1375,7 @@
                                 <p class="feature-description">${feature.description}</p>
                             </div>
                             <div class="feature-img-container">
-                                <img class="feature-img" loading="lazy" src="./img/feature-${index + 1}.svg" alt="">
+                                <img class="feature-img" loading="lazy" src="./img/mobile-feature-${index + 1}.webp" alt="">
                             </div>
                         </div>
                     `)
