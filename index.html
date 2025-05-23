@@ -86,7 +86,6 @@
             color: #664BF4;
         }
 
-
         /* 여기부터는 main for desktop style 입니다. */
 
         .gnb {
@@ -169,6 +168,54 @@
             gap: 4px;
             margin-right: 20px;
             padding-right: 13.5px;
+        }
+
+        .googleform-btn{
+            cursor: pointer;
+            display: inline-block;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            font-family: Pretendard;
+            font-weight: 700;
+            text-decoration: none;
+            transition: opacity 0.3s;
+            height: 32px;
+            padding: 7px 12px;
+            box-shadow: 0px -1px 0px 0px rgba(0,0,0,0.06) inset, 0px 0px 0px 1px rgba(0,0,0,0.08) inset, 0px 2px 6px 0px rgba(0,0,0,0.02);
+            color: #FFF;
+            background-color: #242A30;
+            font-size: 13px;
+            line-height: 140%;
+            margin-right: 8px;
+        }
+        .googleform-btn:hover {
+            background-image: linear-gradient(
+            rgba(36, 42, 48, 0.04),
+            rgba(36, 42, 48, 0.04)
+            );
+        }
+        .googleform-btn:active {
+            background-image: linear-gradient(
+            rgba(36, 42, 48, 0.08),
+            rgba(36, 42, 48, 0.08)
+            );
+        }
+        .googleform-btn.hero {
+            margin: 18px 0 8px 0;
+            height: 48px;
+            padding: 12px 20px;
+            font-size: 16px;
+            background-color: #242A30;
+            color: #FFF;
+        }
+        .googleform-btn.wait {
+            margin-bottom: 24px;
+            padding: 12px 14.5px;
+            background-color: #fff;
+            color: #664BF4;
+            font-size: 16px;
+            font-weight: 600;
         }
 
         .share-btn{
@@ -332,7 +379,6 @@
             transform: scale(1.1); 
         }
 
-
         .tooltip {
             display: none;
             position:absolute;
@@ -389,7 +435,6 @@
             img{
                 width: 100%;
             }
-
 
             .feature-img-container{
                 max-width: 630px;
@@ -465,6 +510,21 @@
                 letter-spacing: -0.96px;
             }
 
+            .googleform-btn{
+                padding: 12px 14.5px !important;
+                height: auto !important;
+                width: auto !important;
+                background-color: #fff !important;
+                color: #664BF4 !important;
+                text-align: center !important;
+                font-family: Pretendard !important;
+                font-size: 16px !important;
+                font-style: normal !important;
+                font-weight: 600 !important;
+                line-height: normal !important;
+                letter-spacing: -0.32px !important;
+            }
+
             .wait-benefit-item{
                 p{
                     font-size: 14px;
@@ -487,7 +547,6 @@
             justify-content: center;
             gap: 60px;
             margin: 150px 20px 0 20px;
-
 
             dl{
                 display: flex;
@@ -624,15 +683,14 @@
         /****************************************/
 
         @media screen and (max-width: 1000px) {
-
             .chat-img-container{
-            position: initial;
-            margin:0;      
+                position: initial;
+                margin:0;      
 
-            .chat-img{
-                width: 100%;
+                .chat-img{
+                    width: 100%;
+                }
             }
-        }
 
             .gnb{
                 padding: 13px 0;
@@ -704,13 +762,22 @@
             }
 
             .hero {
-            display: flex;
-            justify-content: center;
-            margin: 0;
-            background: #FFF;
-            background: radial-gradient(rgba(111, 72, 235, 0.1), rgba(111, 72, 235, 0));
-            border: none;
-        }
+                display: flex;
+                justify-content: center;
+                margin: 0;
+                background: #FFF;
+                background: radial-gradient(rgba(111, 72, 235, 0.1), rgba(111, 72, 235, 0));
+                border: none;
+
+                .googleform-btn{
+                    margin: 0 0 2px 0 !important;
+                    height: 48px !important;
+                    padding: 12px 20px !important;
+                    font-size: 16px !important;
+                    background-color: #242A30 !important;
+                    color: #FFF !important;
+                }
+            }
 
             .hero-box{
                 padding: 116px 0 0 0;
@@ -779,8 +846,6 @@
                 .feature-img-container{
                     display: contents;
                 }
-
-
             }
 
             .feature-card-content{
@@ -900,79 +965,6 @@
                 opacity: 0;
                 transform: translateY(-20px); /* 위로 이동하며 사라짐 */
                 visibility: hidden;
-            }
-        }
-
-        .googleform-btn {
-            cursor: pointer;
-            display: inline-block;
-            border: none;
-            outline: none;
-            border-radius: 10px;
-            font-family: Pretendard;
-            font-weight: 700;
-            text-decoration: none;
-            transition: opacity 0.3s;
-        }
-        .googleform-btn:hover {
-            background-image: linear-gradient(
-            rgba(36, 42, 48, 0.04),
-            rgba(36, 42, 48, 0.04)
-            );
-        }
-        .googleform-btn:active {
-            background-image: linear-gradient(
-            rgba(36, 42, 48, 0.08),
-            rgba(36, 42, 48, 0.08)
-            );
-        }
-        .googleform-btn.for-desktop {
-            height: 32px;
-            padding: 7px 12px;
-            box-shadow: 0px -1px 0px 0px rgba(0,0,0,0.06) inset, 0px 0px 0px 1px rgba(0,0,0,0.08) inset, 0px 2px 6px 0px rgba(0,0,0,0.02);
-            color: #FFF;
-            background-color: #242A30;
-            font-size: 13px;
-            line-height: 140%;
-            margin-right: 8px;
-        }
-        .googleform-btn.for-desktop.hero {
-            margin: 18px 0 8px 0;
-            height: 48px;
-            padding: 12px 20px;
-            font-size: 16px;
-            background-color: #242A30;
-            color: #FFF;
-        }
-        .googleform-btn.for-desktop.wait {
-            margin-bottom: 24px;
-            padding: 12px 14.5px;
-            background-color: #fff;
-            color: #664BF4;
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        @media screen and (max-width: 1000px) {
-            .googleform-btn.for-desktop {
-                display: none !important;
-            }
-            .googleform-btn.for-mobile {
-                display: inline-block !important;
-                margin: 0 0 2px 0;
-                height: 48px;
-                padding: 12px 20px;
-                font-size: 16px;
-                background-color: #242A30;
-                color: #FFF;
-            }
-            .googleform-btn.for-mobile.wait {
-                margin-bottom: 24px;
-                padding: 12px 14.5px;
-                background-color: #fff;
-                color: #664BF4;
-                font-size: 16px;
-                font-weight: 600;
             }
         }
     </style>
@@ -1184,6 +1176,7 @@
             <div class="navbar-btns">
                 <p class="nav-scrolled-text"><strong>조인트 Beta <span class="joint-color">런칭 이벤트</span></strong> ・ 대기 리스트 등록하면 리워드를 드려요</p>
                 <a href="https://forms.gle/6HVwurvcTftKb4fm7" target="_blank" rel="noopener noreferrer nofollow" class="googleform-btn for-desktop">대기리스트 등록</a>
+                <a href="https://forms.gle/6HVwurvcTftKb4fm7" target="_blank" rel="noopener noreferrer nofollow" class="googleform-btn for-mobile">대기리스트 등록</a>
                 <button id="share-btn-mobile" class="share-btn for-mobile">
                     <img src="./img/share-icon.svg" alt="">
                 </button>
@@ -1244,8 +1237,6 @@
                     </div>
                 </div>
             </div>  
-        </section>
-            
         </section>
 
         <section class="features">
@@ -1345,7 +1336,6 @@
                     `)
                 </script>
                 <a href="https://forms.gle/6HVwurvcTftKb4fm7" target="_blank" rel="noopener noreferrer nofollow" class="googleform-btn for-mobile">사전 등록하고 혜택받기</a>
-
                 <div class="wait-benefit-container">
                     <div class="wait-benefit-border"></div>
                         <script>
@@ -1404,7 +1394,7 @@
 
         <section class="wait-banner">
             <h2>경험해 보세요<br/>고객과의 대화가 달라집니다</h2>
-            <a href="https://forms.gle/6HVwurvcTftKb4fm7" target="_blank" rel="noopener noreferrer nofollow" class="googleform-btn for-mobile" style="display:inline-block; margin-bottom:24px; padding:12px 14.5px; border-radius:10px; background-color:#fff; color:#664BF4; font-family:Pretendard; font-size:16px; font-weight:600; text-decoration:none;">지금 사전 등록하기</a>
+            <a href="https://forms.gle/6HVwurvcTftKb4fm7" target="_blank" rel="noopener noreferrer nofollow" class="googleform-btn for-mobile">지금 사전 등록하기</a>
             <div class="wait-benefit-container">
                 <div class="wait-benefit-border"></div>
                     <script>
@@ -1462,20 +1452,17 @@
                 </script>
             </div>
         </section>
-
     </main>
 
     <footer>
         <div class="footer-container">
             <p>© 2025 Joint. All rights reserved.</p>
             <div class="social-links">
-                
                 <a href="https://www.linkedin.com/company/jointnow/about/" target="_blank" rel="noopener noreferrer" >
                     <i class="fab fa-linkedin"></i>
                 </a>
             </div>
         </div>
-        
     </footer>
 </body>
 </html>
