@@ -80,6 +80,7 @@
           font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
           font-size: 16px;
           line-height: 1.4;
+          overflow-x: hidden;
       }
 
       body {
@@ -795,6 +796,17 @@
               }
           }
       }
+
+
+      @media screen and (max-width: 420px) {
+          .hero-title {
+              font-size: 26px;
+          }
+
+          .hero-description {
+              font-size: 12px;
+          }
+      }
   </style>
 </head>
 <body>
@@ -821,6 +833,13 @@
                     gnb.classList.remove('scrolled');
                 }
             });
+        }
+
+        if (window.innerWidth <= 1000) {
+            document.documentElement.style.setProperty(
+                "--mobile-full-width",
+                `${window.innerWidth}px`,
+            );
         }
     });
 </script>
