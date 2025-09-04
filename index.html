@@ -338,6 +338,61 @@
           }
       }
 
+      .references {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          padding: 150px 0;
+
+          .references-text {
+              margin: 30px 0 0;
+
+              font-size: 42px;
+              font-weight: 700;
+              line-height: 130%;
+              letter-spacing: -0.84px;
+          }
+      }
+
+      .slider {
+          position: relative;
+
+          margin: 50px 0;
+          padding: 10px 0;
+
+          width: 100%;
+          overflow: hidden;
+          white-space: nowrap;
+          box-sizing: border-box;
+
+          pointer-events: none;
+
+          .slider-track {
+              display: inline-flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: flex-start;
+
+              height: 50px;
+
+              animation: scroll-left 40s linear infinite;
+          }
+
+          .slider-track img {
+              margin-right: 70px;
+          }
+      }
+
+      @keyframes scroll-left {
+          0% {
+              transform: translateX(0%);
+          }
+          100% {
+              transform: translateX(-50%);
+          }
+      }
+
       .features {
           margin: 0 20px;
       }
@@ -347,7 +402,6 @@
           justify-content: space-between;
           align-items: center;
           margin: 0 auto;
-          height: 550px;
           max-width: 1100px;
 
           img {
@@ -369,12 +423,21 @@
 
       .feature-title {
           text-align: left;
-          color: var(--primary);
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: 160%; /* 32px */
-          letter-spacing: -0.4px;
+
+          span {
+              display: inline-block;
+
+              padding: 2px 10px;
+              border-radius: 12px;
+              background: white;
+              box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08) inset;
+
+              color: var(--primary);
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 200%;
+          }
       }
 
       .feature-content {
@@ -683,6 +746,26 @@
               letter-spacing: -0.3px;
           }
 
+          .references {
+              padding: 100px 0 60px;
+
+              .references-text {
+                  padding: 0 20px;
+
+                  text-align: left;
+                  font-size: 30px;
+                  font-weight: 700;
+                  line-height: 130%;
+                  letter-spacing: -0.6px;
+              }
+          }
+
+          .slider {
+              .slider-track {
+                  animation: scroll-left 30s linear infinite;
+              }
+          }
+
           .features {
               margin: 40px 0 0 0;
               display: flex;
@@ -720,13 +803,9 @@
           }
 
           .feature-title {
-              text-align: left;
-              color: var(--primary);
-              font-size: 20px;
-              font-style: normal;
-              font-weight: 700;
-              line-height: 160%; /* 32px */
-              letter-spacing: -0.4px;
+              span {
+                  letter-spacing: -0.28px;
+              }
           }
 
           .feature-content {
@@ -799,6 +878,12 @@
       @media screen and (max-width: 420px) {
           .hero-title {
               font-size: 26px;
+          }
+
+          .references {
+              .references-text {
+                  font-size: 24px;
+              }
           }
       }
   </style>
@@ -877,10 +962,62 @@
     </div>
   </section>
 
+  <section class="references">
+    <h3 class="feature-title"><span>고객사</span></h3>
+    <p class="references-text">거래처 간 협업의 변화를 경험 중인<br/>조인트 고객사입니다</p>
+    <div class="slider">
+      <div class="slider-track">
+        <img src="./img/refs/binder.png" height="34" alt="Joint 조인트 고객사 - 바인더" title="바인더">
+        <img src="./img/refs/tosspayments.png" height="33" alt="Joint 조인트 고객사 - 토스페이먼츠" title="토스페이먼츠">
+        <img src="./img/refs/opensurvey.png" height="26" alt="Joint 조인트 고객사 - 오픈서베이" title="오픈서베이">
+        <img src="./img/refs/greeting.png" height="42" alt="Joint 조인트 고객사 - 그리팅" title="그리팅">
+        <img src="./img/refs/taxguide.png" height="47" alt="Joint 조인트 고객사 - 택스가이드" title="택스가이드">
+        <img src="./img/refs/kyeryong.png" height="30" alt="Joint 조인트 고객사 - 계룡건설" title="계룡건설">
+        <img src="./img/refs/wisebirds.png" height="45" alt="Joint 조인트 고객사 - 와이즈버즈" title="와이즈버즈">
+        <img src="./img/refs/delphyr.png" height="34" alt="Joint 조인트 고객사 - 델피어" title="델피어">
+        <img src="./img/refs/hour_min_sec.png" height="33" alt="Joint 조인트 고객사 - 아워미닛세컨즈" title="아워미닛세컨즈">
+        <img src="./img/refs/grooveplan.png" height="46" alt="Joint 조인트 고객사 - 그루브플랜" title="그루브플랜">
+
+        <img src="./img/refs/binder.png" height="34" alt="Joint 조인트 고객사 - 바인더" title="바인더">
+        <img src="./img/refs/tosspayments.png" height="33" alt="Joint 조인트 고객사 - 토스페이먼츠" title="토스페이먼츠">
+        <img src="./img/refs/opensurvey.png" height="26" alt="Joint 조인트 고객사 - 오픈서베이" title="오픈서베이">
+        <img src="./img/refs/greeting.png" height="42" alt="Joint 조인트 고객사 - 그리팅" title="그리팅">
+        <img src="./img/refs/taxguide.png" height="47" alt="Joint 조인트 고객사 - 택스가이드" title="택스가이드">
+        <img src="./img/refs/kyeryong.png" height="30" alt="Joint 조인트 고객사 - 계룡건설" title="계룡건설">
+        <img src="./img/refs/wisebirds.png" height="45" alt="Joint 조인트 고객사 - 와이즈버즈" title="와이즈버즈">
+        <img src="./img/refs/delphyr.png" height="34" alt="Joint 조인트 고객사 - 델피어" title="델피어">
+        <img src="./img/refs/hour_min_sec.png" height="33" alt="Joint 조인트 고객사 - 아워미닛세컨즈" title="아워미닛세컨즈">
+        <img src="./img/refs/grooveplan.png" height="46" alt="Joint 조인트 고객사 - 그루브플랜" title="그루브플랜">
+
+        <img src="./img/refs/binder.png" height="34" alt="Joint 조인트 고객사 - 바인더" title="바인더">
+        <img src="./img/refs/tosspayments.png" height="33" alt="Joint 조인트 고객사 - 토스페이먼츠" title="토스페이먼츠">
+        <img src="./img/refs/opensurvey.png" height="26" alt="Joint 조인트 고객사 - 오픈서베이" title="오픈서베이">
+        <img src="./img/refs/greeting.png" height="42" alt="Joint 조인트 고객사 - 그리팅" title="그리팅">
+        <img src="./img/refs/taxguide.png" height="47" alt="Joint 조인트 고객사 - 택스가이드" title="택스가이드">
+        <img src="./img/refs/kyeryong.png" height="30" alt="Joint 조인트 고객사 - 계룡건설" title="계룡건설">
+        <img src="./img/refs/wisebirds.png" height="45" alt="Joint 조인트 고객사 - 와이즈버즈" title="와이즈버즈">
+        <img src="./img/refs/delphyr.png" height="34" alt="Joint 조인트 고객사 - 델피어" title="델피어">
+        <img src="./img/refs/hour_min_sec.png" height="33" alt="Joint 조인트 고객사 - 아워미닛세컨즈" title="아워미닛세컨즈">
+        <img src="./img/refs/grooveplan.png" height="46" alt="Joint 조인트 고객사 - 그루브플랜" title="그루브플랜">
+
+        <img src="./img/refs/binder.png" height="34" alt="Joint 조인트 고객사 - 바인더" title="바인더">
+        <img src="./img/refs/tosspayments.png" height="33" alt="Joint 조인트 고객사 - 토스페이먼츠" title="토스페이먼츠">
+        <img src="./img/refs/opensurvey.png" height="26" alt="Joint 조인트 고객사 - 오픈서베이" title="오픈서베이">
+        <img src="./img/refs/greeting.png" height="42" alt="Joint 조인트 고객사 - 그리팅" title="그리팅">
+        <img src="./img/refs/taxguide.png" height="47" alt="Joint 조인트 고객사 - 택스가이드" title="택스가이드">
+        <img src="./img/refs/kyeryong.png" height="30" alt="Joint 조인트 고객사 - 계룡건설" title="계룡건설">
+        <img src="./img/refs/wisebirds.png" height="45" alt="Joint 조인트 고객사 - 와이즈버즈" title="와이즈버즈">
+        <img src="./img/refs/delphyr.png" height="34" alt="Joint 조인트 고객사 - 델피어" title="델피어">
+        <img src="./img/refs/hour_min_sec.png" height="33" alt="Joint 조인트 고객사 - 아워미닛세컨즈" title="아워미닛세컨즈">
+        <img src="./img/refs/grooveplan.png" height="46" alt="Joint 조인트 고객사 - 그루브플랜" title="그루브플랜">
+      </div>
+    </div>
+  </section>
+
   <section class="features">
     <div class="feature-card">
       <div class="feature-card-content">
-        <h3 class="feature-title">거래처 기반</h3>
+        <h3 class="feature-title"><span>거래처 기반</span></h3>
         <p class="feature-content">프로들을 위한<br/>메신저의 새로운 기준</p>
         <p class="feature-description">더 이상 개인 메신저로 사생활과 섞이지 마세요.<br/>거래처별 전용 공간에서 프로답게 협업하고,<br/>관계를 쌓아가세요.</p>
       </div>
@@ -894,14 +1031,14 @@
         <img class="feature-img" loading="lazy" src="./img/feature-2.webp" alt="Joint 조인트 팀 관리 - 우리 팀원들의 거래처 소통을 한 눈에">
       </div>
       <div class="feature-card-content">
-        <h3 class="feature-title">팀 관리</h3>
+        <h3 class="feature-title"><span>팀 관리</span></h3>
         <p class="feature-content">우리 팀원들의<br/>거래처 소통을 한 눈에</p>
         <p class="feature-description">팀원들이 거래처와 나눈 대화를 한눈에 확인하고 <br/>소통 이력을 투명하게 공유할 수 있어요.</p>
       </div>
     </div>
     <div class="feature-card">
       <div class="feature-card-content">
-        <h3 class="feature-title">거래처 관리</h3>
+        <h3 class="feature-title"><span>거래처 관리</span></h3>
         <p class="feature-content">흩어지지 않는<br/>거래처 인사이트</p>
         <p class="feature-description">모든 거래처 대화를 통합하여 팀 전체가 맥락을<br/>이해하고 함께 보는 인사이트로 만듭니다.</p>
       </div>
@@ -976,10 +1113,62 @@
     </div>
   </section>
 
+  <section class="references">
+    <h3 class="feature-title"><span>고객사</span></h3>
+    <p class="references-text">거래처 간 협업의 변화를 경험 중인<br/>조인트 고객사입니다</p>
+    <div class="slider">
+      <div class="slider-track">
+        <img src="./img/refs/binder.png" height="34" alt="Joint 조인트 고객사 - 바인더" title="바인더">
+        <img src="./img/refs/tosspayments.png" height="33" alt="Joint 조인트 고객사 - 토스페이먼츠" title="토스페이먼츠">
+        <img src="./img/refs/opensurvey.png" height="26" alt="Joint 조인트 고객사 - 오픈서베이" title="오픈서베이">
+        <img src="./img/refs/greeting.png" height="42" alt="Joint 조인트 고객사 - 그리팅" title="그리팅">
+        <img src="./img/refs/taxguide.png" height="47" alt="Joint 조인트 고객사 - 택스가이드" title="택스가이드">
+        <img src="./img/refs/kyeryong.png" height="30" alt="Joint 조인트 고객사 - 계룡건설" title="계룡건설">
+        <img src="./img/refs/wisebirds.png" height="45" alt="Joint 조인트 고객사 - 와이즈버즈" title="와이즈버즈">
+        <img src="./img/refs/delphyr.png" height="34" alt="Joint 조인트 고객사 - 델피어" title="델피어">
+        <img src="./img/refs/hour_min_sec.png" height="33" alt="Joint 조인트 고객사 - 아워미닛세컨즈" title="아워미닛세컨즈">
+        <img src="./img/refs/grooveplan.png" height="46" alt="Joint 조인트 고객사 - 그루브플랜" title="그루브플랜">
+
+        <img src="./img/refs/binder.png" height="34" alt="Joint 조인트 고객사 - 바인더" title="바인더">
+        <img src="./img/refs/tosspayments.png" height="33" alt="Joint 조인트 고객사 - 토스페이먼츠" title="토스페이먼츠">
+        <img src="./img/refs/opensurvey.png" height="26" alt="Joint 조인트 고객사 - 오픈서베이" title="오픈서베이">
+        <img src="./img/refs/greeting.png" height="42" alt="Joint 조인트 고객사 - 그리팅" title="그리팅">
+        <img src="./img/refs/taxguide.png" height="47" alt="Joint 조인트 고객사 - 택스가이드" title="택스가이드">
+        <img src="./img/refs/kyeryong.png" height="30" alt="Joint 조인트 고객사 - 계룡건설" title="계룡건설">
+        <img src="./img/refs/wisebirds.png" height="45" alt="Joint 조인트 고객사 - 와이즈버즈" title="와이즈버즈">
+        <img src="./img/refs/delphyr.png" height="34" alt="Joint 조인트 고객사 - 델피어" title="델피어">
+        <img src="./img/refs/hour_min_sec.png" height="33" alt="Joint 조인트 고객사 - 아워미닛세컨즈" title="아워미닛세컨즈">
+        <img src="./img/refs/grooveplan.png" height="46" alt="Joint 조인트 고객사 - 그루브플랜" title="그루브플랜">
+
+        <img src="./img/refs/binder.png" height="34" alt="Joint 조인트 고객사 - 바인더" title="바인더">
+        <img src="./img/refs/tosspayments.png" height="33" alt="Joint 조인트 고객사 - 토스페이먼츠" title="토스페이먼츠">
+        <img src="./img/refs/opensurvey.png" height="26" alt="Joint 조인트 고객사 - 오픈서베이" title="오픈서베이">
+        <img src="./img/refs/greeting.png" height="42" alt="Joint 조인트 고객사 - 그리팅" title="그리팅">
+        <img src="./img/refs/taxguide.png" height="47" alt="Joint 조인트 고객사 - 택스가이드" title="택스가이드">
+        <img src="./img/refs/kyeryong.png" height="30" alt="Joint 조인트 고객사 - 계룡건설" title="계룡건설">
+        <img src="./img/refs/wisebirds.png" height="45" alt="Joint 조인트 고객사 - 와이즈버즈" title="와이즈버즈">
+        <img src="./img/refs/delphyr.png" height="34" alt="Joint 조인트 고객사 - 델피어" title="델피어">
+        <img src="./img/refs/hour_min_sec.png" height="33" alt="Joint 조인트 고객사 - 아워미닛세컨즈" title="아워미닛세컨즈">
+        <img src="./img/refs/grooveplan.png" height="46" alt="Joint 조인트 고객사 - 그루브플랜" title="그루브플랜">
+
+        <img src="./img/refs/binder.png" height="34" alt="Joint 조인트 고객사 - 바인더" title="바인더">
+        <img src="./img/refs/tosspayments.png" height="33" alt="Joint 조인트 고객사 - 토스페이먼츠" title="토스페이먼츠">
+        <img src="./img/refs/opensurvey.png" height="26" alt="Joint 조인트 고객사 - 오픈서베이" title="오픈서베이">
+        <img src="./img/refs/greeting.png" height="42" alt="Joint 조인트 고객사 - 그리팅" title="그리팅">
+        <img src="./img/refs/taxguide.png" height="47" alt="Joint 조인트 고객사 - 택스가이드" title="택스가이드">
+        <img src="./img/refs/kyeryong.png" height="30" alt="Joint 조인트 고객사 - 계룡건설" title="계룡건설">
+        <img src="./img/refs/wisebirds.png" height="45" alt="Joint 조인트 고객사 - 와이즈버즈" title="와이즈버즈">
+        <img src="./img/refs/delphyr.png" height="34" alt="Joint 조인트 고객사 - 델피어" title="델피어">
+        <img src="./img/refs/hour_min_sec.png" height="33" alt="Joint 조인트 고객사 - 아워미닛세컨즈" title="아워미닛세컨즈">
+        <img src="./img/refs/grooveplan.png" height="46" alt="Joint 조인트 고객사 - 그루브플랜" title="그루브플랜">
+      </div>
+    </div>
+  </section>
+
   <section class="features">
     <div class="feature-card">
       <div class="feature-card-content">
-        <h3 class="feature-title">거래처 기반</h3>
+        <h3 class="feature-title"><span>거래처 기반</span></h3>
         <p class="feature-content">프로들을 위한<br/>메신저의 새로운 기준</p>
         <p class="feature-description">더 이상 개인 메신저로 사생활과 섞이지 마세요.<br/>거래처별 전용 공간에서 프로답게 협업하고,<br/>관계를 쌓아가세요.</p>
       </div>
@@ -990,7 +1179,7 @@
     </div>
     <div class="feature-card">
       <div class="feature-card-content">
-        <h3 class="feature-title">팀 관리</h3>
+        <h3 class="feature-title"><span>팀 관리</span></h3>
         <p class="feature-content">우리 팀원들의<br/>거래처 소통을 한 눈에</p>
         <p class="feature-description">팀원들이 거래처와 나눈 대화를 한눈에 확인하고 <br/>소통 이력을 투명하게 공유할 수 있어요.</p>
       </div>
@@ -1001,7 +1190,7 @@
     </div>
     <div class="feature-card">
       <div class="feature-card-content">
-        <h3 class="feature-title">거래처 관리</h3>
+        <h3 class="feature-title"><span>거래처 관리</span></h3>
         <p class="feature-content">흩어지지 않는<br/>거래처 인사이트</p>
         <p class="feature-description">모든 거래처 대화를 통합하여 팀 전체가 맥락을<br/>이해하고 함께 보는 인사이트로 만듭니다.</p>
       </div>
