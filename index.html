@@ -198,43 +198,50 @@
           );
       }
 
-      .googleform-btn {
-          display: inline-block;
+      .typeform-btn {
+        button{
+          display: inline-block !important;
+          
+          padding: 0 12px!important;
+          
+          height: 32px!important;
+          
+          border: none!important;
+          border-radius: 10px!important;
+          outline: none!important;
+          
+          background-color: var(--primary)!important;
+          box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.06) inset, 0 0 0 1px rgba(0, 0, 0, 0.08) inset, 0 2px 6px 0 rgba(0, 0, 0, 0.02)!important;
+          
+          font-family: inherit !important;
+          font-size: 13px!important;
+          font-weight: 700!important;
+          color: var(--white)!important;
+          line-height: 32px!important;
+          text-decoration: none!important;
 
-          padding: 0 12px;
+          transition: opacity 0.3s!important;
 
-          height: 32px;
-
-          border: none;
-          border-radius: 10px;
-          outline: none;
-
-          background-color: var(--primary);
-          box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.06) inset, 0 0 0 1px rgba(0, 0, 0, 0.08) inset, 0 2px 6px 0 rgba(0, 0, 0, 0.02);
-
-          font-size: 13px;
-          font-weight: 700;
-          color: var(--white);
-          line-height: 32px;
-          text-decoration: none;
-
-          transition: opacity 0.3s;
-
-          cursor: pointer;
+          cursor: pointer!important;
+        }
       }
 
-      .googleform-btn:hover {
+      .typeform-btn:hover {
+        button{
           background-image: linear-gradient(
                   rgba(var(--gray10-rgb), 0.04),
                   rgba(var(--gray10-rgb), 0.04)
-          );
+          ) !important;
+        }
       }
 
-      .googleform-btn:active {
+      .typeform-btn:active {
+        button{
           background-image: linear-gradient(
                   rgba(var(--gray10-rgb), 0.08),
                   rgba(var(--gray10-rgb), 0.08)
-          );
+          ) !important;
+        }
       }
 
       main {
@@ -258,21 +265,22 @@
 
           background: radial-gradient(rgba(111, 72, 235, 0.1), rgba(111, 72, 235, 0));
 
-          .googleform-btn {
-              margin: 18px 0 0;
+          .typeform-btn {
+            margin: 18px 0 0;
+            button{ 
+              font-family: inherit !important;
+              height: 20px !important;
+              padding: 18px 20px 18px 24px !important;
 
-              padding: 18px 20px 18px 24px;
+              border-radius: 14px !important;
 
-              height: 56px;
+              background-color: var(--primary) !important;
 
-              border-radius: 14px;
-
-              background-color: var(--primary);
-
-              font-size: 17px;
-              font-weight: 600;
-              line-height: 20px;
-              color: var(--white);
+              font-size: 17px !important;
+              font-weight: 600 !important;
+              line-height: 20px !important;
+              color: var(--white) !important;
+            }
           }
       }
 
@@ -491,19 +499,22 @@
               letter-spacing: -0.96px;
           }
 
-          .googleform-btn {
-              padding: 12px 16px 12px 20px;
+          .typeform-btn {
+            button{
+              font-family: inherit !important;
+              padding: 12px 16px 12px 20px !important;
 
-              height: 48px;
+              height: 24px !important;
 
-              border-radius: 14px;
+              border-radius: 14px !important;
 
-              background-color: var(--white);
+              background-color: var(--white) !important;
 
-              font-size: 17px;
-              font-weight: 700;
-              line-height: 24px;
-              color: var(--primary);
+              font-size: 17px !important;
+              font-weight: 700 !important;
+              line-height: 24px !important;
+              color: var(--primary) !important;
+            }
           }
       }
 
@@ -720,18 +731,21 @@
               background: radial-gradient(rgba(111, 72, 235, 0.1), rgba(111, 72, 235, 0));
               border: none;
 
-              .googleform-btn {
-                  padding: 16px 20px 16px 24px;
+              .typeform-btn {
+                margin: 18px 0 0;
+                button{
+                  font-family: inherit !important;
+                  height: 20px !important;
+                  padding: 16px 20px 16px 24px !important;
 
-                  height: 52px;
+                  border-radius: 14px !important;
 
-                  border-radius: 14px;
+                  background-color: var(--primary) !important;
 
-                  background-color: var(--primary);
-
-                  font-size: 17px;
-                  line-height: 20px;
-                  color: var(--white);
+                  font-size: 17px !important;
+                  line-height: 20px !important;
+                  color: var(--white) !important;
+                }
               }
           }
 
@@ -938,10 +952,8 @@
          class="signin-btn for-desktop">로그인</a>
       <a href="https://mapp.joint.now/" target="_blank" rel="noopener"
          class="signin-btn for-mobile">로그인</a>
-      <a href="https://forms.gle/6HVwurvcTftKb4fm7" target="_blank" rel="noopener noreferrer nofollow"
-         class="googleform-btn for-desktop">무료 계정 신청</a>
-      <a href="https://forms.gle/6HVwurvcTftKb4fm7" target="_blank" rel="noopener noreferrer nofollow"
-         class="googleform-btn for-mobile">무료 계정 신청</a>
+         <div class="typeform-btn for-desktop" data-tf-live="01K6C2D7WHYR367H60C4C5DBCF"></div><script src="//embed.typeform.com/next/embed.js"></script>
+         <div  class="typeform-btn for-mobile"data-tf-live="01K6C2D7WHYR367H60C4C5DBCF"></div><script src="//embed.typeform.com/next/embed.js"></script>
     </div>
   </nav>
 </header>
@@ -950,12 +962,11 @@
   <section class="hero">
     <div class="vertical-line-out">
       <div class="hero-box">
-        <h1 class="hero-title">조인트는 거래처 협업을 위한<br/>쉽고 최적화된 툴입니다</h1>
+        <h1 class="hero-title">외부 커뮤니케이션 1등이 되고 싶은<br/>팀을 위한 외부 메신저</h1>
         <p class="hero-description">이메일은 느리고, 개인 메신저는 업무용으로 적합하지 않죠.<br/>대부분의 협업툴은 사내용이라 외부 파트너와의 협업엔 한계가 있습니다.</p>
 
         <div>
-          <a href="https://forms.gle/6HVwurvcTftKb4fm7" target="_blank" rel="noopener noreferrer nofollow"
-             class="googleform-btn hero">무료 계정 신청하기 →</a>
+          <div class="typeform-btn hero" data-tf-live="01K6CETBCKB3S90K1CRFEB7RT7"></div><script src="//embed.typeform.com/next/embed.js"></script>
         </div>
 
         <div class="chat-img-container">
@@ -1057,8 +1068,7 @@
 
   <section class="wait-banner">
     <h2>경험해 보세요<br/>거래처와의 대화가 달라집니다</h2>
-    <a href="https://forms.gle/6HVwurvcTftKb4fm7" target="_blank" rel="noopener noreferrer nofollow"
-       class="googleform-btn">무료 계정 신청하기 →</a>
+       <div class="typeform-btn" data-tf-live="01K6CETBCKB3S90K1CRFEB7RT7"></div><script src="//embed.typeform.com/next/embed.js"></script>
   </section>
 
   <section class="functions">
@@ -1106,8 +1116,7 @@
       <p class="hero-description">이메일은 느리고, 개인 메신저는 업무용으로 적합하지 않죠.<br/>대부분의 협업툴은 사내용이라 외부 파트너와의 협업엔 한계가 있습니다.</p>
 
       <div>
-        <a href="https://forms.gle/6HVwurvcTftKb4fm7" target="_blank" rel="noopener noreferrer nofollow"
-           class="googleform-btn hero">무료 계정 신청하기 →</a>
+           <div class="typeform-btn hero" data-tf-live="01K6CETBCKB3S90K1CRFEB7RT7"></div><script src="//embed.typeform.com/next/embed.js"></script>
       </div>
 
       <div class="chat-img-container">
@@ -1207,8 +1216,7 @@
 
   <section class="wait-banner">
     <h2>경험해 보세요<br/>거래처와의 대화가 달라집니다</h2>
-    <a href="https://forms.gle/6HVwurvcTftKb4fm7" target="_blank" rel="noopener noreferrer nofollow"
-       class="googleform-btn">무료 계정 신청하기 →</a>
+    <div class="typeform-btn" data-tf-live="01K6CETBCKB3S90K1CRFEB7RT7"></div><script src="//embed.typeform.com/next/embed.js"></script>
   </section>
 
   <section class="functions">
