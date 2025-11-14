@@ -102,6 +102,7 @@
       box-sizing: border-box;
       font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo";
       word-break: auto-phrase;
+      -webkit-tap-highlight-color: transparent;
     }
 
     @media screen and (min-width: 1001px) {
@@ -921,11 +922,16 @@
       }
 
       .references {
+        align-items: flex-start;
         padding: 100px 0 60px;
+
+        .feature-title {
+          margin-left: 24px;
+        }
 
         .references-text {
           max-width: 430px;
-          padding: 0 20px;
+          padding: 0 24px;
 
           text-align: left;
           font-size: 30px;
@@ -936,11 +942,17 @@
       }
 
       .slider {
-        margin: 40px 0;
-
         .slider-track {
           animation: scroll-left 30s linear infinite;
         }
+      }
+
+      .slider-top {
+        margin: 40px 0 0;
+      }
+
+      .slider-bottom {
+        margin: 0 0 40px;
       }
 
       .customer-stories {
@@ -961,6 +973,12 @@
           line-height: 150%;
           letter-spacing: -0.36px;
         }
+      }
+
+      .customer-story-all-btn-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
       }
 
       .customer-story-all-btn {
@@ -984,7 +1002,7 @@
         display: flex;
         flex-direction: column !important;
         align-items: flex-start;
-        margin: 0 auto;
+        margin: 0;
         gap: 36px;
         width: 100%;
         max-width: 390px;
@@ -1197,7 +1215,7 @@
           <div class="chat-img-wrapper">
             <img
               class="chat-img"
-              src="img/landing-chat.webp"
+              src="img/landing-chat.png"
               alt="Joint 조인트 채팅 대화"
             />
           </div>
@@ -1689,7 +1707,7 @@
         외부 커뮤니케이션 1등이 되고 싶은 팀을 위한 외부 메신저
       </h1>
       <p class="hero-description">
-        이메일은 느리고, 개인 메신저는 업무용으로 적합하지 않죠.<br/>대부분의
+        이메일은 느리고 개인 메신저는 업무용으로 적합하지 않죠.<br/>대부분의
         협업툴은 사내용이라 외부 파트너와의 협업엔 한계가 있습니다.
       </p>
 
@@ -1707,7 +1725,7 @@
             class="chat-img"
             alt=""
             loading="lazy"
-            src="./img/mobile-landing-chat.webp"
+            src="./img/mobile-landing-chat.png"
           />
         </div>
       </div>
@@ -1715,12 +1733,105 @@
   </section>
 
   <section class="references">
-    <h3 class="feature-title"><span>고객사</span></h3>
+    <h3 class="feature-title"><span>고객 성공 사례</span></h3>
     <p class="references-text">
       거래처 간 협업의 변화를 경험 중인 조인트 고객사입니다
     </p>
-    <div class="slider">
+    <div class="slider slider-top">
       <div class="slider-track">
+        <img
+          src="./img/refs/binder.png"
+          height="34"
+          alt="Joint 조인트 고객사 - 바인더"
+          title="바인더"
+        />
+        <img
+          src="./img/refs/tosspayments.png"
+          height="33"
+          alt="Joint 조인트 고객사 - 토스페이먼츠"
+          title="토스페이먼츠"
+        />
+        <img
+          src="./img/refs/opensurvey.png"
+          height="26"
+          alt="Joint 조인트 고객사 - 오픈서베이"
+          title="오픈서베이"
+        />
+        <img
+          src="./img/refs/greeting.png"
+          height="42"
+          alt="Joint 조인트 고객사 - 그리팅"
+          title="그리팅"
+        />
+        <img
+          src="./img/refs/taxguide.png"
+          height="47"
+          alt="Joint 조인트 고객사 - 택스가이드"
+          title="택스가이드"
+        />
+
+        <img
+          src="./img/refs/binder.png"
+          height="34"
+          alt="Joint 조인트 고객사 - 바인더"
+          title="바인더"
+        />
+        <img
+          src="./img/refs/tosspayments.png"
+          height="33"
+          alt="Joint 조인트 고객사 - 토스페이먼츠"
+          title="토스페이먼츠"
+        />
+        <img
+          src="./img/refs/opensurvey.png"
+          height="26"
+          alt="Joint 조인트 고객사 - 오픈서베이"
+          title="오픈서베이"
+        />
+        <img
+          src="./img/refs/greeting.png"
+          height="42"
+          alt="Joint 조인트 고객사 - 그리팅"
+          title="그리팅"
+        />
+        <img
+          src="./img/refs/taxguide.png"
+          height="47"
+          alt="Joint 조인트 고객사 - 택스가이드"
+          title="택스가이드"
+        />
+
+        <img
+          src="./img/refs/binder.png"
+          height="34"
+          alt="Joint 조인트 고객사 - 바인더"
+          title="바인더"
+        />
+        <img
+          src="./img/refs/tosspayments.png"
+          height="33"
+          alt="Joint 조인트 고객사 - 토스페이먼츠"
+          title="토스페이먼츠"
+        />
+        <img
+          src="./img/refs/opensurvey.png"
+          height="26"
+          alt="Joint 조인트 고객사 - 오픈서베이"
+          title="오픈서베이"
+        />
+        <img
+          src="./img/refs/greeting.png"
+          height="42"
+          alt="Joint 조인트 고객사 - 그리팅"
+          title="그리팅"
+        />
+        <img
+          src="./img/refs/taxguide.png"
+          height="47"
+          alt="Joint 조인트 고객사 - 택스가이드"
+          title="택스가이드"
+        />
+
         <img
           src="./img/refs/binder.png"
           height="34"
@@ -1752,6 +1863,8 @@
           title="택스가이드"
         />
       </div>
+    </div>
+    <div class="slider slider-bottom">
       <div class="slider-track">
         <img
           src="./img/refs/kyeryong.png"
@@ -1785,36 +1898,6 @@
         />
 
         <img
-          src="./img/refs/binder.png"
-          height="34"
-          alt="Joint 조인트 고객사 - 바인더"
-          title="바인더"
-        />
-        <img
-          src="./img/refs/tosspayments.png"
-          height="33"
-          alt="Joint 조인트 고객사 - 토스페이먼츠"
-          title="토스페이먼츠"
-        />
-        <img
-          src="./img/refs/opensurvey.png"
-          height="26"
-          alt="Joint 조인트 고객사 - 오픈서베이"
-          title="오픈서베이"
-        />
-        <img
-          src="./img/refs/greeting.png"
-          height="42"
-          alt="Joint 조인트 고객사 - 그리팅"
-          title="그리팅"
-        />
-        <img
-          src="./img/refs/taxguide.png"
-          height="47"
-          alt="Joint 조인트 고객사 - 택스가이드"
-          title="택스가이드"
-        />
-        <img
           src="./img/refs/kyeryong.png"
           height="30"
           alt="Joint 조인트 고객사 - 계룡건설"
@@ -1846,36 +1929,6 @@
         />
 
         <img
-          src="./img/refs/binder.png"
-          height="34"
-          alt="Joint 조인트 고객사 - 바인더"
-          title="바인더"
-        />
-        <img
-          src="./img/refs/tosspayments.png"
-          height="33"
-          alt="Joint 조인트 고객사 - 토스페이먼츠"
-          title="토스페이먼츠"
-        />
-        <img
-          src="./img/refs/opensurvey.png"
-          height="26"
-          alt="Joint 조인트 고객사 - 오픈서베이"
-          title="오픈서베이"
-        />
-        <img
-          src="./img/refs/greeting.png"
-          height="42"
-          alt="Joint 조인트 고객사 - 그리팅"
-          title="그리팅"
-        />
-        <img
-          src="./img/refs/taxguide.png"
-          height="47"
-          alt="Joint 조인트 고객사 - 택스가이드"
-          title="택스가이드"
-        />
-        <img
           src="./img/refs/kyeryong.png"
           height="30"
           alt="Joint 조인트 고객사 - 계룡건설"
@@ -1906,36 +1959,6 @@
           title="그루브플랜"
         />
 
-        <img
-          src="./img/refs/binder.png"
-          height="34"
-          alt="Joint 조인트 고객사 - 바인더"
-          title="바인더"
-        />
-        <img
-          src="./img/refs/tosspayments.png"
-          height="33"
-          alt="Joint 조인트 고객사 - 토스페이먼츠"
-          title="토스페이먼츠"
-        />
-        <img
-          src="./img/refs/opensurvey.png"
-          height="26"
-          alt="Joint 조인트 고객사 - 오픈서베이"
-          title="오픈서베이"
-        />
-        <img
-          src="./img/refs/greeting.png"
-          height="42"
-          alt="Joint 조인트 고객사 - 그리팅"
-          title="그리팅"
-        />
-        <img
-          src="./img/refs/taxguide.png"
-          height="47"
-          alt="Joint 조인트 고객사 - 택스가이드"
-          title="택스가이드"
-        />
         <img
           src="./img/refs/kyeryong.png"
           height="30"
@@ -2016,18 +2039,20 @@
         </p>
       </a>
     </div>
-    <a
-      class="customer-story-all-btn"
-      href="https://guide.joint.now/customer-story"
-      target="_blank"
-      rel="noopener">
-      전체보기
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-        <path
-          d="M11.0303 3.96967C10.7374 3.67678 10.2626 3.67678 9.96967 3.96967C9.67678 4.26256 9.67678 4.73744 9.96967 5.03033L13.1893 8.25H3C2.58579 8.25 2.25 8.58579 2.25 9C2.25 9.41421 2.58579 9.75 3 9.75H13.1893L9.96967 12.9697C9.67678 13.2626 9.67678 13.7374 9.96967 14.0303C10.2626 14.3232 10.7374 14.3232 11.0303 14.0303L15.5303 9.53033C15.8232 9.23744 15.8232 8.76256 15.5303 8.46967L11.0303 3.96967Z"
-          fill="currentColor"/>
-      </svg>
-    </a>
+    <div class="customer-story-all-btn-container">
+      <a
+        class="customer-story-all-btn"
+        href="https://guide.joint.now/customer-story"
+        target="_blank"
+        rel="noopener">
+        전체보기
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path
+            d="M11.0303 3.96967C10.7374 3.67678 10.2626 3.67678 9.96967 3.96967C9.67678 4.26256 9.67678 4.73744 9.96967 5.03033L13.1893 8.25H3C2.58579 8.25 2.25 8.58579 2.25 9C2.25 9.41421 2.58579 9.75 3 9.75H13.1893L9.96967 12.9697C9.67678 13.2626 9.67678 13.7374 9.96967 14.0303C10.2626 14.3232 10.7374 14.3232 11.0303 14.0303L15.5303 9.53033C15.8232 9.23744 15.8232 8.76256 15.5303 8.46967L11.0303 3.96967Z"
+            fill="currentColor"/>
+        </svg>
+      </a>
+    </div>
   </section>
 
   <section class="features">
