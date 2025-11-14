@@ -84,6 +84,8 @@
   <style>
     :root {
       --gray04: #8d96a1;
+      --gray06: #556372;
+      --gray08: #3c4651;
       --gray10: #242a30;
       --gray10-rgb: 36, 42, 48;
       --white: #ffffff;
@@ -437,7 +439,7 @@
       flex-direction: column;
       align-items: center;
 
-      padding: 150px 0;
+      padding: 150px 0 120px;
 
       .references-text {
         margin: 30px 0 0;
@@ -446,6 +448,62 @@
         font-weight: 700;
         line-height: 130%;
         letter-spacing: -0.84px;
+      }
+    }
+
+    .customer-stories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      align-items: stretch;
+      justify-items: stretch;
+      gap: 36px;
+      margin-top: 50px;
+      max-width: 1362px;
+
+      .customer-story-card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-decoration: none;
+      }
+
+      .customer-story-description {
+        margin-top: 20px;
+        text-align: left;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing: -0.4px;
+        color: var(--gray08);
+      }
+    }
+
+    .customer-story-all-btn {
+      display: flex;
+      align-items: center;
+      margin-top: 60px;
+      padding: 15px;
+      border: 1px solid rgba(var(--gray10-rgb), 0.08);
+      border-radius: 16px;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--gray06);
+      letter-spacing: -0.32px;
+      line-height: 19px;
+      text-decoration: none;
+      cursor: pointer;
+
+      svg {
+        margin-left: 6px;
+        color: var(--gray06);
+      }
+    }
+
+    .customer-story-all-btn:hover {
+      background: rgba(var(--gray10-rgb), 0.04);
+
+      svg {
+        color: var(--primary);
       }
     }
 
@@ -1044,8 +1102,10 @@
         target="_blank"
         rel="noopener">고객 성공 사례
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-          <path d="M11.0833 2.91663L2.91658 11.0833" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M11.0833 8.90746V2.91663H5.09242" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M11.0833 2.91663L2.91658 11.0833" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M11.0833 8.90746V2.91663H5.09242" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </a>
       <a
@@ -1371,6 +1431,66 @@
         />
       </div>
     </div>
+
+    <div class="customer-stories">
+      <a
+        class="customer-story-card"
+        href="https://guide.joint.now/customer-story-binder"
+        target="_blank"
+        rel="noopener"
+        aria-label="Joint 조인트 고객 성공 사례 - 바인더"
+      >
+        <img
+          src="img/story/story-binder.png"
+          alt="Joint 조인트 고객 성공 사례 - 바인더"
+        />
+        <p class="customer-story-description">
+          [바인더] 팀의 CS 운영 방식을 완전히 바꿔놓았어요. 이제 고객사와 바로 대화하고, 바로 대응합니다.
+        </p>
+      </a>
+      <a
+        class="customer-story-card"
+        href="https://guide.joint.now/customer-story-hourminuteseconds"
+        target="_blank"
+        rel="noopener"
+        aria-label="Joint 조인트 고객 성공 사례 - 아워미닛세컨즈"
+      >
+        <img
+          src="img/story/story-246060.png"
+          alt="Joint 조인트 고객 성공 사례 - 아워미닛세컨즈"
+        />
+        <p class="customer-story-description">
+          [아워미닛세컨즈] 거래처와의 대화가 단순해지고, 팀의 협업 구조까지 정리되었습니다.
+        </p>
+      </a>
+      <a
+        class="customer-story-card"
+        href="https://guide.joint.now/customer-story-opensurvey"
+        target="_blank"
+        rel="noopener"
+        aria-label="Joint 조인트 고객 성공 사례 - 오픈서베이"
+      >
+        <img
+          src="img/story/story-opensurvey.png"
+          alt="Joint 조인트 고객 성공 사례 - 오픈서베이"
+        />
+        <p class="customer-story-description">
+          [오픈서베이] 조인트는 모든 이해관계자가 하나의 대화방에서 실시간 소통이 가능합니다.
+        </p>
+      </a>
+    </div>
+    <a
+      class="customer-story-all-btn"
+      href="https://guide.joint.now/customer-story"
+      target="_blank"
+      rel="noopener">
+      전체보기
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <path
+          d="M11.0303 3.96967C10.7374 3.67678 10.2626 3.67678 9.96967 3.96967C9.67678 4.26256 9.67678 4.73744 9.96967 5.03033L13.1893 8.25H3C2.58579 8.25 2.25 8.58579 2.25 9C2.25 9.41421 2.58579 9.75 3 9.75H13.1893L9.96967 12.9697C9.67678 13.2626 9.67678 13.7374 9.96967 14.0303C10.2626 14.3232 10.7374 14.3232 11.0303 14.0303L15.5303 9.53033C15.8232 9.23744 15.8232 8.76256 15.5303 8.46967L11.0303 3.96967Z"
+          fill="currentColor"/>
+      </svg>
+    </a>
   </section>
 
   <section class="features">
