@@ -452,19 +452,26 @@
     }
 
     .customer-stories {
+      box-sizing: border-box;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       align-items: stretch;
       justify-items: stretch;
-      gap: 36px;
-      margin-top: 50px;
+      gap: 12px;
+      margin-top: 38px;
       max-width: 1362px;
 
       .customer-story-card {
         display: flex;
         flex-direction: column;
+        padding: 12px;
         width: 100%;
+        border-radius: 20px;
         text-decoration: none;
+      }
+
+      .customer-story-card:hover {
+        background: rgba(var(--gray10-rgb), 0.04);
       }
 
       .customer-story-description {
@@ -929,9 +936,41 @@
       }
 
       .slider {
+        margin: 40px 0;
+
         .slider-track {
           animation: scroll-left 30s linear infinite;
         }
+      }
+
+      .customer-stories {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        gap: 16px;
+        margin-top: 8px;
+        padding: 0 12px;
+        max-width: 100%;
+
+        .customer-story-description {
+          margin-top: 16px;
+          text-align: left;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 150%;
+          letter-spacing: -0.36px;
+        }
+      }
+
+      .customer-story-all-btn {
+        margin-top: 28px;
+        padding: 12px 14px;
+        border-radius: 14px;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: -0.3px;
+        line-height: 18px;
       }
 
       .features {
@@ -1168,7 +1207,7 @@
   </section>
 
   <section class="references">
-    <h3 class="feature-title"><span>고객사</span></h3>
+    <h3 class="feature-title"><span>고객 성공 사례</span></h3>
     <p class="references-text">
       거래처 간 협업의 변화를 경험 중인<br/>조인트 고객사입니다
     </p>
@@ -1712,6 +1751,8 @@
           alt="Joint 조인트 고객사 - 택스가이드"
           title="택스가이드"
         />
+      </div>
+      <div class="slider-track">
         <img
           src="./img/refs/kyeryong.png"
           height="30"
@@ -1927,6 +1968,66 @@
         />
       </div>
     </div>
+
+    <div class="customer-stories">
+      <a
+        class="customer-story-card"
+        href="https://guide.joint.now/customer-story-binder"
+        target="_blank"
+        rel="noopener"
+        aria-label="Joint 조인트 고객 성공 사례 - 바인더"
+      >
+        <img
+          src="img/story/story-binder.png"
+          alt="Joint 조인트 고객 성공 사례 - 바인더"
+        />
+        <p class="customer-story-description">
+          [바인더] 팀의 CS 운영 방식을 완전히 바꿔놓았어요. 이제 고객사와 바로 대화하고, 바로 대응합니다.
+        </p>
+      </a>
+      <a
+        class="customer-story-card"
+        href="https://guide.joint.now/customer-story-hourminuteseconds"
+        target="_blank"
+        rel="noopener"
+        aria-label="Joint 조인트 고객 성공 사례 - 아워미닛세컨즈"
+      >
+        <img
+          src="img/story/story-246060.png"
+          alt="Joint 조인트 고객 성공 사례 - 아워미닛세컨즈"
+        />
+        <p class="customer-story-description">
+          [아워미닛세컨즈] 거래처와의 대화가 단순해지고, 팀의 협업 구조까지 정리되었습니다.
+        </p>
+      </a>
+      <a
+        class="customer-story-card"
+        href="https://guide.joint.now/customer-story-opensurvey"
+        target="_blank"
+        rel="noopener"
+        aria-label="Joint 조인트 고객 성공 사례 - 오픈서베이"
+      >
+        <img
+          src="img/story/story-opensurvey.png"
+          alt="Joint 조인트 고객 성공 사례 - 오픈서베이"
+        />
+        <p class="customer-story-description">
+          [오픈서베이] 조인트는 모든 이해관계자가 하나의 대화방에서 실시간 소통이 가능합니다.
+        </p>
+      </a>
+    </div>
+    <a
+      class="customer-story-all-btn"
+      href="https://guide.joint.now/customer-story"
+      target="_blank"
+      rel="noopener">
+      전체보기
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <path
+          d="M11.0303 3.96967C10.7374 3.67678 10.2626 3.67678 9.96967 3.96967C9.67678 4.26256 9.67678 4.73744 9.96967 5.03033L13.1893 8.25H3C2.58579 8.25 2.25 8.58579 2.25 9C2.25 9.41421 2.58579 9.75 3 9.75H13.1893L9.96967 12.9697C9.67678 13.2626 9.67678 13.7374 9.96967 14.0303C10.2626 14.3232 10.7374 14.3232 11.0303 14.0303L15.5303 9.53033C15.8232 9.23744 15.8232 8.76256 15.5303 8.46967L11.0303 3.96967Z"
+          fill="currentColor"/>
+      </svg>
+    </a>
   </section>
 
   <section class="features">
