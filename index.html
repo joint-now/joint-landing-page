@@ -83,6 +83,7 @@
 
   <style>
     :root {
+      --gray04: #8d96a1;
       --gray10: #242a30;
       --gray10-rgb: 36, 42, 48;
       --white: #ffffff;
@@ -101,21 +102,15 @@
       word-break: auto-phrase;
     }
 
-    .for-desktop {
-      display: block !important;
-    }
-
-    .for-mobile {
-      display: none !important;
+    @media screen and (min-width: 1001px) {
+      body .for-mobile {
+        display: none;
+      }
     }
 
     @media screen and (max-width: 1000px) {
-      .for-desktop {
-        display: none !important;
-      }
-
-      .for-mobile {
-        display: block !important;
+      body .for-desktop {
+        display: none;
       }
     }
 
@@ -202,6 +197,36 @@
       align-items: center;
       gap: 6px;
       margin-right: 25px;
+    }
+
+    .customer-story-btn {
+      display: inline-flex;
+      align-items: center;
+      margin-right: 12px;
+      padding: 0 12px;
+      height: 32px;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+      background-color: transparent;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--gray10);
+      line-height: 32px;
+      text-decoration: none;
+
+      svg {
+        margin-left: 4px;
+        color: var(--gray04);
+      }
+    }
+
+    .customer-story-btn:hover {
+      background: rgba(var(--gray10-rgb), 0.04);
+
+      svg {
+        color: var(--primary);
+      }
     }
 
     .signin-btn {
@@ -1013,6 +1038,16 @@
       <img src="./img/joint-logo.svg" alt="Joint 조인트"/>
     </div>
     <div class="navbar-btns">
+      <a
+        class="customer-story-btn for-desktop"
+        href="https://guide.joint.now/customer-story"
+        target="_blank"
+        rel="noopener">고객 성공 사례
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M11.0833 2.91663L2.91658 11.0833" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M11.0833 8.90746V2.91663H5.09242" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
       <a
         href="https://app.joint.now/"
         target="_blank"
