@@ -2,7 +2,7 @@
   "guides": [
     {
       "id": "guide-01",
-      "defaultOpen": true,
+      "defaultOpen": 1,
       "url": "https://guide.joint.now/Quick-Start-299232861c368179b864e1d67d97badc",
       "title": "빠른 시작 (Quick Start)",
       "description": "조인트의 핵심 기능을 빠르게 익히고 대화를 시작하는 전체 프로세스 가이드.",
@@ -275,7 +275,7 @@
     },
     {
       "id": "guide-02",
-      "defaultOpen": true,
+      "defaultOpen": 2,
       "url": "https://guide.joint.now/PC-299232861c36810b94e7fa9fcd6f6b96",
       "title": "모바일/PC 앱 설치",
       "description": "안드로이드, iOS, PC 등 기기별 조인트 전용 앱 설치 방법 총정리.",
@@ -635,7 +635,7 @@
     },
     {
       "id": "guide-03",
-      "defaultOpen": true,
+      "defaultOpen": 3,
       "url": "https://guide.joint.now/299232861c36815ea271ff5d483c4023",
       "title": "사용자 초대",
       "description": "우리 팀 동료, 거래처 담당자, 새로운 협력사 등을 대화방에 초대하는 법.",
@@ -1250,7 +1250,7 @@
     },
     {
       "id": "guide-04",
-      "defaultOpen": false,
+      "defaultOpen": 0,
       "url": "https://guide.joint.now/PC-299232861c36817ea1a9da081c8fc717",
       "title": "메신저 사용 (PC)",
       "description": "PC 웹 및 데스크톱 앱에서의 메시지 작성, 스타일 적용, 파일 공유 기능 안내.",
@@ -1783,7 +1783,7 @@
     },
     {
       "id": "guide-05",
-      "defaultOpen": false,
+      "defaultOpen": 0,
       "url": "https://guide.joint.now/299232861c3681fab070c6b43432c6ed",
       "title": "메신저 사용 (모바일)",
       "description": "모바일 앱 환경에서의 대화방 목록 관리, 메시지 작성 및 알림 확인 가이드.",
@@ -2313,7 +2313,7 @@
     },
     {
       "id": "guide-06",
-      "defaultOpen": false,
+      "defaultOpen": 0,
       "url": "https://guide.joint.now/299232861c368135bceafd72238753ab",
       "title": "거래처 관리",
       "description": "우리 워크스페이스에 등록된 모든 거래처 현황과 담당자 정보를 통합 관리합니다.",
@@ -2758,7 +2758,7 @@
     },
     {
       "id": "guide-07",
-      "defaultOpen": false,
+      "defaultOpen": 0,
       "url": "https://guide.joint.now/299232861c368181b2f5d033d6477c0d",
       "title": "팀 관리",
       "description": "우리 팀원들의 활동 현황 모니터링, 워크스페이스 통계 및 팀원 초대 관리.",
@@ -3371,7 +3371,7 @@
     },
     {
       "id": "guide-08",
-      "defaultOpen": false,
+      "defaultOpen": 0,
       "url": "https://guide.joint.now/299232861c3681438734d0063fef231e",
       "title": "설정",
       "description": "개인 프로필, 알림 수신 및 워크스페이스 소유자 전용 환경 설정 안내.",
