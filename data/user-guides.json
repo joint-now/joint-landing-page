@@ -1684,6 +1684,13 @@
                 "remove"
               ],
               "highlightText": "삭제"
+            },
+            {
+              "searchKeyword": [
+                "취소",
+                "cancel"
+              ],
+              "highlightText": "취소"
             }
           ]
         }
