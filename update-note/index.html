@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joint Update Notes</title>
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="style.css">
+    <!-- Marked.js for Markdown support -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body> <!-- Default to light -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <img src="images/favicon.png" alt="Logo" class="logo-img">
+                <span class="logo-text">Joint Update Notes</span>
+            </div>
+            <div class="nav-links">
+                <div id="live-clock" class="live-clock"></div>
+                <button id="theme-toggle" class="theme-btn">
+                    <span class="icon-sun">🌙</span>
+                    <span class="icon-moon">☀️</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <header class="main-header">
+            <h1 class="page-title">What's New</h1>
+        </header>
+
+        <main class="changelog-list" id="updates-container">
+            <!-- Updates will be injected here via JS -->
+        </main>
+
+        <footer class="main-footer">
+            <p>&copy; 2025 Joint. All rights reserved.</p>
+        </footer>
+    </div>
+    <!-- data.js (Notion Fallback) Removed -->
+    <script src="script.js"></script>
+</body>
+
+</html>
