@@ -35,21 +35,102 @@ document.addEventListener('DOMContentLoaded', () => {
     updateClock();
     setInterval(updateClock, 1000);
 
-    // 3. API에서 데이터 가져오기
+    // 3. 정적 파일에서 데이터 가져오기
     let UPDATES_DATA = [];
 
-    async function fetchUpdatesFromAPI() {
-        try {
-            console.log('📡 Fetching updates from API...');
-            const response = await fetch('/api/updates');
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
+    // YAML frontmatter 파싱 (간단한 파서)
+    function parseFrontmatter(markdown) {
+        const match = markdown.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
+        if (!match) return { meta: {}, content: markdown };
+
+        const frontmatter = match[1];
+        const content = match[2];
+        const meta = {};
+
+        frontmatter.split('\n').forEach(line => {
+            const colonIndex = line.indexOf(':');
+            if (colonIndex === -1) return;
+
+            const key = line.slice(0, colonIndex).trim();
+            let value = line.slice(colonIndex + 1).trim();
+
+            // 따옴표 제거
+            if ((value.startsWith('"') && value.endsWith('"')) ||
+                (value.startsWith("'") && value.endsWith("'"))) {
+                value = value.slice(1, -1);
             }
-            UPDATES_DATA = await response.json();
-            console.log(`✅ Loaded ${UPDATES_DATA.length} updates from API`);
+
+            // 배열 파싱 (예: ["Update", "Bug Fix"])
+            if (value.startsWith('[') && value.endsWith(']')) {
+                try {
+                    value = JSON.parse(value);
+                } catch {
+                    value = value.slice(1, -1).split(',').map(s => s.trim().replace(/^["']|["']$/g, ''));
+                }
+            }
+
+            meta[key] = value;
+        });
+
+        return { meta, content };
+    }
+
+    async function fetchUpdatesFromStatic() {
+        try {
+            console.log('📡 Loading updates from static files...');
+
+            // 1. index.json에서 폴더 목록 가져오기
+            const indexResponse = await fetch('public/index.json');
+            if (!indexResponse.ok) {
+                throw new Error(`Failed to load index.json: ${indexResponse.status}`);
+            }
+            const { folders } = await indexResponse.json();
+
+            // 2. 각 폴더의 .md 파일을 병렬로 fetch
+            const results = await Promise.allSettled(
+                folders.map(async (folder) => {
+                    const mdPath = `public/${folder}/${folder}.md`;
+                    const response = await fetch(mdPath);
+                    if (!response.ok) throw new Error(`Failed: ${mdPath}`);
+
+                    const text = await response.text();
+                    const { meta, content } = parseFrontmatter(text);
+
+                    // 이미지 경로를 폴더 기준 상대 경로로 변환
+                    const basePath = `public/${folder}`;
+                    let image = meta.image || '';
+                    if (image && !image.startsWith('http') && !image.startsWith('/')) {
+                        image = `${basePath}/${image}`;
+                    }
+
+                    // 본문 내 이미지 경로도 상대→절대로 변환
+                    const resolvedContent = content.replace(
+                        /!\[(.*?)\]\((?!http|\/)(.*?)\)/g,
+                        (match, alt, src) => `![${alt}](${basePath}/${src})`
+                    );
+
+                    return {
+                        id: folder,
+                        title: meta.title || folder,
+                        date: meta.date || '',
+                        tags: Array.isArray(meta.tags) ? meta.tags : [],
+                        image: image,
+                        content: resolvedContent,
+                        description: meta.description || ''
+                    };
+                })
+            );
+
+            // 성공한 것만 수집
+            UPDATES_DATA = results
+                .filter(r => r.status === 'fulfilled')
+                .map(r => r.value)
+                .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+
+            console.log(`✅ Loaded ${UPDATES_DATA.length} updates from static files`);
             return UPDATES_DATA;
         } catch (error) {
-            console.error('❌ Failed to fetch updates:', error);
+            console.error('❌ Failed to load updates:', error);
             UPDATES_DATA = [];
             return UPDATES_DATA;
         }
@@ -57,8 +138,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4. 라우팅 및 렌더링 로직
     async function initializeApp() {
-        // Fetch data from API
-        await fetchUpdatesFromAPI();
+        // Fetch data from static files
+        await fetchUpdatesFromStatic();
 
         // URL에서 id 파라미터 가져오기
         function getPostIdFromUrl() {
@@ -148,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const thumbnailHtml = thumbnailSrc ?
                     `<img src="${thumbnailSrc}" alt="${update.title}" class="row-thumbnail">` :
-                    `<img src="images/thumbnail_placeholder.svg" alt="No image" class="row-thumbnail placeholder">`;
+                    `<img src="public/thumbnail_placeholder.svg" alt="No image" class="row-thumbnail placeholder">`;
 
                 // Tags generation
                 let tagsHtml = '';
@@ -271,7 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         const thumb = post.image || (imgMatch ? imgMatch[1] : null);
                         const thumbHtml = thumb ?
                             `<img src="${thumb}" class="recommendation-thumb" alt="">` :
-                            `<img src="images/thumbnail_placeholder.svg" class="recommendation-thumb placeholder" alt="">`;
+                            `<img src="public/thumbnail_placeholder.svg" class="recommendation-thumb placeholder" alt="">`;
 
                         return `
                         <a href="#" class="recommendation-card" data-id="${post.id}">

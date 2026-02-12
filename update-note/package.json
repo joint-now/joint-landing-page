@@ -1,14 +1,7 @@
 {
-  "name": "update-notes-site-local",
+  "name": "update-notes-site",
   "private": true,
   "scripts": {
-    "start": "bun api-server.ts",
-    "dev": "bun --hot api-server.ts"
-  },
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
+    "start": "npx serve ."
   }
 }
