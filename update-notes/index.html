@@ -2,98 +2,76 @@
 <html lang="ko">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>업데이트 노트 — JOINT</title>
-  <meta name="description" content="조인트 제품의 최신 업데이트 소식을 확인하세요. Joint Message AI Assistant 출시 등 새로운 기능을 소개합니다." />
+    <title>업데이트 노트 — JOINT</title>
+    <meta name="description" content="조인트는 여러분의 협업을 위해 꾸준히 업데이트되고 있어요." />
 
-  <meta property="og:title" content="업데이트 노트 — JOINT" />
-  <meta property="og:site_name" content="조인트 (JOINT)" />
-  <meta property="og:description" content="조인트 제품의 최신 업데이트 소식을 확인하세요." />
-  <meta property="og:type" content="article" />
+    <meta property="og:title" content="업데이트 노트 — JOINT" />
+    <meta property="og:site_name" content="조인트 (JOINT)" />
+    <meta property="og:description" content="조인트는 여러분의 협업을 위해 꾸준히 업데이트되고 있어요." />
+    <meta property="og:type" content="website" />
 
-  <link rel="icon" href="/img/favicon.ico" type="image/x-icon" sizes="32x32" />
-  <link rel="icon" href="/img/icon.svg" type="image/svg+xml" sizes="any" />
-  <link rel="apple-touch-icon" href="/img/apple-icon.png" type="image/png" sizes="180x180" />
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon" sizes="32x32" />
+    <link rel="icon" href="/img/icon.svg" type="image/svg+xml" sizes="any" />
+    <link rel="apple-touch-icon" href="/img/apple-icon.png" type="image/png" sizes="180x180" />
 
-  <link rel="stylesheet" as="style" crossorigin
-    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="style.css" />
 
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJGC6M9MC4"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-    gtag("config", "G-QJGC6M9MC4");
-  </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJGC6M9MC4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-QJGC6M9MC4");
+    </script>
 </head>
 
 <body>
 
-  <!-- 공통 상단 GNB -->
-  <nav class="gnb" aria-label="메인 네비게이션">
-    <a class="gnb__title" href="#">Joint 업데이트</a>
-    <a class="gnb__home-button" href="https://www.joint.now/">Joint 홈으로</a>
-  </nav>
+    <!-- 공통 상단 GNB -->
+    <nav class="gnb" aria-label="메인 네비게이션">
+        <div class="gnb__inner">
+            <a class="gnb__title" href="/update-notes/">Joint 업데이트</a>
+            <a class="gnb__home-button" href="https://www.joint.now/">Joint 홈으로</a>
+        </div>
+    </nav>
 
-  <main>
-    <article class="update-note">
+    <header class="note-list-header">
+        <h1 class="note-list-header__title">업데이트 노트</h1>
+        <p class="note-list-header__description">조인트는 여러분의 협업을 위해 꾸준히 업데이트되고 있어요.</p>
+    </header>
 
-      <header class="update-note__header">
-        <p class="update-note__label">Update Note</p>
-        <h1 class="update-note__title">Joint Message AI Assistant 출시</h1>
-        <time class="update-note__date" datetime="2026-02-19">2026년 02월 19일</time>
-      </header>
+    <main>
+        <section class="note-list" aria-label="업데이트 노트 목록">
 
-      <div class="update-note__body">
+            <article class="note-list__item">
+                <div class="note-list__content">
+                    <h2 class="note-list__item-title">
+                        <a href="/update-notes/260219/">Joint Message AI Assistant 출시</a>
+                    </h2>
+                    <p class="note-list__item-description">
+                        메시지 작성을 더 빠르고 정확하게 도와주는 네 가지 핵심 기능을 소개합니다. 말투 변환, 맞춤법 교정, 문장 자동 완성 등 새로운 기능을 만나보세요.
+                    </p>
+                    <time class="note-list__item-date" datetime="2026-02-19">2026년 02월 19일</time>
+                </div>
+                <div class="note-list__thumbnail">
+                    <img src="/update-notes/img/260219/thumbnail.png"
+                        alt="Joint Message AI Assistant 출시 업데이트 섬네일 이미지" />
+                </div>
+            </article>
 
-        <section class="update-note__section">
-          <h2>✨ New Features</h2>
 
-          <p>이번 업데이트에서 <strong>Joint Message AI Assistant</strong>가 새롭게 출시되었습니다. 메시지 작성을 더 빠르고 정확하게 도와주는 네 가지 핵심 기능을
-            소개합니다.</p>
 
-          <h3>말투 변환</h3>
-          <p>원하는 스타일로 문장을 바로 다듬어 줍니다. 상황에 맞는 톤을 골라 한 번에 변환하세요.</p>
-          <ul>
-            <li>정중하게</li>
-            <li>부탁하는</li>
-            <li>다정하게</li>
-            <li>내 말투</li>
-          </ul>
-
-          <h3>맞춤법 교정</h3>
-          <p>오탈자와 띄어쓰기를 한 번에 교정할 수 있어요. 중요한 메시지를 보내기 전에 빠르게 확인하세요.</p>
-
-          <h3>문장 자동 완성</h3>
-          <p>현재 문맥에 맞는 문장 제안을 최대 3가지 추천받아 빠르게 작성할 수 있어요.</p>
-
-          <h3>메시지 분석 및 개선 제안</h3>
-          <p>문장의 톤과 표현, 문맥을 분석해 더 좋은 문장으로 다듬을 수 있어요. AI가 제안하는 개선안으로 커뮤니케이션 퀄리티를 높이세요.</p>
         </section>
+    </main>
 
-        <section class="update-note__section">
-          <h2>⚡ Improvements</h2>
-          <p>이번 업데이트에서 개선된 사항이 없습니다.</p>
-        </section>
-
-        <section class="update-note__section">
-          <h2>🐛 Bug Fixes</h2>
-          <p>이번 업데이트에서 수정된 버그가 없습니다.</p>
-        </section>
-
-      </div>
-
-    </article>
-  </main>
-
-  <script src="script.js"></script>
 </body>
 
 </html>

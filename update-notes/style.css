@@ -22,10 +22,6 @@
    =========================== */
 
 .gnb {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 24px;
   background-color: rgba(var(--white-rgb), 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -33,6 +29,15 @@
   position: sticky;
   top: 0;
   z-index: 100;
+}
+
+.gnb__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px 24px;
 }
 
 .gnb__title {
@@ -92,6 +97,7 @@
 html {
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  overflow-y: scroll;
 }
 
 body {
@@ -234,7 +240,16 @@ body {
 
 /* Images */
 
-.update-note__body img {
+.update-note__hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 40px 0;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.update-note__body img:not(.update-note__hero-image) {
   display: block;
   max-width: 100%;
   height: auto;
@@ -247,7 +262,7 @@ body {
    =========================== */
 
 @media screen and (max-width: 767px) {
-  .gnb {
+  .gnb__inner {
     padding: 12px 16px;
   }
 
@@ -292,6 +307,10 @@ body {
    =========================== */
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+  .gnb__inner {
+    padding: 16px 32px;
+  }
+
   .update-note {
     padding: 72px 32px 100px;
   }
@@ -302,11 +321,143 @@ body {
    =========================== */
 
 @media screen and (min-width: 1280px) {
-  .gnb {
-    padding: 16px calc((100% - 720px) / 2 + 24px);
-  }
-
   .update-note {
     padding: 96px 24px 140px;
+  }
+}
+
+/* ===========================
+   Update Note List (Home)
+   =========================== */
+
+.note-list-header {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 32px;
+}
+
+.note-list-header__title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.note-list-header__description {
+  font-size: 16px;
+  color: rgba(var(--gray10-rgb), 0.76);
+  margin-top: 12px;
+}
+
+.note-list {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px 120px;
+}
+
+.note-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(var(--gray10-rgb), 0.08);
+}
+
+.note-list__item:last-child {
+  border-bottom: none;
+}
+
+.note-list__content {
+  flex: 1;
+  margin-right: 24px;
+  min-width: 0;
+}
+
+.note-list__item-title {
+  font-size: 20px;
+  font-weight: bold;
+  word-break: keep-all;
+}
+
+.note-list__item-title a {
+  text-decoration: none;
+  color: var(--gray10);
+  transition: color 0.2s ease;
+}
+
+.note-list__item-title a:hover {
+  color: var(--primary);
+}
+
+.note-list__item-description {
+  font-size: 14px;
+  color: rgba(var(--gray10-rgb), 0.76);
+  margin-top: 8px;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.note-list__item-date {
+  font-size: 13px;
+  color: var(--gray04);
+  margin-top: 12px;
+  display: block;
+}
+
+.note-list__thumbnail {
+  width: 120px;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: rgba(var(--gray10-rgb), 0.04);
+}
+
+.note-list__thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 767px) {
+  .note-list-header {
+    padding: 36px 16px 24px;
+  }
+
+  .note-list-header__title {
+    font-size: 24px;
+  }
+
+  .note-list {
+    padding: 0 16px 80px;
+  }
+
+  .note-list__item {
+    padding: 20px 0;
+  }
+
+  .note-list__content {
+    margin-right: 16px;
+  }
+
+  .note-list__item-title {
+    font-size: 18px;
+  }
+
+  .note-list__thumbnail {
+    width: 80px;
+    height: 56px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .note-list-header {
+    padding: 48px 32px 32px;
+  }
+
+  .note-list {
+    padding: 0 32px 100px;
   }
 }
