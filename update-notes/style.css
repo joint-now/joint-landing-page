@@ -97,7 +97,6 @@
 html {
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
-  overflow-y: scroll;
 }
 
 body {
@@ -249,7 +248,7 @@ body {
   object-fit: cover;
 }
 
-.update-note__body img:not(.update-note__hero-image) {
+.update-note__section img {
   display: block;
   max-width: 100%;
   height: auto;
