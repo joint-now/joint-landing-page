@@ -13,6 +13,7 @@
   --white-rgb: 255, 255, 255;
   --black: #000000;
   --primary: #664bf4;
+  --primary-rgb: 102, 75, 244;
   --bg: #fafafa;
 }
 
@@ -61,14 +62,14 @@
   font-weight: 600;
   text-decoration: none;
   color: var(--primary);
-  background-color: rgba(102, 75, 244, 0.08);
+  background-color: rgba(var(--primary-rgb), 0.08);
   border-radius: 100px;
   letter-spacing: -0.01em;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .gnb__home-button:hover {
-  background-color: rgba(102, 75, 244, 0.15);
+  background-color: rgba(var(--primary-rgb), 0.15);
 }
 
 .gnb__home-button:focus-visible {
@@ -136,7 +137,7 @@ body {
   margin-bottom: 16px;
   padding: 4px 14px;
   border-radius: 100px;
-  background-color: rgba(102, 75, 244, 0.08);
+  background-color: rgba(var(--primary-rgb), 0.08);
   color: var(--primary);
   font-size: 0.8125rem;
   font-weight: 600;
