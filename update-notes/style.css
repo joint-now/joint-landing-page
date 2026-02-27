@@ -408,12 +408,11 @@ body {
 }
 
 .note-list__thumbnail {
-  width: 120px;
-  height: 80px;
+  width: 160px;
   flex-shrink: 0;
   border-radius: 8px;
   overflow: hidden;
-  background-color: rgba(var(--gray10-rgb), 0.04);
+  aspect-ratio: 1684 / 1030;
   border: 1px solid rgba(var(--gray10-rgb), 0.1);
 }
 
@@ -449,8 +448,7 @@ body {
   }
 
   .note-list__thumbnail {
-    width: 80px;
-    height: 56px;
+    width: 112px;
   }
 }
 
