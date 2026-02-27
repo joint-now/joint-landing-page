@@ -14,7 +14,7 @@
   --black: #000000;
   --primary: #664bf4;
   --primary-rgb: 102, 75, 244;
-  --bg: #fafafa;
+  --bg: #ffffff;
 }
 
 /* ===========================
@@ -246,6 +246,7 @@ body {
   margin: 0 0 40px 0;
   border-radius: 12px;
   object-fit: cover;
+  border: 1px solid rgba(var(--gray10-rgb), 0.1);
 }
 
 .update-note__section img {
@@ -254,6 +255,7 @@ body {
   height: auto;
   margin: 24px 0;
   border-radius: 12px;
+  border: 1px solid rgba(var(--gray10-rgb), 0.1);
 }
 
 /* ===========================
@@ -343,7 +345,7 @@ body {
 .note-list-header__description {
   font-size: 16px;
   color: rgba(var(--gray10-rgb), 0.76);
-  margin-top: 12px;
+  margin-top: 4px;
 }
 
 .note-list {
@@ -406,12 +408,12 @@ body {
 }
 
 .note-list__thumbnail {
-  width: 120px;
-  height: 80px;
+  width: 160px;
   flex-shrink: 0;
   border-radius: 8px;
   overflow: hidden;
-  background-color: rgba(var(--gray10-rgb), 0.04);
+  aspect-ratio: 1684 / 1030;
+  border: 1px solid rgba(var(--gray10-rgb), 0.1);
 }
 
 .note-list__thumbnail img {
@@ -446,8 +448,7 @@ body {
   }
 
   .note-list__thumbnail {
-    width: 80px;
-    height: 56px;
+    width: 112px;
   }
 }
 
