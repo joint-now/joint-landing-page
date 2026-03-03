@@ -500,18 +500,18 @@ body {
   gap: 20px;
   padding: 16px;
   border-radius: 12px;
-  background: var(--white);
+  background-color: var(--white);
   border: 1px solid rgba(var(--gray10-rgb), 0.08);
-  transition: background 0.2s, box-shadow 0.2s;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .post-navigation__item:hover .post-navigation__card {
-  background: var(--surface-hover);
+  background-color: var(--surface-hover);
   box-shadow: 0 4px 12px rgba(var(--gray10-rgb), 0.04);
 }
 
 .post-navigation__item:focus-visible .post-navigation__card {
-  background: var(--surface-hover);
+  background-color: var(--surface-hover);
   box-shadow: 0 4px 12px rgba(var(--gray10-rgb), 0.04);
   outline: 2px solid var(--primary);
   outline-offset: 2px;
