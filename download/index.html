@@ -63,7 +63,6 @@
       margin: 0;
       padding: 0;
       text-align: center;
-      user-select: none;
       box-sizing: border-box;
       font-family:
         Pretendard,
@@ -626,32 +625,27 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const gnb = document.querySelector('.gnb');
-      const logo = document.querySelector('.logo');
-
-      if (logo) {
-        logo.addEventListener('click', (e) => {
-          e.preventDefault();
-          window.location.href = '/';
-        });
-      }
-
       if (gnb) {
-        window.addEventListener('scroll', () => {
-          if (window.scrollY > 100) {
-            gnb.classList.add('scrolled');
-          } else {
-            gnb.classList.remove('scrolled');
-          }
-        });
+        window.addEventListener(
+          'scroll',
+          () => {
+            if (window.scrollY > 100) {
+              gnb.classList.add('scrolled');
+            } else {
+              gnb.classList.remove('scrolled');
+            }
+          },
+          { passive: true }
+        );
       }
     });
   </script>
 
   <header class="gnb">
     <nav class="navbar">
-      <div class="logo">
+      <a class="logo" href="/">
         <img src="/img/joint-logo.svg" alt="Joint 조인트" width="77" height="26" />
-      </div>
+      </a>
       <div class="navbar-btns">
         <a class="customer-story-btn for-desktop" href="https://guide.joint.now/customer-story" target="_blank"
           rel="noopener">
@@ -707,15 +701,15 @@
     <section class="mobile-app-download">
       <div class="app-download-inner">
         <div class="download-image mobile-qr-container">
-          <img src="/img/download/mobile-app-mockup.png" alt="모바일 앱 설명 이미지" width="1572" height="1412" />
+          <img src="/img/download/mobile-app-mockup.png" alt="모바일 앱 설명 이미지" width="1572" height="1412" loading="lazy" decoding="async" />
         </div>
         <div class="download-info">
           <span class="download-badge">모바일 앱</span>
-          <h1 class="download-title">
+          <h2 class="download-title">
             모바일에서도 Joint로
             <br />
             협업을 이어가세요
-          </h1>
+          </h2>
           <p class="download-description">
             모바일 앱을 설치하면 중요한 메시지와 알림을 놓치지 않고
             <br />
