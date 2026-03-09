@@ -179,6 +179,11 @@
       opacity: 0.8;
     }
 
+    .navbar .logo:focus-visible {
+      outline: 2px solid #000;
+      outline-offset: 3px;
+    }
+
     .navbar-btns {
       display: flex;
       align-items: center;
@@ -206,6 +211,11 @@
     .customer-story-btn svg {
       margin-left: 4px;
       color: var(--gray04);
+    }
+
+    .customer-story-btn:focus-visible {
+      outline: 2px solid #000;
+      outline-offset: 3px;
     }
 
     .customer-story-btn:hover {
@@ -244,6 +254,11 @@
       cursor: pointer;
     }
 
+    .signin-btn:focus-visible {
+      outline: 2px solid #000;
+      outline-offset: 3px;
+    }
+
     .signin-btn:hover {
       background-image: linear-gradient(rgba(var(--gray10-rgb), 0.04),
           rgba(var(--gray10-rgb), 0.04));
@@ -276,6 +291,11 @@
       transition: opacity 0.3s !important;
 
       cursor: pointer !important;
+    }
+
+    .typeform-btn button:focus-visible {
+      outline: 2px solid #000 !important;
+      outline-offset: 3px !important;
     }
 
     .typeform-btn:hover button {
@@ -331,7 +351,9 @@
     .download-info {
       display: flex;
       flex: 0 0 420px;
-      /* 텍스트 너비 고정 (더 줄여서 이미지 확보) */
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
     }
 
     .download-image {
@@ -355,11 +377,6 @@
     }
 
     /* 좌측: 텍스트 + 버튼 영역 */
-    .download-info {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 16px;
-    }
 
     .download-badge {
       display: inline-block;
@@ -626,17 +643,15 @@
     document.addEventListener('DOMContentLoaded', () => {
       const gnb = document.querySelector('.gnb');
       if (gnb) {
-        window.addEventListener(
-          'scroll',
-          () => {
-            if (window.scrollY > 100) {
-              gnb.classList.add('scrolled');
-            } else {
-              gnb.classList.remove('scrolled');
-            }
-          },
-          { passive: true }
-        );
+        const updateGnb = () => {
+          if (window.scrollY > 100) {
+            gnb.classList.add('scrolled');
+          } else {
+            gnb.classList.remove('scrolled');
+          }
+        };
+        window.addEventListener('scroll', updateGnb, { passive: true });
+        updateGnb();
       }
     });
   </script>
