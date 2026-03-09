@@ -1,54 +1,42 @@
 <!doctype html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, user-scalable=yes" />
 
-    <meta property="og:title" content="JOINT - 앱 다운로드" />
-    <meta property="og:site_name" content="조인트 (JOINT)" />
-    <meta
-      property="og:description"
-      content="조인트 데스크톱 앱과 모바일 앱을 지금 바로 시작하세요."
-    />
-    <meta property="og:image" content="https://www.joint.now/img/og-image.png" />
-    <meta property="og:url" content="https://www.joint.now/download/" />
-    <meta property="og:type" content="website" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes" />
 
-    <link rel="icon" href="/img/favicon.ico" type="image/x-icon" sizes="32x32" />
-    <link rel="icon" href="/img/icon.svg" type="image/svg+xml" sizes="any" />
-    <link rel="apple-touch-icon" href="/img/apple-icon.png" type="image/png" sizes="180x180" />
+  <meta property="og:title" content="JOINT - 앱 다운로드" />
+  <meta property="og:site_name" content="조인트 (JOINT)" />
+  <meta property="og:description" content="조인트 데스크톱 앱과 모바일 앱을 지금 바로 시작하세요." />
+  <meta property="og:image" content="https://www.joint.now/img/og-image.png" />
+  <meta property="og:url" content="https://www.joint.now/download/" />
+  <meta property="og:type" content="website" />
 
-    <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="theme-color" content="#FFFFFF" />
-    <meta
-      name="description"
-      content="조인트 데스크톱 앱과 모바일 앱을 지금 바로 시작하세요. PC에서 바로 시작하거나, 모바일에서 앱을 설치해 보세요."
-    />
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon" sizes="32x32" />
+  <link rel="icon" href="/img/icon.svg" type="image/svg+xml" sizes="any" />
+  <link rel="apple-touch-icon" href="/img/apple-icon.png" type="image/png" sizes="180x180" />
 
-    <title>JOINT - 앱 다운로드</title>
-    <link
-      rel="stylesheet"
-      as="style"
-      crossorigin
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <meta name="description" content="조인트 데스크톱 앱과 모바일 앱을 지금 바로 시작하세요. PC에서 바로 시작하거나, 모바일에서 앱을 설치해 보세요." />
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJGC6M9MC4"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
+  <title>JOINT - 앱 다운로드</title>
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
-      function gtag() {
-        dataLayer.push(arguments);
-      }
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QJGC6M9MC4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-      gtag('js', new Date());
-      gtag('config', 'G-QJGC6M9MC4');
-    </script>
-    <script type="application/ld+json">
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-QJGC6M9MC4');
+  </script>
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
@@ -58,767 +46,733 @@
       }
     </script>
 
-    <style>
-      :root {
-        --gray04: #8d96a1;
-        --gray06: #556372;
-        --gray08: #3c4651;
-        --gray10: #242a30;
-        --gray10-rgb: 36, 42, 48;
-        --white: #ffffff;
-        --white-rgb: 255, 255, 255;
-        --black: #000000;
-        --primary: #664bf4;
+  <style>
+    :root {
+      --gray04: #8d96a1;
+      --gray06: #556372;
+      --gray08: #3c4651;
+      --gray10: #242a30;
+      --gray10-rgb: 36, 42, 48;
+      --white: #ffffff;
+      --white-rgb: 255, 255, 255;
+      --black: #000000;
+      --primary: #664bf4;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      user-select: none;
+      box-sizing: border-box;
+      font-family:
+        Pretendard,
+        -apple-system,
+        BlinkMacSystemFont,
+        system-ui,
+        Roboto,
+        'Helvetica Neue',
+        'Segoe UI',
+        'Apple SD Gothic Neo';
+      word-break: auto-phrase;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    @media screen and (min-width: 1001px) {
+      body .for-mobile {
+        display: none;
       }
+    }
 
-      * {
-        margin: 0;
-        padding: 0;
-        text-align: center;
-        user-select: none;
-        box-sizing: border-box;
-        font-family:
-          Pretendard,
-          -apple-system,
-          BlinkMacSystemFont,
-          system-ui,
-          Roboto,
-          'Helvetica Neue',
-          'Segoe UI',
-          'Apple SD Gothic Neo';
-        word-break: auto-phrase;
-        -webkit-tap-highlight-color: transparent;
+    @media screen and (max-width: 1000px) {
+      body .for-desktop {
+        display: none;
       }
+    }
 
-      @media screen and (min-width: 1001px) {
-        body .for-mobile {
-          display: none;
-        }
-      }
+    html,
+    body {
+      background-color: #fff;
+      font-family:
+        'Pretendard Variable',
+        Pretendard,
+        -apple-system,
+        BlinkMacSystemFont,
+        system-ui,
+        Roboto,
+        'Helvetica Neue',
+        'Segoe UI',
+        'Apple SD Gothic Neo',
+        'Noto Sans KR',
+        'Malgun Gothic',
+        'Apple Color Emoji',
+        'Segoe UI Emoji',
+        'Segoe UI Symbol',
+        sans-serif;
+      font-size: 16px;
+      line-height: 1.4;
+      overflow-x: hidden;
+    }
 
-      @media screen and (max-width: 1000px) {
-        body .for-desktop {
-          display: none;
-        }
-      }
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
 
-      html,
-      body {
-        background-color: #fff;
-        font-family:
-          'Pretendard Variable',
-          Pretendard,
-          -apple-system,
-          BlinkMacSystemFont,
-          system-ui,
-          Roboto,
-          'Helvetica Neue',
-          'Segoe UI',
-          'Apple SD Gothic Neo',
-          'Noto Sans KR',
-          'Malgun Gothic',
-          'Apple Color Emoji',
-          'Segoe UI Emoji',
-          'Segoe UI Symbol',
-          sans-serif;
-        font-size: 16px;
-        line-height: 1.4;
-        overflow-x: hidden;
-      }
+    /* === GNB === */
 
-      body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        min-height: 100vh;
-        overflow-x: hidden;
-      }
+    .gnb {
+      position: fixed;
+      top: 0;
 
-      /* === GNB === */
+      padding: 18px 0;
 
-      .gnb {
-        position: fixed;
-        top: 0;
+      width: 100%;
+      height: 70px;
 
-        padding: 18px 0;
+      z-index: 1000;
 
-        width: 100%;
-        height: 70px;
+      border-bottom: 1px solid rgba(var(--gray10-rgb), 0.06);
+      background: rgba(var(--white-rgb), 0);
 
-        z-index: 1000;
+      transition: background 0.5s ease;
+    }
 
-        border-bottom: 1px solid rgba(var(--gray10-rgb), 0.06);
-        background: rgba(var(--white-rgb), 0);
+    .gnb.scrolled {
+      background: var(--white);
+    }
 
-        transition: background 0.5s ease;
-      }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
+      margin: 0 auto;
+
+      max-width: 1212px;
+      height: 34px;
+    }
+
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+      margin: 8px 0 0 25px;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+
+      -webkit-tap-highlight-color: transparent;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      outline: none;
+    }
+
+    .navbar .logo img {
+      width: auto;
+      height: 26px;
+    }
+
+    .navbar .logo:hover {
+      opacity: 0.8;
+    }
+
+    .navbar-btns {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-right: 25px;
+    }
+
+    .customer-story-btn {
+      display: inline-flex;
+      align-items: center;
+      margin-right: 12px;
+      padding: 0 12px;
+      height: 32px;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+      background-color: transparent;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--gray10);
+      line-height: 32px;
+      text-decoration: none;
+    }
+
+    .customer-story-btn svg {
+      margin-left: 4px;
+      color: var(--gray04);
+    }
+
+    .customer-story-btn:hover {
+      background: rgba(var(--gray10-rgb), 0.04);
+    }
+
+    .customer-story-btn:hover svg {
+      color: var(--primary);
+    }
+
+    .signin-btn {
+      display: inline-block;
+
+      padding: 0 12px;
+
+      height: 32px;
+
+      border: none;
+      border-radius: 10px;
+      outline: none;
+
+      background-color: #ffffff;
+      box-shadow:
+        0 -1px 0 0 rgba(0, 0, 0, 0.06) inset,
+        0 0 0 1px rgba(0, 0, 0, 0.08) inset,
+        0 2px 6px 0 rgba(0, 0, 0, 0.02);
+
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gray10);
+      line-height: 32px;
+      text-decoration: none;
+
+      transition: opacity 0.3s;
+
+      cursor: pointer;
+    }
+
+    .signin-btn:hover {
+      background-image: linear-gradient(rgba(var(--gray10-rgb), 0.04),
+          rgba(var(--gray10-rgb), 0.04));
+    }
+
+    .typeform-btn button {
+      display: inline-block !important;
+
+      padding: 0 12px !important;
+
+      height: 32px !important;
+
+      border: none !important;
+      border-radius: 10px !important;
+      outline: none !important;
+
+      background-color: var(--primary) !important;
+      box-shadow:
+        0 -1px 0 0 rgba(0, 0, 0, 0.06) inset,
+        0 0 0 1px rgba(0, 0, 0, 0.08) inset,
+        0 2px 6px 0 rgba(0, 0, 0, 0.02) !important;
+
+      font-family: inherit !important;
+      font-size: 13px !important;
+      font-weight: 700 !important;
+      color: var(--white) !important;
+      line-height: 32px !important;
+      text-decoration: none !important;
+
+      transition: opacity 0.3s !important;
+
+      cursor: pointer !important;
+    }
+
+    .typeform-btn:hover button {
+      background-image: linear-gradient(rgba(var(--gray10-rgb), 0.04),
+          rgba(var(--gray10-rgb), 0.04)) !important;
+    }
+
+    .typeform-btn:active button {
+      background-image: linear-gradient(rgba(var(--gray10-rgb), 0.08),
+          rgba(var(--gray10-rgb), 0.08)) !important;
+    }
+
+    /* === 다운로드 페이지 메인 콘텐츠 === */
+
+    main {
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .desktop-app-download {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      padding: 150px 0 100px;
+      /* PC 섹션 상단에 50px 추가 여백 */
+    }
+
+    .mobile-app-download {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      padding: 100px 0;
+      background: rgba(var(--gray10-rgb), 0.02);
+    }
+
+    .app-download-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+
+      max-width: 1212px;
+      width: 100%;
+      padding: 0 25px;
+      box-sizing: border-box;
+    }
+
+    /* 좌/우 컨텐츠 공통 넓이 */
+    .download-info {
+      display: flex;
+      flex: 0 0 420px;
+      /* 텍스트 너비 고정 (더 줄여서 이미지 확보) */
+    }
+
+    .download-image {
+      display: flex;
+      flex: 1;
+      /* 남은 영역을 모두 이미지가 차지하게 하여 크게 만듦 */
+      justify-content: center;
+      align-items: center;
+    }
+
+    .download-image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .mobile-qr-container {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    /* 좌측: 텍스트 + 버튼 영역 */
+    .download-info {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .download-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 12px;
+      background: var(--white);
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08) inset;
+
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 200%;
+    }
+
+    .download-title {
+      text-align: left;
+      color: var(--gray10);
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 130%;
+      letter-spacing: -0.84px;
+    }
+
+    .download-description {
+      text-align: left;
+      color: rgba(var(--gray10-rgb), 0.72);
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 160%;
+      letter-spacing: -0.34px;
+    }
+
+    .download-btn-group {
+      display: flex;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 14px 28px;
+
+      border: none;
+      border-radius: 14px;
+
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+      text-decoration: none;
+
+      cursor: pointer;
+      transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .download-btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .download-btn:active {
+      transform: translateY(0);
+    }
+
+    .download-btn-primary {
+      background-color: var(--primary);
+      color: var(--white);
+      box-shadow: 0 2px 8px rgba(102, 75, 244, 0.25);
+    }
+
+    .download-btn-primary:hover {
+      background-image: linear-gradient(rgba(var(--gray10-rgb), 0.06),
+          rgba(var(--gray10-rgb), 0.06));
+    }
+
+    /* QR 코드 영역 (인라인 텍스트 하단) */
+    .download-qr-inline {
+      display: flex;
+      /* 넓게 펴기 위해 flex로 변경 */
+      width: 100%;
+      /* 부모(텍스트 컬럼) 너비 꽉 채우기 */
+      align-items: center;
+      gap: 20px;
+      margin-top: 24px;
+      padding: 16px 20px;
+      border-radius: 16px;
+      background: var(--white);
+      border: 1px solid rgba(var(--gray10-rgb), 0.08);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    }
+
+    .download-qr-inline img {
+      border-radius: 8px;
+      border: 1px solid rgba(var(--gray10-rgb), 0.06);
+    }
+
+    .download-qr-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .download-qr-content strong {
+      color: var(--gray10);
+      font-size: 18px;
+      /* 텍스트 크기 상향 */
+      font-weight: 700;
+      line-height: 140%;
+    }
+
+    .download-qr-content span {
+      color: rgba(var(--gray10-rgb), 0.52);
+      font-size: 15px;
+      /* 텍스트 크기 상향 */
+      line-height: 140%;
+    }
+
+    /* === Footer === */
+
+    footer {
+      background: rgba(var(--gray10-rgb), 0.02);
+      padding: 80px 0;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      margin: 0 auto;
+      padding: 0 20px;
+
+      max-width: 1190px;
+
+      color: rgba(var(--gray10-rgb), 0.48);
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 160%;
+    }
+
+    .footer-container div,
+    .footer-container p {
+      text-align: left;
+    }
+
+    .footer-container hr {
+      width: 100%;
+      height: 1px;
+
+      border: none;
+
+      background: rgba(var(--gray10-rgb), 0.06);
+    }
+
+    .footer-container .info {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer-container .joint {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 150%;
+    }
+
+    .footer-container .term {
+      margin-right: 16px;
+
+      color: rgba(var(--gray10-rgb), 0.48);
+      text-decoration: none;
+    }
+
+    .social-links a {
+      width: 24px;
+      height: 24px;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .social-links a i {
+      font-size: 24px;
+    }
+
+    .social-links a:hover {
+      text-decoration: none;
+    }
+
+    /* === 모바일 미디어쿼리 === */
+    @media screen and (max-width: 1000px) {
       .gnb.scrolled {
-        background: var(--white);
-      }
-
-      .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        margin: 0 auto;
-
-        max-width: 1212px;
-        height: 34px;
+        padding-bottom: 0;
       }
 
       .navbar .logo {
         display: flex;
-        align-items: center;
-        margin: 8px 0 0 25px;
-        cursor: pointer;
-        transition: opacity 0.3s ease;
-
-        -webkit-tap-highlight-color: transparent;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        outline: none;
-      }
-
-      .navbar .logo img {
-        width: auto;
-        height: 26px;
-      }
-
-      .navbar .logo:hover {
-        opacity: 0.8;
+        margin-left: 0;
+        padding: 2px 5px 2px 18.5px;
       }
 
       .navbar-btns {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        margin-right: 25px;
+        gap: 4px;
+        margin-right: 0;
+        padding-right: 16px;
       }
 
-      .customer-story-btn {
-        display: inline-flex;
-        align-items: center;
-        margin-right: 12px;
-        padding: 0 12px;
-        height: 32px;
-        border: none;
-        border-radius: 10px;
-        outline: none;
-        background-color: transparent;
-        font-size: 14px;
-        font-weight: 600;
-        color: var(--gray10);
-        line-height: 32px;
-        text-decoration: none;
+      .desktop-app-download {
+        min-height: auto;
+        padding: 120px 0 60px;
       }
 
-      .customer-story-btn svg {
-        margin-left: 4px;
-        color: var(--gray04);
-      }
-
-      .customer-story-btn:hover {
-        background: rgba(var(--gray10-rgb), 0.04);
-      }
-
-      .customer-story-btn:hover svg {
-        color: var(--primary);
-      }
-
-      .signin-btn {
-        display: inline-block;
-
-        padding: 0 12px;
-
-        height: 32px;
-
-        border: none;
-        border-radius: 10px;
-        outline: none;
-
-        background-color: #ffffff;
-        box-shadow:
-          0 -1px 0 0 rgba(0, 0, 0, 0.06) inset,
-          0 0 0 1px rgba(0, 0, 0, 0.08) inset,
-          0 2px 6px 0 rgba(0, 0, 0, 0.02);
-
-        font-size: 13px;
-        font-weight: 700;
-        color: var(--gray10);
-        line-height: 32px;
-        text-decoration: none;
-
-        transition: opacity 0.3s;
-
-        cursor: pointer;
-      }
-
-      .signin-btn:hover {
-        background-image: linear-gradient(
-          rgba(var(--gray10-rgb), 0.04),
-          rgba(var(--gray10-rgb), 0.04)
-        );
-      }
-
-      .typeform-btn button {
-        display: inline-block !important;
-
-        padding: 0 12px !important;
-
-        height: 32px !important;
-
-        border: none !important;
-        border-radius: 10px !important;
-        outline: none !important;
-
-        background-color: var(--primary) !important;
-        box-shadow:
-          0 -1px 0 0 rgba(0, 0, 0, 0.06) inset,
-          0 0 0 1px rgba(0, 0, 0, 0.08) inset,
-          0 2px 6px 0 rgba(0, 0, 0, 0.02) !important;
-
-        font-family: inherit !important;
-        font-size: 13px !important;
-        font-weight: 700 !important;
-        color: var(--white) !important;
-        line-height: 32px !important;
-        text-decoration: none !important;
-
-        transition: opacity 0.3s !important;
-
-        cursor: pointer !important;
-      }
-
-      .typeform-btn:hover button {
-        background-image: linear-gradient(
-          rgba(var(--gray10-rgb), 0.04),
-          rgba(var(--gray10-rgb), 0.04)
-        ) !important;
-      }
-
-      .typeform-btn:active button {
-        background-image: linear-gradient(
-          rgba(var(--gray10-rgb), 0.08),
-          rgba(var(--gray10-rgb), 0.08)
-        ) !important;
-      }
-
-      /* === 다운로드 페이지 메인 콘텐츠 === */
-
-      main {
-        box-sizing: border-box;
-        width: 100%;
-      }
-
-      .app-download {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        min-height: calc(100vh - 70px);
-        padding: 120px 20px 80px;
+      .mobile-app-download {
+        min-height: auto;
+        padding: 80px 0 60px;
       }
 
       .app-download-inner {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 80px;
-
-        max-width: 960px;
-        width: 100%;
-      }
-
-      /* 좌측: 텍스트 + 버튼 영역 */
-      .download-info {
-        display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-        flex: 1;
+        gap: 40px;
       }
 
-      .download-badge {
-        display: inline-block;
-        padding: 4px 12px;
-        border-radius: 12px;
-        background: var(--white);
-        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08) inset;
-
-        color: var(--primary);
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 200%;
+      /* 모바일에서는 강제로 flex: 1 크기 비율 해제 */
+      .download-info,
+      .download-image {
+        flex: auto;
+        align-items: center;
       }
 
       .download-title {
-        text-align: left;
-        color: var(--gray10);
-        font-size: 42px;
-        font-weight: 700;
-        line-height: 130%;
-        letter-spacing: -0.84px;
-      }
-
-      .download-description {
-        text-align: left;
-        color: rgba(var(--gray10-rgb), 0.72);
-        font-size: 17px;
-        font-weight: 500;
-        line-height: 160%;
-        letter-spacing: -0.34px;
-      }
-
-      .download-btn-group {
-        display: flex;
-        gap: 12px;
-        margin-top: 12px;
-      }
-
-      .download-btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-
-        padding: 14px 28px;
-
-        border: none;
-        border-radius: 14px;
-
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 20px;
-        text-decoration: none;
-
-        cursor: pointer;
-        transition:
-          opacity 0.2s ease,
-          transform 0.2s ease;
-      }
-
-      .download-btn:hover {
-        transform: translateY(-1px);
-      }
-
-      .download-btn:active {
-        transform: translateY(0);
-      }
-
-      .download-btn-primary {
-        background-color: var(--primary);
-        color: var(--white);
-        box-shadow: 0 2px 8px rgba(102, 75, 244, 0.25);
-      }
-
-      .download-btn-primary:hover {
-        background-image: linear-gradient(
-          rgba(var(--gray10-rgb), 0.06),
-          rgba(var(--gray10-rgb), 0.06)
-        );
-      }
-
-      /* 우측: QR 코드 영역 */
-      .download-qr {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-
-        padding: 40px;
-
-        border-radius: 24px;
-        background: rgba(var(--gray10-rgb), 0.02);
-        border: 1px solid rgba(var(--gray10-rgb), 0.06);
-      }
-
-      .download-qr-label {
-        color: var(--gray08);
-        font-size: 15px;
-        font-weight: 600;
-        line-height: 150%;
-        letter-spacing: -0.3px;
-      }
-
-      .download-qr img {
-        border-radius: 12px;
-      }
-
-      .download-qr-hint {
-        color: rgba(var(--gray10-rgb), 0.48);
-        font-size: 13px;
-        font-weight: 500;
-        line-height: 150%;
-      }
-
-      /* === 모바일 전용 다운로드 레이아웃 === */
-
-      .app-download-mobile {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 24px;
-
-        min-height: calc(100vh - 70px);
-        padding: 120px 24px 80px;
-      }
-
-      .mobile-download-info {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-      }
-
-      .mobile-download-title {
-        color: var(--gray10);
+        text-align: center;
         font-size: 28px;
-        font-weight: 700;
-        line-height: 140%;
         letter-spacing: -0.56px;
       }
 
-      .mobile-download-description {
-        color: rgba(var(--gray10-rgb), 0.72);
+      .download-description {
+        text-align: center;
         font-size: 15px;
-        font-weight: 500;
-        line-height: 160%;
         letter-spacing: -0.3px;
       }
 
-      .mobile-download-btn {
-        display: inline-flex;
-        align-items: center;
+      .download-btn-group {
         justify-content: center;
-
-        margin-top: 8px;
-        padding: 16px 36px;
-
-        border: none;
-        border-radius: 14px;
-
-        background-color: var(--primary);
-        color: var(--white);
-        box-shadow: 0 2px 8px rgba(102, 75, 244, 0.25);
-
-        font-size: 17px;
-        font-weight: 700;
-        line-height: 20px;
-        text-decoration: none;
-
-        cursor: pointer;
-        transition:
-          opacity 0.2s ease,
-          transform 0.2s ease;
-      }
-
-      .mobile-download-btn:hover {
-        background-image: linear-gradient(
-          rgba(var(--gray10-rgb), 0.06),
-          rgba(var(--gray10-rgb), 0.06)
-        );
-      }
-
-      .mobile-download-btn:active {
-        transform: scale(0.98);
-      }
-
-      /* === Footer === */
-
-      footer {
-        background: rgba(var(--gray10-rgb), 0.02);
-        padding: 80px 0;
-      }
-
-      .footer-container {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-
-        margin: 0 auto;
-        padding: 0 20px;
-
-        max-width: 1190px;
-
-        color: rgba(var(--gray10-rgb), 0.48);
-        font-size: 13px;
-        font-weight: 400;
-        line-height: 160%;
-      }
-
-      .footer-container div,
-      .footer-container p {
-        text-align: left;
-      }
-
-      .footer-container hr {
         width: 100%;
-        height: 1px;
+      }
 
-        border: none;
-
-        background: rgba(var(--gray10-rgb), 0.06);
+      .mobile-app-download .download-info {
+        order: -1;
+        /* 모바일에서 텍스트 영역을 위로 올림 */
       }
 
       .footer-container .info {
-        display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const gnb = document.querySelector('.gnb');
+      const logo = document.querySelector('.logo');
+
+      if (logo) {
+        logo.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.location.href = '/';
+        });
       }
 
-      .footer-container .joint {
-        font-size: 15px;
-        font-weight: 700;
-        line-height: 150%;
+      if (gnb) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 100) {
+            gnb.classList.add('scrolled');
+          } else {
+            gnb.classList.remove('scrolled');
+          }
+        });
       }
+    });
+  </script>
 
-      .footer-container .term {
-        margin-right: 16px;
-
-        color: rgba(var(--gray10-rgb), 0.48);
-        text-decoration: none;
-      }
-
-      .social-links a {
-        width: 24px;
-        height: 24px;
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .social-links a i {
-        font-size: 24px;
-      }
-
-      .social-links a:hover {
-        text-decoration: none;
-      }
-
-      /* === 모바일 미디어쿼리 === */
-      @media screen and (max-width: 1000px) {
-        .gnb.scrolled {
-          padding-bottom: 0;
-        }
-
-        .navbar .logo {
-          display: flex;
-          margin-left: 0;
-          padding: 2px 5px 2px 18.5px;
-        }
-
-        .navbar-btns {
-          gap: 4px;
-          margin-right: 0;
-          padding-right: 16px;
-        }
-
-        .footer-container .info {
-          flex-direction: column;
-          gap: 16px;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const gnb = document.querySelector('.gnb');
-        const logo = document.querySelector('.logo');
-
-        if (logo) {
-          logo.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.location.href = '/';
-          });
-        }
-
-        if (gnb) {
-          window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-              gnb.classList.add('scrolled');
-            } else {
-              gnb.classList.remove('scrolled');
-            }
-          });
-        }
-      });
-    </script>
-
-    <header class="gnb">
-      <nav class="navbar">
-        <div class="logo">
-          <img src="/img/joint-logo.svg" alt="Joint 조인트" width="77" height="26" />
-        </div>
-        <div class="navbar-btns">
-          <a
-            class="customer-story-btn for-desktop"
-            href="https://guide.joint.now/customer-story"
-            target="_blank"
-            rel="noopener"
-          >
-            고객 성공 사례
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="14"
-              viewBox="0 0 14 14"
-              fill="none"
-            >
-              <path
-                d="M11.0833 2.91663L2.91658 11.0833"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M11.0833 8.90746V2.91663H5.09242"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-miterlimit="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
-          <a
-            href="https://app.joint.now/"
-            target="_blank"
-            rel="noopener"
-            class="signin-btn for-desktop"
-          >
-            로그인
-          </a>
-          <a
-            href="https://mapp.joint.now/"
-            target="_blank"
-            rel="noopener"
-            class="signin-btn for-mobile"
-          >
-            로그인
-          </a>
-          <div class="typeform-btn for-desktop" data-tf-live="01K6C2D7WHYR367H60C4C5DBCF"></div>
-          <div class="typeform-btn for-mobile" data-tf-live="01K6C2D7WHYR367H60C4C5DBCF"></div>
-          <script src="//embed.typeform.com/next/embed.js"></script>
-        </div>
-      </nav>
-    </header>
-
-    <main>
-      <!-- 데스크톱 레이아웃 -->
-      <div class="for-desktop">
-        <section class="app-download">
-          <div class="app-download-inner">
-            <div class="download-info">
-              <span class="download-badge">다운로드</span>
-              <h1 class="download-title">
-                데스크톱과 모바일에서
-                <br />
-                조인트를 시작하세요
-              </h1>
-              <p class="download-description">
-                PC에서 바로 시작하거나, 모바일 앱을 설치하여
-                <br />
-                언제 어디서나 거래처와 소통하세요.
-              </p>
-              <div class="download-btn-group">
-                <a
-                  href="https://app.joint.now/download"
-                  target="_blank"
-                  rel="noopener"
-                  class="download-btn download-btn-primary"
-                >
-                  PC웹/앱 시작
-                </a>
-              </div>
-            </div>
-            <div class="download-qr">
-              <p class="download-qr-label">모바일 앱</p>
-              <img
-                src="/img/download/qrcode.png"
-                alt="모바일 앱 다운로드 QR 코드"
-                width="120"
-                height="120"
-              />
-              <p class="download-qr-hint">스마트폰으로 QR 코드를 스캔하세요</p>
-            </div>
-          </div>
-        </section>
+  <header class="gnb">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="/img/joint-logo.svg" alt="Joint 조인트" width="77" height="26" />
       </div>
-
-      <!-- 모바일 레이아웃 -->
-      <div class="for-mobile">
-        <section class="app-download-mobile">
-          <div class="mobile-download-info">
-            <span class="download-badge">다운로드</span>
-            <h1 class="mobile-download-title">
-              조인트를 모바일에서도
-              <br />
-              사용해 보세요
-            </h1>
-            <p class="mobile-download-description">
-              모바일 앱을 설치하면 언제 어디서나
-              <br />
-              거래처와의 소통을 놓치지 않습니다.
-            </p>
-          </div>
-          <a href="https://mapp.joint.now/download" class="mobile-download-btn">모바일 앱 설치</a>
-        </section>
+      <div class="navbar-btns">
+        <a class="customer-story-btn for-desktop" href="https://guide.joint.now/customer-story" target="_blank"
+          rel="noopener">
+          고객 성공 사례
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M11.0833 2.91663L2.91658 11.0833" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M11.0833 8.90746V2.91663H5.09242" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+        <a href="https://app.joint.now/" target="_blank" rel="noopener" class="signin-btn for-desktop">
+          로그인
+        </a>
+        <a href="https://mapp.joint.now/" target="_blank" rel="noopener" class="signin-btn for-mobile">
+          로그인
+        </a>
+        <div class="typeform-btn for-desktop" data-tf-live="01K6C2D7WHYR367H60C4C5DBCF"></div>
+        <div class="typeform-btn for-mobile" data-tf-live="01K6C2D7WHYR367H60C4C5DBCF"></div>
+        <script src="//embed.typeform.com/next/embed.js"></script>
       </div>
-    </main>
+    </nav>
+  </header>
 
-    <footer>
-      <div class="footer-container">
-        <div class="joint">(주) 조인트</div>
-        <div class="info">
-          <div>
-            <p>서울시 서초구 서초대로 398BNK 디지털 타워 6층 (06619)</p>
-            <p>문의 : help@joint.now</p>
-          </div>
-          <div class="social-links">
-            <a
-              href="https://www.linkedin.com/company/jointnow/about/"
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-              aria-label="Joint 조인트 LinkedIn 페이지"
-            >
-              <i class="fab fa-linkedin"></i>
+  <main>
+    <section class="desktop-app-download">
+      <div class="app-download-inner">
+        <div class="download-info">
+          <span class="download-badge">데스크톱 앱</span>
+          <h1 class="download-title">
+            더 편리한 협업을 위해
+            <br />
+            Joint 앱을 시작하세요
+          </h1>
+          <p class="download-description">
+            앱으로 설치하면 더 빠르고 안정적인 환경에서
+            <br />
+            거래처와 협업을 이어갈 수 있습니다.
+          </p>
+          <div class="download-btn-group">
+            <a href="https://app.joint.now/download" target="_blank" rel="noopener"
+              class="download-btn download-btn-primary">
+              앱 다운로드
             </a>
           </div>
         </div>
-        <hr />
-        <div>© 2025 Joint. All rights reserved.</div>
+        <div class="download-image">
+          <img src="/img/download/desktop-app-mockup.png" alt="데스크톱 앱 설명 이미지" width="1154" height="706" />
+        </div>
+      </div>
+    </section>
+
+    <section class="mobile-app-download">
+      <div class="app-download-inner">
+        <div class="download-image mobile-qr-container">
+          <img src="/img/download/mobile-app-mockup.png" alt="모바일 앱 설명 이미지" width="1572" height="1412" />
+        </div>
+        <div class="download-info">
+          <span class="download-badge">모바일 앱</span>
+          <h1 class="download-title">
+            모바일에서도 Joint로
+            <br />
+            협업을 이어가세요
+          </h1>
+          <p class="download-description">
+            모바일 앱을 설치하면 중요한 메시지와 알림을 놓치지 않고
+            <br />
+            언제 어디서든 거래처와 소통할 수 있습니다.
+          </p>
+
+          <div class="download-qr-inline for-desktop">
+            <img src="/img/download/qrcode.png" alt="모바일 앱 다운로드용 QR 코드" width="120" height="120" />
+            <div class="download-qr-content">
+              <strong>모바일 앱 설치하기</strong>
+              <span>스마트폰 카메라로 스캔하세요</span>
+            </div>
+          </div>
+
+          <div class="download-btn-group for-mobile">
+            <a href="https://mapp.joint.now/download" class="download-btn download-btn-primary">
+              모바일 앱 설치
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="joint">(주) 조인트</div>
+      <div class="info">
         <div>
-          <span>
-            <a
-              class="term"
-              href="https://www.joint.now/privacy_policy_20250519.html"
-              target="_blank"
-              rel="noopener"
-              aria-label="Joint 조인트 개인정보 처리방침"
-            >
-              <strong>개인정보 처리방침</strong>
-            </a>
-          </span>
-          <span>
-            <a
-              class="term"
-              href="https://www.joint.now/terms_of_service_20250519.html"
-              target="_blank"
-              rel="noopener"
-              aria-label="Joint 조인트 서비스 이용약관"
-            >
-              서비스 이용약관
-            </a>
-          </span>
+          <p>서울시 서초구 서초대로 398BNK 디지털 타워 6층 (06619)</p>
+          <p>문의 : help@joint.now</p>
+        </div>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/company/jointnow/about/" target="_blank" rel="noopener noreferrer nofollow"
+            aria-label="Joint 조인트 LinkedIn 페이지">
+            <i class="fab fa-linkedin"></i>
+          </a>
         </div>
       </div>
-    </footer>
-  </body>
+      <hr />
+      <div>© 2025 Joint. All rights reserved.</div>
+      <div>
+        <span>
+          <a class="term" href="https://www.joint.now/privacy_policy_20250519.html" target="_blank" rel="noopener"
+            aria-label="Joint 조인트 개인정보 처리방침">
+            <strong>개인정보 처리방침</strong>
+          </a>
+        </span>
+        <span>
+          <a class="term" href="https://www.joint.now/terms_of_service_20250519.html" target="_blank" rel="noopener"
+            aria-label="Joint 조인트 서비스 이용약관">
+            서비스 이용약관
+          </a>
+        </span>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>
