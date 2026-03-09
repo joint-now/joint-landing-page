@@ -7,6 +7,13 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Download -->
+  <url>
+    <loc>https://www.joint.now/download/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Update Notes Index -->
   <url>
     <loc>https://www.joint.now/update-notes/</loc>
