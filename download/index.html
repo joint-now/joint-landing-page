@@ -155,8 +155,8 @@
       }
 
       .navbar {
+        position: relative;
         display: flex;
-        justify-content: space-between;
         align-items: center;
 
         margin: 0 auto;
@@ -166,6 +166,7 @@
       }
 
       .navbar .logo {
+        flex: 1;
         display: flex;
         align-items: center;
         margin: 8px 0 0 25px;
@@ -195,13 +196,31 @@
       }
 
       .navbar-btns {
+        flex: 1;
         display: flex;
         align-items: center;
+        justify-content: flex-end;
         gap: 6px;
         margin-right: 25px;
       }
 
-      .customer-story-btn {
+      .navbar-menu {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .navbar-menu a[aria-current='page'] {
+        color: var(--primary);
+        pointer-events: none;
+        cursor: default;
+      }
+
+      .navbar-menu .navbar-link-btn {
+        margin-right: 0;
+      }
+
+      .navbar-link-btn {
         display: inline-flex;
         align-items: center;
         margin-right: 12px;
@@ -218,21 +237,21 @@
         text-decoration: none;
       }
 
-      .customer-story-btn svg {
+      .navbar-link-btn svg {
         margin-left: 4px;
         color: var(--gray04);
       }
 
-      .customer-story-btn:focus-visible {
+      .navbar-link-btn:focus-visible {
         outline: 2px solid var(--black);
         outline-offset: 3px;
       }
 
-      .customer-story-btn:hover {
+      .navbar-link-btn:hover {
         background: rgba(var(--gray10-rgb), 0.04);
       }
 
-      .customer-story-btn:hover svg {
+      .navbar-link-btn:hover svg {
         color: var(--primary);
       }
 
@@ -687,9 +706,9 @@
         <a class="logo" href="/">
           <img src="/img/joint-logo.svg" alt="Joint 조인트" width="77" height="26" />
         </a>
-        <div class="navbar-btns">
+        <div class="navbar-menu for-desktop">
           <a
-            class="customer-story-btn for-desktop"
+            class="navbar-link-btn"
             href="https://guide.joint.now/customer-story"
             target="_blank"
             rel="noopener"
@@ -720,6 +739,12 @@
               />
             </svg>
           </a>
+          <a class="navbar-link-btn" href="https://www.joint.now/download/" aria-current="page">
+            앱 다운로드
+          </a>
+          <a class="navbar-link-btn" href="https://www.joint.now/update-notes/">업데이트 소식</a>
+        </div>
+        <div class="navbar-btns">
           <a
             href="https://app.joint.now/"
             target="_blank"
