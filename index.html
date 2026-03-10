@@ -164,7 +164,6 @@
       .navbar {
         position: relative;
         display: flex;
-        justify-content: space-between;
         align-items: center;
 
         margin: 0 auto;
@@ -174,6 +173,7 @@
       }
 
       .navbar .logo {
+        flex: 1;
         display: flex;
         align-items: center;
         margin: 8px 0 0 25px;
@@ -198,8 +198,10 @@
       }
 
       .navbar-btns {
+        flex: 1;
         display: flex;
         align-items: center;
+        justify-content: flex-end;
         gap: 6px;
         margin-right: 25px;
       }
@@ -208,9 +210,6 @@
         display: flex;
         align-items: center;
         gap: 8px;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
       }
 
       .navbar-menu .customer-story-btn {
