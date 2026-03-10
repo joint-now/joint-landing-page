@@ -8,19 +8,11 @@
       "description": "조인트의 핵심 기능을 빠르게 익히고 대화를 시작할 수 있도록 안내해요. 빠르게 시작하세요.",
       "keywordMappings": [
         {
-          "searchKeyword": [
-            "빠른 시작",
-            "시작",
-            "초대",
-            "가입"
-          ],
+          "searchKeyword": ["빠른 시작", "시작", "초대", "가입"],
           "highlightText": "빠른 시작 (Quick Start)"
         },
         {
-          "searchKeyword": [
-            "조인트",
-            "joint"
-          ],
+          "searchKeyword": ["조인트", "joint"],
           "highlightText": "조인트"
         }
       ],
@@ -32,50 +24,27 @@
           "description": "PC 환경에서 초대 수락, 게스트 접속, 회원가입, 대화 시작 방법을 쉽게 알려줘요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "빠른 시작",
-                "시작",
-                "초대",
-                "가입"
-              ],
+              "searchKeyword": ["빠른 시작", "시작", "초대", "가입"],
               "highlightText": "빠른 시작"
             },
             {
-              "searchKeyword": [
-                "PC",
-                "데스트탑",
-                "데스트톱",
-                "desktop"
-              ],
+              "searchKeyword": ["PC", "데스트탑", "데스트톱", "desktop"],
               "highlightText": "PC"
             },
             {
-              "searchKeyword": [
-                "초대",
-                "수락"
-              ],
+              "searchKeyword": ["초대", "수락"],
               "highlightText": "초대 수락"
             },
             {
-              "searchKeyword": [
-                "게스트",
-                "guest"
-              ],
+              "searchKeyword": ["게스트", "guest"],
               "highlightText": "게스트"
             },
             {
-              "searchKeyword": [
-                "회원가입",
-                "가입",
-                "join",
-                "sign up"
-              ],
+              "searchKeyword": ["회원가입", "가입", "join", "sign up"],
               "highlightText": "회원가입"
             },
             {
-              "searchKeyword": [
-                "시작"
-              ],
+              "searchKeyword": ["시작"],
               "highlightText": "시작"
             }
           ]
@@ -87,26 +56,15 @@
           "description": "모바일 앱에서 초대 수락과 대화 시작을 간편하게 안내해요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "빠른 시작",
-                "시작",
-                "초대",
-                "가입"
-              ],
+              "searchKeyword": ["빠른 시작", "시작", "초대", "가입"],
               "highlightText": "빠른 시작"
             },
             {
-              "searchKeyword": [
-                "모바일",
-                "mobile"
-              ],
+              "searchKeyword": ["모바일", "mobile"],
               "highlightText": "모바일"
             },
             {
-              "searchKeyword": [
-                "초대",
-                "수락"
-              ],
+              "searchKeyword": ["초대", "수락"],
               "highlightText": "초대 수락"
             }
           ]
@@ -144,26 +102,15 @@
           "description": "조인트를 사용할 수 있는 안드로이드, 아이폰, PC의 권장 사양을 확인할 수 있어요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "지원"
-              ],
+              "searchKeyword": ["지원"],
               "highlightText": "지원"
             },
             {
-              "searchKeyword": [
-                "기기",
-                "기기종류",
-                "device"
-              ],
+              "searchKeyword": ["기기", "기기종류", "device"],
               "highlightText": "기기"
             },
             {
-              "searchKeyword": [
-                "사양",
-                "최소사양",
-                "권장사양",
-                "requirement"
-              ],
+              "searchKeyword": ["사양", "최소사양", "권장사양", "requirement"],
               "highlightText": "사양"
             }
           ]
@@ -175,35 +122,19 @@
           "description": "안드로이드 크롬과 아이폰 사파리에서 앱 설치와 알림 허용 방법을 안내해요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "모바일",
-                "모바일용",
-                "mobile",
-                "phone"
-              ],
+              "searchKeyword": ["모바일", "모바일용", "mobile", "phone"],
               "highlightText": "모바일"
             },
             {
-              "searchKeyword": [
-                "안드로이드",
-                "android"
-              ],
+              "searchKeyword": ["안드로이드", "android"],
               "highlightText": "안드로이드"
             },
             {
-              "searchKeyword": [
-                "아이폰",
-                "iphone",
-                "ios"
-              ],
+              "searchKeyword": ["아이폰", "iphone", "ios"],
               "highlightText": "아이폰"
             },
             {
-              "searchKeyword": [
-                "알림",
-                "notification",
-                "push"
-              ],
+              "searchKeyword": ["알림", "notification", "push"],
               "highlightText": "알림"
             }
           ]
@@ -215,40 +146,23 @@
           "description": "크롬, 엣지, 웨일 브라우저에서 데스크톱 앱을 설치하는 방법을 쉽게 설명해요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "PC",
-                "데스트탑",
-                "데스트톱",
-                "desktop"
-              ],
+              "searchKeyword": ["PC", "데스트탑", "데스트톱", "desktop"],
               "highlightText": "PC"
             },
             {
-              "searchKeyword": [
-                "크롬",
-                "chrome"
-              ],
+              "searchKeyword": ["크롬", "chrome"],
               "highlightText": "크롬"
             },
             {
-              "searchKeyword": [
-                "엣지",
-                "edge"
-              ],
+              "searchKeyword": ["엣지", "edge"],
               "highlightText": "엣지"
             },
             {
-              "searchKeyword": [
-                "웨일",
-                "whale"
-              ],
+              "searchKeyword": ["웨일", "whale"],
               "highlightText": "웨일"
             },
             {
-              "searchKeyword": [
-                "브라우저",
-                "browser"
-              ],
+              "searchKeyword": ["브라우저", "browser"],
               "highlightText": "브라우저"
             }
           ]
@@ -263,38 +177,19 @@
       "description": "우리 팀 동료나 거래처 담당자를 대화방에 초대하는 방법을 쉽게 설명해요.",
       "keywordMappings": [
         {
-          "searchKeyword": [
-            "초대",
-            "추가",
-            "invite",
-            "invitation"
-          ],
+          "searchKeyword": ["초대", "추가", "invite", "invitation"],
           "highlightText": "사용자 초대"
         },
         {
-          "searchKeyword": [
-            "동료",
-            "멤버",
-            "colleague",
-            "team member",
-            "member"
-          ],
+          "searchKeyword": ["동료", "멤버", "colleague", "team member", "member"],
           "highlightText": "동료"
         },
         {
-          "searchKeyword": [
-            "거래처",
-            "account",
-            "client",
-            "customer"
-          ],
+          "searchKeyword": ["거래처", "account", "client", "customer"],
           "highlightText": "거래처"
         },
         {
-          "searchKeyword": [
-            "담당자",
-            "contact"
-          ],
+          "searchKeyword": ["담당자", "contact"],
           "highlightText": "담당자"
         }
       ],
@@ -306,28 +201,15 @@
           "description": "사내 구성원을 대화방에 추가하거나 이메일로 초대하는 방법을 안내해요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "초대",
-                "추가",
-                "invite",
-                "invitation"
-              ],
+              "searchKeyword": ["초대", "추가", "invite", "invitation"],
               "highlightText": "동료 초대"
             },
             {
-              "searchKeyword": [
-                "팀",
-                "team"
-              ],
+              "searchKeyword": ["팀", "team"],
               "highlightText": "우리 팀"
             },
             {
-              "searchKeyword": [
-                "동료",
-                "colleague",
-                "coworker",
-                "member"
-              ],
+              "searchKeyword": ["동료", "colleague", "coworker", "member"],
               "highlightText": "동료"
             }
           ]
@@ -339,36 +221,19 @@
           "description": "협력사나 외부 거래처 담당자를 대화방에 초대하는 방법을 알려줘요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "초대",
-                "추가",
-                "invite",
-                "invitation"
-              ],
+              "searchKeyword": ["초대", "추가", "invite", "invitation"],
               "highlightText": "초대"
             },
             {
-              "searchKeyword": [
-                "거래처",
-                "account",
-                "client",
-                "customer"
-              ],
+              "searchKeyword": ["거래처", "account", "client", "customer"],
               "highlightText": "거래처"
             },
             {
-              "searchKeyword": [
-                "담당자",
-                "contact"
-              ],
+              "searchKeyword": ["담당자", "contact"],
               "highlightText": "담당자"
             },
             {
-              "searchKeyword": [
-                "외부",
-                "external",
-                "outside"
-              ],
+              "searchKeyword": ["외부", "external", "outside"],
               "highlightText": "외부"
             }
           ]
@@ -380,21 +245,11 @@
           "description": "기존 대화방에 새로운 업체나 협력사를 초대하는 방법을 안내해요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "초대",
-                "추가",
-                "invite",
-                "invitation"
-              ],
+              "searchKeyword": ["초대", "추가", "invite", "invitation"],
               "highlightText": "초대"
             },
             {
-              "searchKeyword": [
-                "거래처",
-                "account",
-                "client",
-                "customer"
-              ],
+              "searchKeyword": ["거래처", "account", "client", "customer"],
               "highlightText": "거래처"
             }
           ]
@@ -406,23 +261,11 @@
           "description": "이미 등록된 거래처와 다른 주제나 프로젝트를 위한 새 방을 만드는 방법을 알려줘요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "거래처",
-                "account",
-                "client",
-                "partner",
-                "customer"
-              ],
+              "searchKeyword": ["거래처", "account", "client", "partner", "customer"],
               "highlightText": "거래처"
             },
             {
-              "searchKeyword": [
-                "대화방",
-                "채팅방",
-                "채널",
-                "channel",
-                "chat"
-              ],
+              "searchKeyword": ["대화방", "채팅방", "채널", "channel", "chat"],
               "highlightText": "대화방"
             }
           ]
@@ -434,32 +277,15 @@
           "description": "미등록 거래처 정보를 입력해 대화방을 동시에 개설하고 초대하는 방법을 안내해요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "거래처",
-                "account",
-                "client",
-                "customer",
-                "partner"
-              ],
+              "searchKeyword": ["거래처", "account", "client", "customer", "partner"],
               "highlightText": "거래처"
             },
             {
-              "searchKeyword": [
-                "등록",
-                "register",
-                "registration",
-                "add"
-              ],
+              "searchKeyword": ["등록", "register", "registration", "add"],
               "highlightText": "등록"
             },
             {
-              "searchKeyword": [
-                "대화방",
-                "채팅방",
-                "채널",
-                "channel",
-                "chat"
-              ],
+              "searchKeyword": ["대화방", "채팅방", "채널", "channel", "chat"],
               "highlightText": "대화방"
             }
           ]
@@ -471,22 +297,11 @@
           "description": "특정 참여자끼리만 내용을 공유할 수 있는 비공개 대화방 개설 방법을 안내해요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "비공개",
-                "비밀",
-                "private",
-                "secret"
-              ],
+              "searchKeyword": ["비공개", "비밀", "private", "secret"],
               "highlightText": "비공개"
             },
             {
-              "searchKeyword": [
-                "대화방",
-                "채팅방",
-                "채널",
-                "channel",
-                "chat"
-              ],
+              "searchKeyword": ["대화방", "채팅방", "채널", "channel", "chat"],
               "highlightText": "대화방"
             }
           ]
@@ -501,57 +316,27 @@
       "description": "PC에서 메시지 작성, 스타일 적용, 파일 공유 등 메신저 기능을 편하게 사용할 수 있도록 안내해요.",
       "keywordMappings": [
         {
-          "searchKeyword": [
-            "조인트",
-            "메신저",
-            "joint",
-            "messenger",
-            "chat",
-            "messaging"
-          ],
+          "searchKeyword": ["조인트", "메신저", "joint", "messenger", "chat", "messaging"],
           "highlightText": "메신저 사용 (PC)"
         },
         {
-          "searchKeyword": [
-            "PC",
-            "데스크탑",
-            "데스크톱",
-            "desktop"
-          ],
+          "searchKeyword": ["PC", "데스크탑", "데스크톱", "desktop"],
           "highlightText": "PC"
         },
         {
-          "searchKeyword": [
-            "메시지",
-            "메세지",
-            "message"
-          ],
+          "searchKeyword": ["메시지", "메세지", "message"],
           "highlightText": "메시지"
         },
         {
-          "searchKeyword": [
-            "작성"
-          ],
+          "searchKeyword": ["작성"],
           "highlightText": "작성"
         },
         {
-          "searchKeyword": [
-            "스타일",
-            "텍스트",
-            "꾸미기",
-            "style",
-            "format"
-          ],
+          "searchKeyword": ["스타일", "텍스트", "꾸미기", "style", "format"],
           "highlightText": "스타일"
         },
         {
-          "searchKeyword": [
-            "파일",
-            "업로드",
-            "file",
-            "share",
-            "sharing"
-          ],
+          "searchKeyword": ["파일", "업로드", "file", "share", "sharing"],
           "highlightText": "파일"
         }
       ],
@@ -563,75 +348,35 @@
           "description": "PC 버전의 대화방 목록, 메시지 창, 대화방 정보 공간의 구성을 쉽게 설명해요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "메시지",
-                "메세지",
-                "message"
-              ],
+              "searchKeyword": ["메시지", "메세지", "message"],
               "highlightText": "메시지"
             },
             {
-              "searchKeyword": [
-                "홈",
-                "첫화면",
-                "초기화면",
-                "메뉴",
-                "menu",
-                "navigation"
-              ],
+              "searchKeyword": ["홈", "첫화면", "초기화면", "메뉴", "menu", "navigation"],
               "highlightText": "홈 화면"
             },
             {
-              "searchKeyword": [
-                "안내",
-                "사용법",
-                "설명",
-                "guide"
-              ],
+              "searchKeyword": ["안내", "사용법", "설명", "guide"],
               "highlightText": "안내"
             },
             {
-              "searchKeyword": [
-                "대화방",
-                "채팅방",
-                "채널",
-                "channel",
-                "chat"
-              ],
+              "searchKeyword": ["대화방", "채팅방", "채널", "channel", "chat"],
               "highlightText": "대화방"
             },
             {
-              "searchKeyword": [
-                "목록"
-              ],
+              "searchKeyword": ["목록"],
               "highlightText": "목록"
             },
             {
-              "searchKeyword": [
-                "메시지 창",
-                "메시지창",
-                "대화창",
-                "message window",
-                "chat window"
-              ],
+              "searchKeyword": ["메시지 창", "메시지창", "대화창", "message window", "chat window"],
               "highlightText": "메시지 창"
             },
             {
-              "searchKeyword": [
-                "파일",
-                "업로드",
-                "file",
-                "share",
-                "sharing"
-              ],
+              "searchKeyword": ["파일", "업로드", "file", "share", "sharing"],
               "highlightText": "파일"
             },
             {
-              "searchKeyword": [
-                "구성",
-                "구조",
-                "layout"
-              ],
+              "searchKeyword": ["구성", "구조", "layout"],
               "highlightText": "구성"
             }
           ]
@@ -643,35 +388,15 @@
           "description": "메시지 작성, 텍스트 스타일, 댓글, 이모지 반응 등 기본 대화 기능을 안내해요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "대화",
-                "채팅",
-                "메시지",
-                "메세지",
-                "chat",
-                "chatting",
-                "message"
-              ],
+              "searchKeyword": ["대화", "채팅", "메시지", "메세지", "chat", "chatting", "message"],
               "highlightText": "대화하기"
             },
             {
-              "searchKeyword": [
-                "스타일",
-                "꾸미기",
-                "style",
-                "format"
-              ],
+              "searchKeyword": ["스타일", "꾸미기", "style", "format"],
               "highlightText": "스타일"
             },
             {
-              "searchKeyword": [
-                "댓글",
-                "답글",
-                "스레드",
-                "comment",
-                "reply",
-                "thread"
-              ],
+              "searchKeyword": ["댓글", "답글", "스레드", "comment", "reply", "thread"],
               "highlightText": "댓글"
             },
             {
@@ -695,47 +420,19 @@
           "description": "파일 공유, 비밀 대화, 메시지 챙기기 등 고급 기능을 안내해요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "대화",
-                "채팅",
-                "메시지",
-                "메세지",
-                "chat",
-                "chatting",
-                "message"
-              ],
+              "searchKeyword": ["대화", "채팅", "메시지", "메세지", "chat", "chatting", "message"],
               "highlightText": "대화하기"
             },
             {
-              "searchKeyword": [
-                "파일",
-                "업로드",
-                "공유",
-                "전송",
-                "file",
-                "share",
-                "sharing"
-              ],
+              "searchKeyword": ["파일", "업로드", "공유", "전송", "file", "share", "sharing"],
               "highlightText": "파일 공유"
             },
             {
-              "searchKeyword": [
-                "비밀",
-                "비공개",
-                "secret",
-                "private"
-              ],
+              "searchKeyword": ["비밀", "비공개", "secret", "private"],
               "highlightText": "비밀 대화"
             },
             {
-              "searchKeyword": [
-                "챙기기",
-                "할일",
-                "해야할",
-                "bookmark",
-                "star",
-                "todo"
-              ],
+              "searchKeyword": ["챙기기", "할일", "해야할", "bookmark", "star", "todo"],
               "highlightText": "메시지 챙기기"
             }
           ]
@@ -747,41 +444,23 @@
           "description": "신규 댓글 알림, 읽음 처리, 챙기기 시스템 메시지 확인 방법을 안내해요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "이메일",
-                "email"
-              ],
+              "searchKeyword": ["이메일", "email"],
               "highlightText": "알림"
             },
             {
-              "searchKeyword": [
-                "알림",
-                "notification",
-                "push"
-              ],
+              "searchKeyword": ["알림", "notification", "push"],
               "highlightText": "알림"
             },
             {
-              "searchKeyword": [
-                "읽음",
-                "모두읽음",
-                "read"
-              ],
+              "searchKeyword": ["읽음", "모두읽음", "read"],
               "highlightText": "읽음 처리"
             },
             {
-              "searchKeyword": [
-                "메시지",
-                "메세지",
-                "message"
-              ],
+              "searchKeyword": ["메시지", "메세지", "message"],
               "highlightText": "메시지"
             },
             {
-              "searchKeyword": [
-                "시스템",
-                "system"
-              ],
+              "searchKeyword": ["시스템", "system"],
               "highlightText": "시스템 메시지"
             }
           ]
@@ -793,29 +472,15 @@
           "description": "거래처로부터 받은 대화방 초대를 직접 확인하고 승인하는 방법을 안내해요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "수락",
-                "accept",
-                "confirm"
-              ],
+              "searchKeyword": ["수락", "accept", "confirm"],
               "highlightText": "수락하기"
             },
             {
-              "searchKeyword": [
-                "초대",
-                "invite",
-                "invitation"
-              ],
+              "searchKeyword": ["초대", "invite", "invitation"],
               "highlightText": "초대"
             },
             {
-              "searchKeyword": [
-                "대화방",
-                "채팅방",
-                "채널",
-                "channel",
-                "chat"
-              ],
+              "searchKeyword": ["대화방", "채팅방", "채널", "channel", "chat"],
               "highlightText": "대화방"
             }
           ]
@@ -830,14 +495,7 @@
       "description": "모바일 앱에서 대화방 관리, 메시지 작성, 알림 확인 방법을 친절하게 알려드려요.",
       "keywordMappings": [
         {
-          "searchKeyword": [
-            "조인트",
-            "메신저",
-            "joint",
-            "messenger",
-            "chat",
-            "messaging"
-          ],
+          "searchKeyword": ["조인트", "메신저", "joint", "messenger", "chat", "messaging"],
           "highlightText": "메신저 사용 (모바일)"
         },
         {
@@ -854,20 +512,11 @@
           "highlightText": "모바일"
         },
         {
-          "searchKeyword": [
-            "메시지",
-            "작성",
-            "message",
-            "chat"
-          ],
+          "searchKeyword": ["메시지", "작성", "message", "chat"],
           "highlightText": "메시지 작성"
         },
         {
-          "searchKeyword": [
-            "알림",
-            "notification",
-            "push"
-          ],
+          "searchKeyword": ["알림", "notification", "push"],
           "highlightText": "알림"
         }
       ],
@@ -879,71 +528,35 @@
           "description": "모바일 대화방 목록과 메뉴 구성을 쉽게 설명해요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "메시지",
-                "메세지",
-                "message"
-              ],
+              "searchKeyword": ["메시지", "메세지", "message"],
               "highlightText": "메시지"
             },
             {
-              "searchKeyword": [
-                "홈",
-                "첫화면",
-                "초기화면"
-              ],
+              "searchKeyword": ["홈", "첫화면", "초기화면"],
               "highlightText": "홈 화면"
             },
             {
-              "searchKeyword": [
-                "안내",
-                "사용법",
-                "설명",
-                "guide"
-              ],
+              "searchKeyword": ["안내", "사용법", "설명", "guide"],
               "highlightText": "안내"
             },
             {
-              "searchKeyword": [
-                "모바일",
-                "mobile",
-                "phone"
-              ],
+              "searchKeyword": ["모바일", "mobile", "phone"],
               "highlightText": "모바일"
             },
             {
-              "searchKeyword": [
-                "대화방",
-                "채팅방",
-                "채널",
-                "channel",
-                "chat"
-              ],
+              "searchKeyword": ["대화방", "채팅방", "채널", "channel", "chat"],
               "highlightText": "대화방"
             },
             {
-              "searchKeyword": [
-                "하단",
-                "아래쪽",
-                "bottom",
-                "lower"
-              ],
+              "searchKeyword": ["하단", "아래쪽", "bottom", "lower"],
               "highlightText": "하단"
             },
             {
-              "searchKeyword": [
-                "메뉴",
-                "menu",
-                "navigation"
-              ],
+              "searchKeyword": ["메뉴", "menu", "navigation"],
               "highlightText": "메뉴"
             },
             {
-              "searchKeyword": [
-                "구성",
-                "구조",
-                "layout"
-              ],
+              "searchKeyword": ["구성", "구조", "layout"],
               "highlightText": "구성"
             }
           ]
@@ -955,35 +568,15 @@
           "description": "모바일에서 메시지 작성, 스타일, 댓글, 이모지 반응 등 기본 대화 기능을 안내해요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "대화",
-                "채팅",
-                "메시지",
-                "메세지",
-                "chat",
-                "chatting",
-                "message"
-              ],
+              "searchKeyword": ["대화", "채팅", "메시지", "메세지", "chat", "chatting", "message"],
               "highlightText": "대화하기"
             },
             {
-              "searchKeyword": [
-                "스타일",
-                "꾸미기",
-                "style",
-                "format"
-              ],
+              "searchKeyword": ["스타일", "꾸미기", "style", "format"],
               "highlightText": "스타일"
             },
             {
-              "searchKeyword": [
-                "댓글",
-                "답글",
-                "스레드",
-                "comment",
-                "reply",
-                "thread"
-              ],
+              "searchKeyword": ["댓글", "답글", "스레드", "comment", "reply", "thread"],
               "highlightText": "댓글"
             },
             {
@@ -1007,47 +600,19 @@
           "description": "모바일 파일 공유, 비밀 대화, 메시지 챙기기 등 고급 기능을 안내해요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "대화",
-                "채팅",
-                "메시지",
-                "메세지",
-                "chat",
-                "chatting",
-                "message"
-              ],
+              "searchKeyword": ["대화", "채팅", "메시지", "메세지", "chat", "chatting", "message"],
               "highlightText": "대화하기"
             },
             {
-              "searchKeyword": [
-                "파일",
-                "업로드",
-                "공유",
-                "전송",
-                "file",
-                "share",
-                "sharing"
-              ],
+              "searchKeyword": ["파일", "업로드", "공유", "전송", "file", "share", "sharing"],
               "highlightText": "파일 공유"
             },
             {
-              "searchKeyword": [
-                "비밀",
-                "비공개",
-                "secret",
-                "private"
-              ],
+              "searchKeyword": ["비밀", "비공개", "secret", "private"],
               "highlightText": "비밀 대화"
             },
             {
-              "searchKeyword": [
-                "챙기기",
-                "할일",
-                "해야할",
-                "bookmark",
-                "star",
-                "todo"
-              ],
+              "searchKeyword": ["챙기기", "할일", "해야할", "bookmark", "star", "todo"],
               "highlightText": "메시지 챙기기"
             }
           ]
@@ -1059,41 +624,23 @@
           "description": "모바일 푸시 알림, 레드 배지, 알림 메시지 읽음 처리 방법을 안내해요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "이메일",
-                "email"
-              ],
+              "searchKeyword": ["이메일", "email"],
               "highlightText": "알림"
             },
             {
-              "searchKeyword": [
-                "알림",
-                "notification",
-                "push"
-              ],
+              "searchKeyword": ["알림", "notification", "push"],
               "highlightText": "알림"
             },
             {
-              "searchKeyword": [
-                "배지",
-                "badge"
-              ],
+              "searchKeyword": ["배지", "badge"],
               "highlightText": "배지"
             },
             {
-              "searchKeyword": [
-                "읽음",
-                "모두읽음",
-                "read"
-              ],
+              "searchKeyword": ["읽음", "모두읽음", "read"],
               "highlightText": "읽음 처리"
             },
             {
-              "searchKeyword": [
-                "메시지",
-                "메세지",
-                "message"
-              ],
+              "searchKeyword": ["메시지", "메세지", "message"],
               "highlightText": "메시지"
             }
           ]
@@ -1105,29 +652,15 @@
           "description": "모바일 앱에서 외부 거래처의 대화방 초대를 확인하고 승낙하는 방법을 안내해요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "수락",
-                "accept",
-                "confirm"
-              ],
+              "searchKeyword": ["수락", "accept", "confirm"],
               "highlightText": "수락하기"
             },
             {
-              "searchKeyword": [
-                "초대",
-                "invite",
-                "invitation"
-              ],
+              "searchKeyword": ["초대", "invite", "invitation"],
               "highlightText": "초대"
             },
             {
-              "searchKeyword": [
-                "대화방",
-                "채팅방",
-                "채널",
-                "channel",
-                "chat"
-              ],
+              "searchKeyword": ["대화방", "채팅방", "채널", "channel", "chat"],
               "highlightText": "대화방"
             }
           ]
@@ -1142,22 +675,11 @@
       "description": "등록된 모든 거래처와 담당자 정보를 한눈에 보고 관리할 수 있도록 도와드려요.",
       "keywordMappings": [
         {
-          "searchKeyword": [
-            "거래처",
-            "account",
-            "client",
-            "customer",
-            "partner"
-          ],
+          "searchKeyword": ["거래처", "account", "client", "customer", "partner"],
           "highlightText": "거래처"
         },
         {
-          "searchKeyword": [
-            "담당자",
-            "연락처",
-            "contact",
-            "person in charge"
-          ],
+          "searchKeyword": ["담당자", "연락처", "contact", "person in charge"],
           "highlightText": "담당자"
         }
       ],
@@ -1169,44 +691,23 @@
           "description": "전체 거래처 현황, 담당 팀원, 연결된 대화방 수를 한눈에 확인할 수 있어요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "거래처",
-                "account",
-                "client",
-                "customer",
-                "partner"
-              ],
+              "searchKeyword": ["거래처", "account", "client", "customer", "partner"],
               "highlightText": "거래처"
             },
             {
-              "searchKeyword": [
-                "목록",
-                "list"
-              ],
+              "searchKeyword": ["목록", "list"],
               "highlightText": "목록"
             },
             {
-              "searchKeyword": [
-                "보기",
-                "view",
-                "see"
-              ],
+              "searchKeyword": ["보기", "view", "see"],
               "highlightText": "보기"
             },
             {
-              "searchKeyword": [
-                "현황",
-                "status"
-              ],
+              "searchKeyword": ["현황", "status"],
               "highlightText": "현황"
             },
             {
-              "searchKeyword": [
-                "담당",
-                "팀원",
-                "member",
-                "person in charge"
-              ],
+              "searchKeyword": ["담당", "팀원", "member", "person in charge"],
               "highlightText": "담당 팀원"
             }
           ]
@@ -1218,74 +719,35 @@
           "description": "업체명 수정, 메모 등록, 담당자/연락처 지정 방법을 안내해요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "거래처",
-                "account",
-                "client",
-                "customer",
-                "partner"
-              ],
+              "searchKeyword": ["거래처", "account", "client", "customer", "partner"],
               "highlightText": "거래처"
             },
             {
-              "searchKeyword": [
-                "담당자",
-                "연락처",
-                "contact",
-                "person in charge"
-              ],
+              "searchKeyword": ["담당자", "연락처", "contact", "person in charge"],
               "highlightText": "담당자"
             },
             {
-              "searchKeyword": [
-                "연락처",
-                "contact"
-              ],
+              "searchKeyword": ["연락처", "contact"],
               "highlightText": "연락처"
             },
             {
-              "searchKeyword": [
-                "업체명",
-                "거래처명",
-                "회사이름",
-                "company name",
-                "client name"
-              ],
+              "searchKeyword": ["업체명", "거래처명", "회사이름", "company name", "client name"],
               "highlightText": "업체명"
             },
             {
-              "searchKeyword": [
-                "메모",
-                "노트",
-                "memo",
-                "note"
-              ],
+              "searchKeyword": ["메모", "노트", "memo", "note"],
               "highlightText": "메모"
             },
             {
-              "searchKeyword": [
-                "메인/서브",
-                "메인",
-                "서브",
-                "main/sub",
-                "primary/secondary"
-              ],
+              "searchKeyword": ["메인/서브", "메인", "서브", "main/sub", "primary/secondary"],
               "highlightText": "메인/서브"
             },
             {
-              "searchKeyword": [
-                "지정",
-                "할당",
-                "assign",
-                "designate"
-              ],
+              "searchKeyword": ["지정", "할당", "assign", "designate"],
               "highlightText": "지정"
             },
             {
-              "searchKeyword": [
-                "연락처",
-                "contact"
-              ],
+              "searchKeyword": ["연락처", "contact"],
               "highlightText": "연락처"
             }
           ]
@@ -1297,38 +759,19 @@
           "description": "특정 거래처와 연결된 전체 대화방 목록을 관리하고 미리볼 수 있어요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "거래처",
-                "account",
-                "client",
-                "customer",
-                "partner"
-              ],
+              "searchKeyword": ["거래처", "account", "client", "customer", "partner"],
               "highlightText": "거래처"
             },
             {
-              "searchKeyword": [
-                "대화방",
-                "채팅방",
-                "채널",
-                "channel",
-                "chat"
-              ],
+              "searchKeyword": ["대화방", "채팅방", "채널", "channel", "chat"],
               "highlightText": "대화방"
             },
             {
-              "searchKeyword": [
-                "리스트",
-                "목록",
-                "list"
-              ],
+              "searchKeyword": ["리스트", "목록", "list"],
               "highlightText": "리스트"
             },
             {
-              "searchKeyword": [
-                "미리보기",
-                "preview"
-              ],
+              "searchKeyword": ["미리보기", "preview"],
               "highlightText": "미리보기"
             }
           ]
@@ -1340,32 +783,15 @@
           "description": "새로운 거래처를 등록하고 대화방 개설, 초대까지 한 번에 할 수 있어요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "거래처",
-                "account",
-                "client",
-                "customer",
-                "partner"
-              ],
+              "searchKeyword": ["거래처", "account", "client", "customer", "partner"],
               "highlightText": "거래처 추가하기"
             },
             {
-              "searchKeyword": [
-                "대화방",
-                "채팅방",
-                "채널",
-                "channel",
-                "chat"
-              ],
+              "searchKeyword": ["대화방", "채팅방", "채널", "channel", "chat"],
               "highlightText": "대화방 개설"
             },
             {
-              "searchKeyword": [
-                "초대",
-                "초대장",
-                "invite",
-                "invitation"
-              ],
+              "searchKeyword": ["초대", "초대장", "invite", "invitation"],
               "highlightText": "초대"
             }
           ]
@@ -1380,10 +806,7 @@
       "description": "팀원들의 활동 현황과 워크스페이스 통계, 초대 관리 방법을 안내해요.",
       "keywordMappings": [
         {
-          "searchKeyword": [
-            "팀",
-            "team"
-          ],
+          "searchKeyword": ["팀", "team"],
           "highlightText": "팀 관리"
         },
         {
@@ -1400,35 +823,19 @@
           "highlightText": "팀원"
         },
         {
-          "searchKeyword": [
-            "통계",
-            "분석",
-            "statistics",
-            "stats",
-            "analytics"
-          ],
+          "searchKeyword": ["통계", "분석", "statistics", "stats", "analytics"],
           "highlightText": "통계"
         },
         {
-          "searchKeyword": [
-            "워크스페이스",
-            "workspace"
-          ],
+          "searchKeyword": ["워크스페이스", "workspace"],
           "highlightText": "워크스페이스"
         },
         {
-          "searchKeyword": [
-            "초대",
-            "invite",
-            "invitation"
-          ],
+          "searchKeyword": ["초대", "invite", "invitation"],
           "highlightText": "초대"
         },
         {
-          "searchKeyword": [
-            "활동",
-            "activity"
-          ],
+          "searchKeyword": ["활동", "activity"],
           "highlightText": "활동"
         }
       ],
@@ -1453,21 +860,11 @@
               "highlightText": "팀원"
             },
             {
-              "searchKeyword": [
-                "목록",
-                "팀원목록",
-                "직원목록",
-                "list"
-              ],
+              "searchKeyword": ["목록", "팀원목록", "직원목록", "list"],
               "highlightText": "목록"
             },
             {
-              "searchKeyword": [
-                "활동",
-                "활동량",
-                "activity",
-                "usage"
-              ],
+              "searchKeyword": ["활동", "활동량", "activity", "usage"],
               "highlightText": "활동"
             }
           ]
@@ -1479,41 +876,19 @@
           "description": "거래처, 대화방, 메시지, 이모지 사용량 등 팀 활동 통계를 한눈에 안내해요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "회사",
-                "워크스페이스",
-                "workspace"
-              ],
+              "searchKeyword": ["회사", "워크스페이스", "workspace"],
               "highlightText": "워크스페이스"
             },
             {
-              "searchKeyword": [
-                "통계",
-                "분석",
-                "stats",
-                "statsistics",
-                "analytics"
-              ],
+              "searchKeyword": ["통계", "분석", "stats", "statsistics", "analytics"],
               "highlightText": "통계"
             },
             {
-              "searchKeyword": [
-                "거래처",
-                "account",
-                "client",
-                "customer",
-                "partner"
-              ],
+              "searchKeyword": ["거래처", "account", "client", "customer", "partner"],
               "highlightText": "거래처"
             },
             {
-              "searchKeyword": [
-                "사용량",
-                "활동량",
-                "이용량",
-                "usage",
-                "activity"
-              ],
+              "searchKeyword": ["사용량", "활동량", "이용량", "usage", "activity"],
               "highlightText": "사용량"
             }
           ]
@@ -1538,28 +913,15 @@
               "highlightText": "팀원"
             },
             {
-              "searchKeyword": [
-                "상세",
-                "정보",
-                "detail"
-              ],
+              "searchKeyword": ["상세", "정보", "detail"],
               "highlightText": "상세 정보"
             },
             {
-              "searchKeyword": [
-                "프로필",
-                "프로필정보",
-                "프로필사진",
-                "profile"
-              ],
+              "searchKeyword": ["프로필", "프로필정보", "프로필사진", "profile"],
               "highlightText": "프로필"
             },
             {
-              "searchKeyword": [
-                "접속",
-                "접속여부",
-                "connected"
-              ],
+              "searchKeyword": ["접속", "접속여부", "connected"],
               "highlightText": "접속"
             }
           ]
@@ -1584,29 +946,15 @@
               "highlightText": "팀원"
             },
             {
-              "searchKeyword": [
-                "대화방",
-                "채팅방",
-                "채널",
-                "channel",
-                "chat"
-              ],
+              "searchKeyword": ["대화방", "채팅방", "채널", "channel", "chat"],
               "highlightText": "대화방"
             },
             {
-              "searchKeyword": [
-                "참여",
-                "참여중",
-                "joined"
-              ],
+              "searchKeyword": ["참여", "참여중", "joined"],
               "highlightText": "참여"
             },
             {
-              "searchKeyword": [
-                "미리보기",
-                "미리확인",
-                "preview"
-              ],
+              "searchKeyword": ["미리보기", "미리확인", "preview"],
               "highlightText": "미리보기"
             }
           ]
@@ -1642,13 +990,7 @@
               "highlightText": "초대장"
             },
             {
-              "searchKeyword": [
-                "발송",
-                "초대발송",
-                "전송",
-                "send",
-                "sending"
-              ],
+              "searchKeyword": ["발송", "초대발송", "전송", "send", "sending"],
               "highlightText": "발송"
             }
           ]
@@ -1686,10 +1028,7 @@
               "highlightText": "삭제"
             },
             {
-              "searchKeyword": [
-                "취소",
-                "cancel"
-              ],
+              "searchKeyword": ["취소", "cancel"],
               "highlightText": "취소"
             }
           ]
@@ -1704,39 +1043,19 @@
       "description": "개인 프로필, 알림 수신, 워크스페이스 환경 설정 등 다양한 설정 방법을 쉽게 설명해요.",
       "keywordMappings": [
         {
-          "searchKeyword": [
-            "설정",
-            "환경설정",
-            "세팅",
-            "setting",
-            "settings",
-            "configuration"
-          ],
+          "searchKeyword": ["설정", "환경설정", "세팅", "setting", "settings", "configuration"],
           "highlightText": "설정"
         },
         {
-          "searchKeyword": [
-            "알림",
-            "notification",
-            "push"
-          ],
+          "searchKeyword": ["알림", "notification", "push"],
           "highlightText": "알림"
         },
         {
-          "searchKeyword": [
-            "워크스페이스",
-            "회사",
-            "회사설정",
-            "workspace"
-          ],
+          "searchKeyword": ["워크스페이스", "회사", "회사설정", "workspace"],
           "highlightText": "워크스페이스"
         },
         {
-          "searchKeyword": [
-            "소유자",
-            "대표",
-            "owner"
-          ],
+          "searchKeyword": ["소유자", "대표", "owner"],
           "highlightText": "워크스페이스"
         }
       ],
@@ -1748,69 +1067,31 @@
           "description": "이름, 직함, 자기소개, 전화번호 등 내 프로필 정보를 손쉽게 수정할 수 있어요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "내",
-                "나의",
-                "개인",
-                "my"
-              ],
+              "searchKeyword": ["내", "나의", "개인", "my"],
               "highlightText": "내"
             },
             {
-              "searchKeyword": [
-                "프로필",
-                "프로필정보",
-                "프로필이미지",
-                "profile"
-              ],
+              "searchKeyword": ["프로필", "프로필정보", "프로필이미지", "profile"],
               "highlightText": "프로필"
             },
             {
-              "searchKeyword": [
-                "설정",
-                "프로필설정",
-                "환경설정",
-                "setting",
-                "settings"
-              ],
+              "searchKeyword": ["설정", "프로필설정", "환경설정", "setting", "settings"],
               "highlightText": "설정"
             },
             {
-              "searchKeyword": [
-                "이름",
-                "내이름",
-                "이름변경",
-                "name"
-              ],
+              "searchKeyword": ["이름", "내이름", "이름변경", "name"],
               "highlightText": "이름"
             },
             {
-              "searchKeyword": [
-                "직함",
-                "직책",
-                "직위",
-                "position",
-                "title"
-              ],
+              "searchKeyword": ["직함", "직책", "직위", "position", "title"],
               "highlightText": "직함"
             },
             {
-              "searchKeyword": [
-                "자기소개",
-                "소개",
-                "소개글",
-                "bio",
-                "introduction"
-              ],
+              "searchKeyword": ["자기소개", "소개", "소개글", "bio", "introduction"],
               "highlightText": "자기소개"
             },
             {
-              "searchKeyword": [
-                "전화번호",
-                "연락처",
-                "핸드폰번호",
-                "phone"
-              ],
+              "searchKeyword": ["전화번호", "연락처", "핸드폰번호", "phone"],
               "highlightText": "전화번호"
             }
           ]
@@ -1822,53 +1103,23 @@
           "description": "놓친 메시지 이메일 수신, 멘션 알림 등 알림 설정 방법을 안내해요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "알림",
-                "알림설정",
-                "메시지알림",
-                "notification",
-                "alert",
-                "push"
-              ],
+              "searchKeyword": ["알림", "알림설정", "메시지알림", "notification", "alert", "push"],
               "highlightText": "알림"
             },
             {
-              "searchKeyword": [
-                "설정",
-                "알림설정",
-                "환경설정",
-                "setting",
-                "settings"
-              ],
+              "searchKeyword": ["설정", "알림설정", "환경설정", "setting", "settings"],
               "highlightText": "설정"
             },
             {
-              "searchKeyword": [
-                "이메일",
-                "이메일알림",
-                "메일",
-                "email",
-                "mail"
-              ],
+              "searchKeyword": ["이메일", "이메일알림", "메일", "email", "mail"],
               "highlightText": "이메일"
             },
             {
-              "searchKeyword": [
-                "수신",
-                "이메일수신",
-                "받기",
-                "receive"
-              ],
+              "searchKeyword": ["수신", "이메일수신", "받기", "receive"],
               "highlightText": "수신"
             },
             {
-              "searchKeyword": [
-                "멘션",
-                "호명",
-                "태그",
-                "mention",
-                "tag"
-              ],
+              "searchKeyword": ["멘션", "호명", "태그", "mention", "tag"],
               "highlightText": "멘션"
             }
           ]
@@ -1880,69 +1131,31 @@
           "description": "소유권 이전, 워크스페이스 삭제, 팀원 관리 등 소유자 전용 설정을 안내해요.",
           "keywordMappings": [
             {
-              "searchKeyword": [
-                "워크스페이스",
-                "우리워크스페이스",
-                "회사",
-                "workspace"
-              ],
+              "searchKeyword": ["워크스페이스", "우리워크스페이스", "회사", "workspace"],
               "highlightText": "워크스페이스"
             },
             {
-              "searchKeyword": [
-                "설정",
-                "워크스페이스설정",
-                "환경설정",
-                "setting",
-                "settings"
-              ],
+              "searchKeyword": ["설정", "워크스페이스설정", "환경설정", "setting", "settings"],
               "highlightText": "설정"
             },
             {
-              "searchKeyword": [
-                "소유자",
-                "워크스페이스소유자",
-                "대표",
-                "owner"
-              ],
+              "searchKeyword": ["소유자", "워크스페이스소유자", "대표", "owner"],
               "highlightText": "소유자"
             },
             {
-              "searchKeyword": [
-                "권한",
-                "소유권한",
-                "관리권한",
-                "permission",
-                "authority"
-              ],
+              "searchKeyword": ["권한", "소유권한", "관리권한", "permission", "authority"],
               "highlightText": "권한"
             },
             {
-              "searchKeyword": [
-                "소유권 이전",
-                "이전",
-                "권한이전",
-                "transfer ownership"
-              ],
+              "searchKeyword": ["소유권 이전", "이전", "권한이전", "transfer ownership"],
               "highlightText": "소유권 이전"
             },
             {
-              "searchKeyword": [
-                "워크스페이스 삭제",
-                "삭제",
-                "공간삭제",
-                "delete workspace"
-              ],
+              "searchKeyword": ["워크스페이스 삭제", "삭제", "공간삭제", "delete workspace"],
               "highlightText": "워크스페이스 삭제"
             },
             {
-              "searchKeyword": [
-                "팀원 삭제",
-                "삭제",
-                "멤버삭제",
-                "remove member",
-                "delete member"
-              ],
+              "searchKeyword": ["팀원 삭제", "삭제", "멤버삭제", "remove member", "delete member"],
               "highlightText": "팀원 삭제"
             }
           ]
