@@ -190,7 +190,7 @@
       }
 
       .navbar .logo:focus-visible {
-        outline: 2px solid #000;
+        outline: 2px solid var(--black);
         outline-offset: 3px;
       }
 
@@ -224,7 +224,7 @@
       }
 
       .customer-story-btn:focus-visible {
-        outline: 2px solid #000;
+        outline: 2px solid var(--black);
         outline-offset: 3px;
       }
 
@@ -265,7 +265,7 @@
       }
 
       .signin-btn:focus-visible {
-        outline: 2px solid #000;
+        outline: 2px solid var(--black);
         outline-offset: 3px;
       }
 
@@ -306,8 +306,8 @@
       }
 
       .typeform-btn button:focus-visible {
-        outline: 2px solid #000 !important;
-        outline-offset: 3px !important;
+        outline: 2px solid var(--black);
+        outline-offset: 3px;
       }
 
       .typeform-btn:hover button {
@@ -607,14 +607,19 @@
           padding-right: 16px;
         }
 
+        main {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+
         .desktop-app-download {
           min-height: auto;
-          padding: 120px 0 60px;
+          padding: 80px 0 60px;
         }
 
         .mobile-app-download {
           min-height: auto;
-          padding: 80px 0 60px;
+          padding: 120px 0 60px;
         }
 
         .app-download-inner {
