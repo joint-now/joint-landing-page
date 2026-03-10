@@ -28,8 +28,6 @@
     <title>JOINT - 앱 다운로드</title>
     <link
       rel="stylesheet"
-      as="style"
-      crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"
     />
     <link
@@ -75,7 +73,6 @@
         margin: 0;
         padding: 0;
         text-align: center;
-        user-select: none;
         box-sizing: border-box;
         font-family:
           Pretendard,
@@ -192,6 +189,11 @@
         opacity: 0.8;
       }
 
+      .navbar .logo:focus-visible {
+        outline: 2px solid var(--black);
+        outline-offset: 3px;
+      }
+
       .navbar-btns {
         display: flex;
         align-items: center;
@@ -219,6 +221,11 @@
       .customer-story-btn svg {
         margin-left: 4px;
         color: var(--gray04);
+      }
+
+      .customer-story-btn:focus-visible {
+        outline: 2px solid var(--black);
+        outline-offset: 3px;
       }
 
       .customer-story-btn:hover {
@@ -257,6 +264,11 @@
         cursor: pointer;
       }
 
+      .signin-btn:focus-visible {
+        outline: 2px solid var(--black);
+        outline-offset: 3px;
+      }
+
       .signin-btn:hover {
         background-image: linear-gradient(
           rgba(var(--gray10-rgb), 0.04),
@@ -293,6 +305,11 @@
         cursor: pointer !important;
       }
 
+      .typeform-btn button:focus-visible {
+        outline: 2px solid var(--black);
+        outline-offset: 3px;
+      }
+
       .typeform-btn:hover button {
         background-image: linear-gradient(
           rgba(var(--gray10-rgb), 0.04),
@@ -314,34 +331,68 @@
         width: 100%;
       }
 
-      .app-download {
+      .desktop-app-download {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
 
-        min-height: calc(100vh - 70px);
-        padding: 120px 20px 80px;
+        padding: 150px 0 100px;
+        /* PC 섹션 상단에 50px 추가 여백 */
+      }
+
+      .mobile-app-download {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        padding: 100px 0;
+        background: rgba(var(--gray10-rgb), 0.02);
       }
 
       .app-download-inner {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 80px;
+        gap: 40px;
 
-        max-width: 960px;
+        max-width: 1212px;
         width: 100%;
+        padding: 0 25px;
+        box-sizing: border-box;
       }
 
-      /* 좌측: 텍스트 + 버튼 영역 */
+      /* 좌/우 컨텐츠 공통 넓이 */
       .download-info {
         display: flex;
+        flex: 0 0 420px;
         flex-direction: column;
         align-items: flex-start;
         gap: 16px;
-        flex: 1;
       }
+
+      .download-image {
+        display: flex;
+        flex: 1;
+        /* 남은 영역을 모두 이미지가 차지하게 하여 크게 만듦 */
+        justify-content: center;
+        align-items: center;
+      }
+
+      .download-image img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .mobile-qr-container {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+      }
+
+      /* 좌측: 텍스트 + 버튼 영역 */
 
       .download-badge {
         display: inline-block;
@@ -422,110 +473,47 @@
         );
       }
 
-      /* 우측: QR 코드 영역 */
-      .download-qr {
+      /* QR 코드 영역 (인라인 텍스트 하단) */
+      .download-qr-inline {
         display: flex;
-        flex-direction: column;
+        /* 넓게 펴기 위해 flex로 변경 */
+        width: 100%;
+        /* 부모(텍스트 컬럼) 너비 꽉 채우기 */
         align-items: center;
-        gap: 16px;
+        gap: 20px;
+        margin-top: 24px;
+        padding: 16px 20px;
+        border-radius: 16px;
+        background: var(--white);
+        border: 1px solid rgba(var(--gray10-rgb), 0.08);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+      }
 
-        padding: 40px;
-
-        border-radius: 24px;
-        background: rgba(var(--gray10-rgb), 0.02);
+      .download-qr-inline img {
+        border-radius: 8px;
         border: 1px solid rgba(var(--gray10-rgb), 0.06);
       }
 
-      .download-qr-label {
-        color: var(--gray08);
-        font-size: 15px;
-        font-weight: 600;
-        line-height: 150%;
-        letter-spacing: -0.3px;
-      }
-
-      .download-qr img {
-        border-radius: 12px;
-      }
-
-      .download-qr-hint {
-        color: rgba(var(--gray10-rgb), 0.48);
-        font-size: 13px;
-        font-weight: 500;
-        line-height: 150%;
-      }
-
-      /* === 모바일 전용 다운로드 레이아웃 === */
-
-      .app-download-mobile {
+      .download-qr-content {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 24px;
-
-        min-height: calc(100vh - 70px);
-        padding: 120px 24px 80px;
+        align-items: flex-start;
+        gap: 6px;
       }
 
-      .mobile-download-info {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-      }
-
-      .mobile-download-title {
+      .download-qr-content strong {
         color: var(--gray10);
-        font-size: 28px;
+        font-size: 18px;
+        /* 텍스트 크기 상향 */
         font-weight: 700;
         line-height: 140%;
-        letter-spacing: -0.56px;
       }
 
-      .mobile-download-description {
-        color: rgba(var(--gray10-rgb), 0.72);
+      .download-qr-content span {
+        color: rgba(var(--gray10-rgb), 0.52);
         font-size: 15px;
-        font-weight: 500;
-        line-height: 160%;
-        letter-spacing: -0.3px;
-      }
-
-      .mobile-download-btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-
-        margin-top: 8px;
-        padding: 16px 36px;
-
-        border: none;
-        border-radius: 14px;
-
-        background-color: var(--primary);
-        color: var(--white);
-        box-shadow: 0 2px 8px rgba(102, 75, 244, 0.25);
-
-        font-size: 17px;
-        font-weight: 700;
-        line-height: 20px;
-        text-decoration: none;
-
-        cursor: pointer;
-        transition:
-          opacity 0.2s ease,
-          transform 0.2s ease;
-      }
-
-      .mobile-download-btn:hover {
-        background-image: linear-gradient(
-          rgba(var(--gray10-rgb), 0.06),
-          rgba(var(--gray10-rgb), 0.06)
-        );
-      }
-
-      .mobile-download-btn:active {
-        transform: scale(0.98);
+        /* 텍스트 크기 상향 */
+        line-height: 140%;
       }
 
       /* === Footer === */
@@ -584,6 +572,9 @@
       }
 
       .social-links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         width: 24px;
         height: 24px;
         color: inherit;
@@ -616,6 +607,55 @@
           padding-right: 16px;
         }
 
+        main {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+
+        .desktop-app-download {
+          min-height: auto;
+          padding: 80px 0 60px;
+        }
+
+        .mobile-app-download {
+          min-height: auto;
+          padding: 120px 0 60px;
+        }
+
+        .app-download-inner {
+          flex-direction: column;
+          gap: 40px;
+        }
+
+        /* 모바일에서는 강제로 flex: 1 크기 비율 해제 */
+        .download-info,
+        .download-image {
+          flex: auto;
+          align-items: center;
+        }
+
+        .download-title {
+          text-align: center;
+          font-size: 28px;
+          letter-spacing: -0.56px;
+        }
+
+        .download-description {
+          text-align: center;
+          font-size: 15px;
+          letter-spacing: -0.3px;
+        }
+
+        .download-btn-group {
+          justify-content: center;
+          width: 100%;
+        }
+
+        .mobile-app-download .download-info {
+          order: -1;
+          /* 모바일에서 텍스트 영역을 위로 올림 */
+        }
+
         .footer-container .info {
           flex-direction: column;
           gap: 16px;
@@ -628,32 +668,25 @@
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const gnb = document.querySelector('.gnb');
-        const logo = document.querySelector('.logo');
-
-        if (logo) {
-          logo.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.location.href = '/';
-          });
-        }
-
         if (gnb) {
-          window.addEventListener('scroll', () => {
+          const updateGnb = () => {
             if (window.scrollY > 100) {
               gnb.classList.add('scrolled');
             } else {
               gnb.classList.remove('scrolled');
             }
-          });
+          };
+          window.addEventListener('scroll', updateGnb, { passive: true });
+          updateGnb();
         }
       });
     </script>
 
     <header class="gnb">
       <nav class="navbar">
-        <div class="logo">
+        <a class="logo" href="/">
           <img src="/img/joint-logo.svg" alt="Joint 조인트" width="77" height="26" />
-        </div>
+        </a>
         <div class="navbar-btns">
           <a
             class="customer-story-btn for-desktop"
@@ -705,72 +738,94 @@
           </a>
           <div class="typeform-btn for-desktop" data-tf-live="01K6C2D7WHYR367H60C4C5DBCF"></div>
           <div class="typeform-btn for-mobile" data-tf-live="01K6C2D7WHYR367H60C4C5DBCF"></div>
-          <script src="//embed.typeform.com/next/embed.js"></script>
+          <script src="https://embed.typeform.com/next/embed.js" defer></script>
         </div>
       </nav>
     </header>
 
     <main>
-      <!-- 데스크톱 레이아웃 -->
-      <div class="for-desktop">
-        <section class="app-download">
-          <div class="app-download-inner">
-            <div class="download-info">
-              <span class="download-badge">다운로드</span>
-              <h1 class="download-title">
-                데스크톱과 모바일에서
-                <br />
-                조인트를 시작하세요
-              </h1>
-              <p class="download-description">
-                PC에서 바로 시작하거나, 모바일 앱을 설치하여
-                <br />
-                언제 어디서나 거래처와 소통하세요.
-              </p>
-              <div class="download-btn-group">
-                <a
-                  href="https://app.joint.now/download"
-                  target="_blank"
-                  rel="noopener"
-                  class="download-btn download-btn-primary"
-                >
-                  PC웹/앱 시작
-                </a>
-              </div>
+      <section class="desktop-app-download">
+        <div class="app-download-inner">
+          <div class="download-info">
+            <span class="download-badge">데스크톱 앱</span>
+            <h1 class="download-title">
+              더 편리한 협업을 위해
+              <br />
+              Joint 앱을 시작하세요
+            </h1>
+            <p class="download-description">
+              앱으로 설치하면 더 빠르고 안정적인 환경에서
+              <br />
+              거래처와 협업을 이어갈 수 있습니다.
+            </p>
+            <div class="download-btn-group">
+              <a
+                href="https://app.joint.now/download"
+                target="_blank"
+                rel="noopener"
+                class="download-btn download-btn-primary"
+              >
+                앱 다운로드
+              </a>
             </div>
-            <div class="download-qr">
-              <p class="download-qr-label">모바일 앱</p>
+          </div>
+          <div class="download-image">
+            <img
+              src="/img/download/desktop-app-mockup.png"
+              alt="데스크톱 앱 설명 이미지"
+              width="1154"
+              height="706"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="mobile-app-download">
+        <div class="app-download-inner">
+          <div class="download-image mobile-qr-container">
+            <img
+              src="/img/download/mobile-app-mockup.png"
+              alt="모바일 앱 설명 이미지"
+              width="1572"
+              height="1412"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="download-info">
+            <span class="download-badge">모바일 앱</span>
+            <h2 class="download-title">
+              모바일에서도 Joint로
+              <br />
+              협업을 이어가세요
+            </h2>
+            <p class="download-description">
+              모바일 앱을 설치하면 중요한 메시지와 알림을 놓치지 않고
+              <br />
+              언제 어디서든 거래처와 소통할 수 있습니다.
+            </p>
+
+            <div class="download-qr-inline for-desktop">
               <img
                 src="/img/download/qrcode.png"
-                alt="모바일 앱 다운로드 QR 코드"
+                alt="모바일 앱 다운로드용 QR 코드"
                 width="120"
                 height="120"
               />
-              <p class="download-qr-hint">스마트폰으로 QR 코드를 스캔하세요</p>
+              <div class="download-qr-content">
+                <strong>모바일 앱 설치하기</strong>
+                <span>스마트폰 카메라로 스캔하세요</span>
+              </div>
+            </div>
+
+            <div class="download-btn-group for-mobile">
+              <a href="https://mapp.joint.now/download" class="download-btn download-btn-primary">
+                모바일 앱 설치
+              </a>
             </div>
           </div>
-        </section>
-      </div>
-
-      <!-- 모바일 레이아웃 -->
-      <div class="for-mobile">
-        <section class="app-download-mobile">
-          <div class="mobile-download-info">
-            <span class="download-badge">다운로드</span>
-            <h1 class="mobile-download-title">
-              조인트를 모바일에서도
-              <br />
-              사용해 보세요
-            </h1>
-            <p class="mobile-download-description">
-              모바일 앱을 설치하면 언제 어디서나
-              <br />
-              거래처와의 소통을 놓치지 않습니다.
-            </p>
-          </div>
-          <a href="https://mapp.joint.now/download" class="mobile-download-btn">모바일 앱 설치</a>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
 
     <footer>
