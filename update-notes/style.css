@@ -367,6 +367,12 @@ body {
   background-color: var(--surface-hover);
 }
 
+.note-list__item:focus-within {
+  background-color: var(--surface-hover);
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
 .note-list__content {
   flex: 1;
   margin-right: 24px;
