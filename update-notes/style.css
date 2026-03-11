@@ -137,7 +137,7 @@ body {
 .update-note {
   max-width: 720px;
   margin: 0 auto;
-  padding: 80px 24px 40px;
+  padding: 80px 24px 50px;
 }
 
 /* ===========================
@@ -145,26 +145,11 @@ body {
    =========================== */
 
 .update-note__header {
-  margin-bottom: 48px;
-  padding-bottom: 32px;
-  border-bottom: 1px solid rgba(var(--gray10-rgb), 0.08);
-}
-
-.update-note__label {
-  display: inline-block;
-  margin-bottom: 16px;
-  padding: 4px 14px;
-  border-radius: 100px;
-  background-color: rgba(var(--primary-rgb), 0.08);
-  color: var(--primary);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  line-height: 1.8;
+  margin-bottom: 24px;
 }
 
 .update-note__title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.35;
   letter-spacing: -0.02em;
@@ -294,12 +279,11 @@ body {
   }
 
   .update-note__header {
-    margin-bottom: 36px;
-    padding-bottom: 24px;
+    margin-bottom: 24px;
   }
 
   .update-note__title {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     line-height: 1.4;
   }
 
@@ -326,7 +310,7 @@ body {
   }
 
   .update-note {
-    padding: 72px 32px 100px;
+    padding: 72px 32px 50px;
   }
 }
 
@@ -336,7 +320,7 @@ body {
 
 @media screen and (min-width: 1280px) {
   .update-note {
-    padding: 96px 24px 140px;
+    padding: 96px 24px 50px;
   }
 }
 
@@ -485,7 +469,7 @@ body {
   gap: 8px;
   max-width: 720px;
   margin: 0 auto;
-  padding: 16px 24px 120px;
+  padding: 0 24px 120px;
   position: relative;
 }
 
@@ -495,7 +479,6 @@ body {
   top: 0;
   left: 24px;
   right: 24px;
-  border-top: 1px solid rgba(var(--gray10-rgb), 0.08);
 }
 
 .post-navigation__item {
