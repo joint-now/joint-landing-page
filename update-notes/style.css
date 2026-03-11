@@ -398,6 +398,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 1;
 }
 
 .note-list__item:hover .note-list__item-title a {
@@ -559,8 +560,9 @@ footer {
   text-decoration: none;
 }
 
-.social-links a i {
-  font-size: 24px;
+.social-links a svg {
+  width: 24px;
+  height: 24px;
 }
 
 .social-links a:hover {
