@@ -24,7 +24,265 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css"
       rel="stylesheet"
     />
-    <link href="../style.css" rel="stylesheet" />
+    <link href="/update-notes/style.css" rel="stylesheet" />
+    <style>
+      /* === GNB (다운로드 페이지와 동일한 스타일) === */
+
+      @media screen and (min-width: 1001px) {
+        body .for-mobile {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 1000px) {
+        body .for-desktop {
+          display: none;
+        }
+      }
+
+      .gnb {
+        position: fixed;
+        top: 0;
+
+        padding: 18px 0;
+
+        width: 100%;
+        height: 70px;
+
+        z-index: 1000;
+
+        border-bottom: 1px solid rgba(var(--gray10-rgb), 0.06);
+        background: rgba(var(--white-rgb), 0);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+
+        transition: background 0.5s ease;
+      }
+
+      .gnb.scrolled {
+        background: var(--white);
+      }
+
+      .navbar {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        margin: 0 auto;
+
+        max-width: 1212px;
+        height: 34px;
+      }
+
+      .navbar .logo {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        margin: 8px 0 0 25px;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+
+        -webkit-tap-highlight-color: transparent;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        outline: none;
+      }
+
+      .navbar .logo img {
+        width: auto;
+        height: 26px;
+      }
+
+      .navbar .logo:hover {
+        opacity: 0.8;
+      }
+
+      .navbar .logo:focus-visible {
+        outline: 2px solid var(--black);
+        outline-offset: 3px;
+      }
+
+      .navbar-btns {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 6px;
+        margin-right: 25px;
+      }
+
+      .navbar-menu {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .navbar-menu a[aria-current='page'] {
+        color: var(--primary);
+        pointer-events: none;
+        cursor: default;
+      }
+
+      .navbar-menu .navbar-link-btn {
+        margin-right: 0;
+      }
+
+      .navbar-link-btn {
+        display: inline-flex;
+        align-items: center;
+        margin-right: 12px;
+        padding: 0 12px;
+        height: 32px;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+        background-color: transparent;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--gray10);
+        line-height: 32px;
+        text-decoration: none;
+      }
+
+      .navbar-link-btn svg {
+        margin-left: 4px;
+        color: var(--gray04);
+      }
+
+      .navbar-link-btn:focus-visible {
+        outline: 2px solid var(--black);
+        outline-offset: 3px;
+      }
+
+      .navbar-link-btn:hover {
+        background: rgba(var(--gray10-rgb), 0.04);
+      }
+
+      .navbar-link-btn:hover svg {
+        color: var(--primary);
+      }
+
+      .signin-btn {
+        display: inline-block;
+
+        padding: 0 12px;
+
+        height: 32px;
+
+        border: none;
+        border-radius: 10px;
+        outline: none;
+
+        background-color: #ffffff;
+        box-shadow:
+          0 -1px 0 0 rgba(0, 0, 0, 0.06) inset,
+          0 0 0 1px rgba(0, 0, 0, 0.08) inset,
+          0 2px 6px 0 rgba(0, 0, 0, 0.02);
+
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--gray10);
+        line-height: 32px;
+        text-decoration: none;
+
+        transition: opacity 0.3s;
+
+        cursor: pointer;
+      }
+
+      .signin-btn:focus-visible {
+        outline: 2px solid var(--black);
+        outline-offset: 3px;
+      }
+
+      .signin-btn:hover {
+        background-image: linear-gradient(
+          rgba(var(--gray10-rgb), 0.04),
+          rgba(var(--gray10-rgb), 0.04)
+        );
+      }
+
+      .typeform-btn button {
+        display: inline-block !important;
+
+        padding: 0 12px !important;
+
+        height: 32px !important;
+
+        border: none !important;
+        border-radius: 10px !important;
+        outline: none !important;
+
+        background-color: var(--primary) !important;
+        box-shadow:
+          0 -1px 0 0 rgba(0, 0, 0, 0.06) inset,
+          0 0 0 1px rgba(0, 0, 0, 0.08) inset,
+          0 2px 6px 0 rgba(0, 0, 0, 0.02) !important;
+
+        font-family: inherit !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        color: var(--white) !important;
+        line-height: 32px !important;
+        text-decoration: none !important;
+
+        transition: opacity 0.3s !important;
+
+        cursor: pointer !important;
+      }
+
+      .typeform-btn button:focus-visible {
+        outline: 2px solid var(--black);
+        outline-offset: 3px;
+      }
+
+      .typeform-btn:hover button {
+        background-image: linear-gradient(
+          rgba(var(--gray10-rgb), 0.04),
+          rgba(var(--gray10-rgb), 0.04)
+        ) !important;
+      }
+
+      .typeform-btn:active button {
+        background-image: linear-gradient(
+          rgba(var(--gray10-rgb), 0.08),
+          rgba(var(--gray10-rgb), 0.08)
+        ) !important;
+      }
+
+      /* 고정 GNB 높이만큼 update-note 상단 여백 보정 */
+      .update-note {
+        padding-top: 150px;
+      }
+
+      /* === 모바일 미디어쿼리 === */
+      @media screen and (max-width: 1000px) {
+        .gnb.scrolled {
+          padding-bottom: 0;
+        }
+
+        .navbar .logo {
+          display: flex;
+          margin-left: 0;
+          padding: 2px 5px 2px 18.5px;
+        }
+
+        .navbar-btns {
+          gap: 4px;
+          margin-right: 0;
+          padding-right: 16px;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .update-note {
+          padding-top: 126px;
+        }
+      }
+    </style>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-QJGC6M9MC4"></script>
     <script>
@@ -41,17 +299,92 @@
     />
   </head>
   <body>
-    <!-- 공통 상단 GNB -->
-    <nav aria-label="메인 네비게이션" class="gnb">
-      <div class="gnb__inner">
-        <a class="gnb__title" href="/update-notes/">Joint 업데이트</a>
-        <a class="gnb__home-button" href="https://www.joint.now/">Joint 홈으로</a>
-      </div>
-    </nav>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const gnb = document.querySelector('.gnb');
+        if (gnb) {
+          const updateGnb = () => {
+            if (window.scrollY > 100) {
+              gnb.classList.add('scrolled');
+            } else {
+              gnb.classList.remove('scrolled');
+            }
+          };
+          window.addEventListener('scroll', updateGnb, { passive: true });
+          updateGnb();
+        }
+      });
+    </script>
+
+    <header class="gnb">
+      <nav class="navbar">
+        <a class="logo" href="/">
+          <img src="/img/joint-logo.svg" alt="Joint 조인트" width="77" height="26" />
+        </a>
+        <div class="navbar-menu for-desktop">
+          <a
+            class="navbar-link-btn"
+            href="https://guide.joint.now/customer-story"
+            target="_blank"
+            rel="noopener"
+          >
+            고객 성공 사례
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+            >
+              <path
+                d="M11.0833 2.91663L2.91658 11.0833"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M11.0833 8.90746V2.91663H5.09242"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+          <a class="navbar-link-btn" href="https://www.joint.now/download/">앱 다운로드</a>
+          <a class="navbar-link-btn" href="https://www.joint.now/update-notes/" aria-current="page">
+            업데이트 소식
+          </a>
+        </div>
+        <div class="navbar-btns">
+          <a
+            href="https://app.joint.now/"
+            target="_blank"
+            rel="noopener"
+            class="signin-btn for-desktop"
+          >
+            로그인
+          </a>
+          <a
+            href="https://mapp.joint.now/"
+            target="_blank"
+            rel="noopener"
+            class="signin-btn for-mobile"
+          >
+            로그인
+          </a>
+          <div class="typeform-btn for-desktop" data-tf-live="01K6C2D7WHYR367H60C4C5DBCF"></div>
+          <div class="typeform-btn for-mobile" data-tf-live="01K6C2D7WHYR367H60C4C5DBCF"></div>
+          <script src="https://embed.typeform.com/next/embed.js" defer></script>
+        </div>
+      </nav>
+    </header>
     <main>
       <article class="update-note">
         <header class="update-note__header">
-          <p class="update-note__label">Update Note</p>
           <h1 class="update-note__title">[Joint Update] 25.06.24 업데이트</h1>
           <time class="update-note__date" datetime="2025-06-24">2025년 06월 24일</time>
         </header>
@@ -119,6 +452,6 @@
         </a>
       </nav>
     </main>
-    <script src="../script.js"></script>
+    <script src="/update-notes/script.js"></script>
   </body>
 </html>
